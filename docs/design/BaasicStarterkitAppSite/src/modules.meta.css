@@ -1,0 +1,23 @@
+.date {
+    font-family: var(--ff-sans);
+    color: color(var(--ultra-light) blackness(40%));
+}
+
+.author {
+    font-family: var(--ff-sans);
+    color: color(var(--ultra-light) blackness(60%));
+    text-transform: uppercase;
+    padding-left: .5rem;
+}
+
+.meta__blog--primary {
+    margin-top: var(--base-line-height);
+    margin-bottom: var(--base-line-height);
+}
+
+@media all and (--from-medium) {
+    .meta__blog--primary {
+        margin-top: calc(var(--base-line-height)*2);
+        margin-bottom: calc(var(--base-line-height)*1.5);
+    }
+}

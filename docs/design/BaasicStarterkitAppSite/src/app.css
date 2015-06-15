@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    # Application CSS file
+\*------------------------------------*/
+
+
+/*
+* Variables
+*/
+
+@import "vars.defaults.css";
+@import "vars.colors.css";
+@import "vars.responsive.css";
+@import "vars.typography.css";
+
+/**
+* Generic styles
+* Default style setup for reseting or normalizing our CSS
+*/
+
+@import "generics.normalize.css";
+@import "generics.boxmodel.css";
+
+/**
+ * Base styles
+ * The base global classes and styling
+ */
+
+@import "base.container.css";
+@import "base.globals.css";
+@import "base.typography.css";
+
+/**
+* Project specific modules
+* All our modules such as buttons, inputs, labels, tables etc. 
+*/
+
+/*@import "modules.grid.css";*/
+@import "modules.buttons.css";
+@import "modules.toggle.css";
+@import "modules.meta.css";
+@import "modules.video.css";
+
+/**
+* Project specific components
+* All project components such as headers, footer, bars, dropdowns etc.
+*/
+
+@import "components.styledtext.css";
+@import "components.hero.css";
+@import "components.nav.css";
+@import "components.logo.css";
+@import "components.section.css";
+@import "components.footer.css";
+@import "components.form.css";
+@import "components.box.css";
+@import "components.price.css";
+@import "components.blog.css";
+@import "components.avatar.css";
+
+
+/**
+* Project specific external plugins
+* All project Sass or CSS plugins such as Select2, Dropit etc. 
+*/
+
+/*@import "plugins.pluginname.css";*/
+@import "plugins.headroom.css";
+
+
+/**
+* Common classes
+* Class helpers such as push, pull, radius etc.
+*/
+
+@import "util.group.css";
+@import "util.floats.css";
+@import "util.spacers.css";
+@import "util.visibility.css";

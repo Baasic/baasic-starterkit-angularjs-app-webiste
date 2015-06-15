@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    # base.globals
+\*------------------------------------*/
+
+html {
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+}
+body {
+    font-family: var(--ff-serif);
+    /*opacity: 0;*/
+/*    animation:fadeIn ease-in .5s;
+    animation-fill-mode:forwards;*/
+}
+
+/*@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}*/
+
+img {
+    max-width: 100%;
+    transition:all .2s linear;  
+}
+
+a:focus {
+    outline: none;
+}
