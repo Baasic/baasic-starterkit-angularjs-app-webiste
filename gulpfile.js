@@ -21,7 +21,9 @@ var htmlminOpts = {
     removeRedundantAttributes: true
 };
 
-var theme = g.util.env.theme || 'default';
+//var theme = g.util.env.theme || 'default';
+var theme = g.util.env.theme || 'apptheme';
+
 
 /**
  * JS Hint
@@ -141,7 +143,7 @@ function index() {
     var opt = { read: false };
     return gulp.src('./src/app/index.html')
       .pipe(g.inject(gulp.src(bowerFiles(), opt), { addRootSlash: false, ignorePath: 'bower_components', starttag: '<!-- inject:vendor:{{ext}} -->' }))
-      .pipe(g.inject(es.merge(appFiles(), cssFiles(opt)), { addRootSlash: false, ignorePath: ['.tmp', 'src/app'] }))
+      .pipe(g.inject(es.merge(appFiles(), cssFiles(opt)), { addRootSlash: false, ignorePath: ['.tmp', 'src/app',  'src/themes/' + theme] }))      
       .pipe(gulp.dest('./src/app/'))
       .pipe(g.embedlr())
       .pipe(gulp.dest('./.tmp/'))
@@ -269,6 +271,8 @@ function appFiles() {
       './.tmp/src/app/**/*.js',
       '!./.tmp/src/app/**/*_test.js',
       './src/app/**/*.js',
+      '!./src/themes/' + theme + '/templates/js/*',
+      './src/themes/' + theme + '/templates/**/*.js',
       '!./src/app/**/*_test.js'
     ];
     return gulp.src(files)

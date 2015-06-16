@@ -15,8 +15,8 @@ angular.module('myBlog', [
     function config($locationProvider, $urlRouterProvider, $stateProvider, baasicAppProvider) {
         'use strict';
 
-        baasicAppProvider.create('starterkit-blog', {
-            apiRootUrl: 'api.baasic.com',
+        baasicAppProvider.create('testapppozda', {
+            apiRootUrl: 'api.baasic.local',
             apiVersion: 'beta'
         });
 
@@ -53,6 +53,10 @@ angular.module('myBlog', [
             })
             .state('master.main.index', {
                 url: '?{page}',
+                templateUrl: 'templates/content-home.html'
+            })
+            .state('master.main.blog', {
+                url: 'blog',
                 templateUrl: 'templates/blog/blog-home.html'
             })
             .state('login', {
@@ -83,6 +87,8 @@ angular.module('myBlog', [
             .state('404', {
                 templateUrl: 'templates/404.html'
             });
+
+
     }
 ])
 .constant('recaptchaKey', '6LcmVwMTAAAAAKIBYc1dOrHBR9xZ8nDa-oTzidES')

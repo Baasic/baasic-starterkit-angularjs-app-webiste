@@ -1,36 +1,7 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" href="css/app.out.css">
-    <link href='http://fonts.googleapis.com/css?family=Signika+Negative:300,400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,400,700' rel='stylesheet' type='text/css'>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-</head>
-
-<body>
-        <!--[if lt IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <code>
-            clicking on ".menu-icon-container" toggles class "close" on ".header__nav"
-            clicking on ".menu-icon-container" toggles class "transformed" on ".menu-icon"
-        </code>
-
         <div class="hero--primary">
             <header role="banner" class="header--fixed group headroom">
                 <div class="container--secondary group">
-                    <a href="index.html">
+                    <a href="/" ui-sref="master.main.index" rel="home">
                         <h1 class="pull">
                             <div class="logo-svg">
                                 <svg version="1.1" id="Bora" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -69,21 +40,27 @@
                         </h1>
                     </a>
                     
-                    <span class="menu-icon-container">
-                        <span class="menu-icon"></span>
+                    <span
+                        ng-init="isActive = false"
+                        ng-click="isActive = !isActive"
+                        class="menu-icon-container">
+
+                        <span ng-class="{'menu-icon':!isActive, 'menu-icon transformed':isActive}"></span>
                     </span>
                     
-                    <nav role="navigation" class="header__nav close">
+                    <nav role="navigation" ng-class="{'header__nav':isActive, 'header__nav close':!isActive}">
+
                         <ul class="nav group">
                             <li class="nav__item"><a href="#features" class="nav__link nav__link--primary">Features</a></li>
                             <li class="nav__item"><a href="#video" class="nav__link nav__link--primary">Watch the video</a></li>
                             <li class="nav__item"><a href="#plan" class="nav__link nav__link--primary">Plan</a></li>
-                            <li class="nav__item"><a href="blog.html" class="nav__link nav__link--primary">Blog</a></li>
+                            <li class="nav__item"><a href="/" ui-sref="master.main.blog" rel="blog" class="nav__link nav__link--primary" rel="blog">Blog</a></li>
                             <li class="nav__item"><a href="#contact" class="nav__link nav__link--primary">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
-            </header>
+            </header>    
+
             <div class="container--secondary">
                 <div class="box">
                     <section class="box__item">
@@ -91,38 +68,42 @@
                         <a href="#" class="btn btn--primary btn--lrg">Get app</a>
                         <a href="#" class="btn btn--secondary btn--lrg">Get app</a>
                     </section>
+                   
                     <div class="box__media">
                         <figure class="box__media--image">
                             <picture>
-                                <source srcset="./img/smartphone-holding.png" media="(min-width: 64em)">
-                                <source srcset="./img/smartphone-holding-med.png" media="(min-width: 48em)">
-                                <source srcset="./img/smartphone-holding-sml.png" media="(min-width: 0em)">
-                                <img srcset="./img/smartphone-holding.png" alt="App preview">
+                                <source srcset="./assets/img/smartphone-holding.png" media="(min-width: 64em)">
+                                <source srcset="./assets/img/smartphone-holding-med.png" media="(min-width: 48em)">
+                                <source srcset="./assets/img/smartphone-holding-sml.png" media="(min-width: 0em)">
+                                <img srcset="./assets/img/smartphone-holding.png" alt="App preview">
                             </picture>
                         </figure>
                    </div>
+
                 </div>
             </div>
         </div>
 
-    <main role="main">
+
+
+<main role="main">
         <section id="features" class="section__primary">
             <div class="container--primary">
                 <div class="flex">
                     <div class="section__primary--item center">
-                        <img src="./img/anchor.svg" alt="Safety">
+                        <img src="./assets/img/anchor.svg" alt="Safety">
                         <h3 class="section__primary__title">Safety</h3>
                         <p>Our mission is to keep you and your crew safe and dry during your adventures. We provide accurate weather forecast and we inform you the way you want it.</p>
                         <a href="#" class="btn btn--tertiary--negative btn--med" alt="See more">See more</a>
                     </div>
                     <div class="section__primary--item center">
-                        <img src="./img/compass.svg" alt="">
+                        <img src="./assets/img/compass.svg" alt="">
                         <h3 class="section__primary__title">Vision</h3>
                         <p>We crossed our path with top notch navigators to bring you the best and latest features, innovative software technologies and ultra-fast app responsiveness.</p>
                         <a href="#" class="btn btn--tertiary--negative btn--med">See more</a>
                     </div>
                     <div class="section__primary--item center">
-                        <img src="./img/rudder.svg" alt="">
+                        <img src="./assets/img/rudder.svg" alt="">
                         <h3 class="section__primary__title">The Way</h3>
                         <p>We see ourselves as an extension to your crew. Not asking much, just doing what we're doing the best — navigate and inform. And we're proud te be the part of the team!</p>
                         <a href="#" class="btn btn--tertiary--negative btn--med">See more</a>
@@ -148,10 +129,10 @@
 
                     <div class="section__secondary--media">
                         <picture>
-                            <source srcset="./img/smartphone-in-app.png" media="(min-width: 64em)">
-                            <source srcset="./img/smartphone-in-app.png" media="(min-width: 48em)">
-                            <source srcset="./img/smartphone-in-app-sml.png" media="(min-width: 0em)">
-                            <img srcset="./img/smartphone-in-app.png" alt="Opened app">
+                            <source srcset="./assets/img/smartphone-in-app.png" media="(min-width: 64em)">
+                            <source srcset="./assets/img/smartphone-in-app.png" media="(min-width: 48em)">
+                            <source srcset="./assets/img/smartphone-in-app-sml.png" media="(min-width: 0em)">
+                            <img srcset="./assets/img/smartphone-in-app.png" alt="Opened app">
                         </picture>
                     </div>
                 </div>
@@ -159,10 +140,10 @@
                 <div class="flex spc--top--xlrg">
                     <div class="section__secondary--media-alt">
                         <picture>
-                            <source srcset="./img/watch-solo.png" media="(min-width: 64em)">
-                            <source srcset="./img/watch-solo.png" media="(min-width: 48em)">
-                            <source srcset="./img/watch-solo-sml.png" media="(min-width: 0em)">
-                            <img srcset="./img/watch-solo.png" alt="Apple Watch app">
+                            <source srcset="./assets/img/watch-solo.png" media="(min-width: 64em)">
+                            <source srcset="./assets/img/watch-solo.png" media="(min-width: 48em)">
+                            <source srcset="./assets/img/watch-solo-sml.png" media="(min-width: 0em)">
+                            <img srcset="./assets/img/watch-solo.png" alt="Apple Watch app">
                         </picture>
                     </div>
                     <div class="section__secondary--item spc--top--xlrg">
@@ -255,19 +236,19 @@
             <div class="container--primary">
                 <div class="flex">
                     <div class="section__primary--item center">
-                        <img src="./img/sos.svg" alt="">
+                        <img src="./assets/img/sos.svg" alt="">
                         <h3  class="section__primary__title">24/7 Safety</h3>
                         <p>We help you 24/7 with any questions or problems. Smart, friendly, and knowledgeable support is always there on the phone, and by chat or ticket..</p>
                         <a href="#" class="btn btn--tertiary--negative btn--med">See more</a>
                     </div>
                     <div class="section__primary--item center">
-                        <img src="./img/knot.svg" alt="">
+                        <img src="./assets/img/knot.svg" alt="">
                         <h3  class="section__primary__title">Customization</h3>
                         <p>Customize Bora’s components and app modules to your wish and create tho achive the best app experience.</p>
                         <a href="#" class="btn btn--tertiary--negative btn--med">See more</a>
                     </div>
                     <div class="section__primary--item center">
-                        <img src="./img/pirate.svg" alt="">
+                        <img src="./assets/img/pirate.svg" alt="">
                         <h3  class="section__primary__title">Creative Design</h3>
                         <p>Yo-ho-ho! We’re sailing over the seven seas in quest to find the best UI and UX solutions. Join us on deck!</p>
                         <a href="#" class="btn btn--tertiary--negative btn--med">See more</a>
@@ -319,39 +300,3 @@
             </div>
         </section>
     </main>
-
-    <footer class="footer center" role="content-info">
-        <div class="container--secondary">
-            <div class="flex--alt footer__icon--wrapper">
-                <a href="#" class="footer__icon--social"><img src="./img/twitter.svg" alt="Twitter"></a>
-                <a href="#" class="footer__icon--social"><img src="./img/facebook.svg" alt="Facebook"></a>
-                <a href="#" class="footer__icon--social"><img src="./img/behance.svg" alt="Behance"></a>
-                <a href="#" class="footer__icon--social"><img src="./img/pinterest.svg" alt="Pinterest"></a>
-                <a href="#" class="footer__icon--social"><img src="./img/dribble.svg" alt="Dribble"></a>
-            </div>
-
-            <nav role="footer__nav center">
-                <ul class="nav group">
-                    <li class="nav__item"><a href="#features" class="nav__link nav__link--secondary">Features</a></li>
-                    <li class="nav__item"><a href="#video" class="nav__link nav__link--secondary">Watch the video</a></li>
-                    <li class="nav__item"><a href="#plan" class="nav__link nav__link--secondary">Plan</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link nav__link--secondary">Blog</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--secondary">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <p class="footer__copyright">© 2015 Bora. All rights reserved. iPhone and Watch are a trademark of Apple Inc. App Store is a service mark of Apple inc.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
-    <script src="js/picturefill.js"></script>
-    <script src="js/uilang.js"></script>
-    <!-- Plyr core script -->
-    <script src="js/plyr.js"></script>
-    <!-- Docs script -->
-    <!-- <script src="js/docs.js"></script> -->
-    <script src="js/main.js"></script>
-
-</body>
-</html>
