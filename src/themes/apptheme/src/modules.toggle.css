@@ -1,0 +1,104 @@
+/*------------------------------------*\
+    # modules.toggle
+\*------------------------------------*/
+
+.headroom--top .menu-icon-container {
+    position: absolute;
+    display: block;
+    width: 3.125rem;
+    height: 3.125rem;
+    top: 3.5rem;
+    right: 1rem;
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
+    cursor: pointer;
+}
+
+.headroom--not-top .menu-icon-container {
+    position: absolute;
+    display: block;
+    width: 3.125rem;
+    height: 3.125rem;
+    top: 2rem;
+    right: 5%;
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
+    cursor: pointer;
+}
+
+.menu-icon {
+    position: relative;
+    display: block;
+    width: 1.875rem;
+    height: .25rem;
+    background-color: var(--color-primary);
+    top: 50%;
+    left: 50%;
+    margin-top: -.125rem;
+    margin-left: -1rem;
+    transition: background-color .2s ease-out;
+}
+
+@media all and (--from-medium) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+.menu-icon::after, .menu-icon::before {
+    content:'';
+    position: absolute;
+    display: block;
+    width: 1.875rem;
+    height: .25rem;
+    background-color: var(--color-primary);
+    left: 0;
+    transition: all .2s ease-out;
+}
+
+.menu-icon::after {
+    top: .5rem;
+}
+
+.menu-icon::before {
+    top: -.5rem;
+}
+
+.menu-icon-container:hover .menu-icon::after {
+    top: .8rem;
+    transition: all .2s ease-out;
+}
+
+.menu-icon-container:hover .menu-icon::before {
+    top: -.8rem;
+    transition: all .2s ease-out;
+}
+
+/*---cross---*/
+.menu-icon.transformed {
+    background-color: transparent;
+}
+
+.menu-icon.transformed::after, .menu-icon.transformed::before {
+    transform-origin: 50% 50%;
+    top: 0;
+    left: .125rem;
+    width: 1.625rem;
+    transition: all .15s ease-out;
+}
+
+.menu-icon.transformed::after {
+    transform: rotate(45deg);
+}
+
+.menu-icon.transformed::before {
+    transform: rotate(-45deg);
+}
+
+.menu-icon-container:hover .menu-icon.transformed::after,
+.menu-icon-container:hover .menu-icon.transformed::before {
+    top: 0;
+    left: -.0625rem;
+    width: 2rem;
+    transition: all .15s ease-out;
+}

@@ -2,7 +2,6 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-
     <main ui-view>
 
     </main>
@@ -21,11 +20,11 @@
 
             <nav role="footer__nav center">
                 <ul class="nav group">
-                    <li class="nav__item"><a href="#features" class="nav__link nav__link--secondary">Features</a></li>
-                    <li class="nav__item"><a href="#video" class="nav__link nav__link--secondary">Watch the video</a></li>
-                    <li class="nav__item"><a href="#plan" class="nav__link nav__link--secondary">Plan</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link nav__link--secondary">Blog</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--secondary">Contact</a></li>
+                    <li class="nav__item"><a href=".##features"  rel="features" class="nav__link nav__link--secondary">Features</a></li>
+                    <li class="nav__item"><a href=".##video"   class="nav__link nav__link--secondary">Watch the video</a></li>
+                    <li class="nav__item"><a href=".##plan"   class="nav__link nav__link--secondary">Plan</a></li>
+                    <li class="nav__item"><a href="/" ui-sref="master.main.blog" rel="blog" class="nav__link nav__link--secondary">Blog</a></li>
+                    <li class="nav__item"><a href=".##contact"   class="nav__link nav__link--secondary">Contact</a></li>
                 </ul>
             </nav>
             
@@ -33,14 +32,16 @@
         </div>
     </footer>
 
-
-
-
-   <script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
+ <link href="http://fonts.googleapis.com/css?family=Signika+Negative:300,400,700" rel="stylesheet" type="text/css">
+ <link href="http://fonts.googleapis.com/css?family=Alegreya:400italic,400,700" rel="stylesheet" type="text/css">
+     
+    <script src="js/jquery.min.js"></script>
+    <script src="js/headroom.min.js"></script>
     <script src="js/picturefill.js"></script>
+    <script src="js/uilang.js"></script>
     <!-- Plyr core script -->
     <script src="js/plyr.js"></script>
     <!-- Docs script -->
-    <!-- <script src="js/docs.js"></script> -->
+    <script src="js/docs.js"></script>
     <script src="js/main.js"></script>
 

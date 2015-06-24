@@ -1,0 +1,134 @@
+.form-wrapper { 
+    position:relative; 
+    margin-bottom:calc(var(--base-line-height)*1.5); 
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.form input, .form textarea {
+    font-family: var(--ff-sans);
+    font-size: var(--type-base);
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid color(var(--ultra-light));
+    border-radius: 0px;
+}
+
+.form textarea {
+    font-family: var(--ff-sans);
+    font-size: var(--type-base);
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:100%;
+    border:none;
+    border-bottom:1px solid color(var(--ultra-light));
+    border-radius: 0px;
+}
+
+.form input:focus, .form textarea:focus {
+    outline:none;
+}
+
+.form label {
+    font-family: var(--ff-sans);
+    color: var(--ultra-dark); 
+    font-size: var(--type-base);
+    font-weight: var(--type-regular);
+    position:absolute;
+    pointer-events:none;
+    left:1rem;
+    top:.75rem;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+
+.form input:focus ~ label, .form input:valid ~ label, .form textarea:focus ~ label, .form textarea:valid ~ label  {
+    top:-20px;
+    font-size:14px;
+    color: color(var(--ultra-dark) whiteness(50%));
+}
+
+.bar {
+    position:relative;
+    display:block;
+    width:100%;
+}
+
+.bar:before, .bar:after {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background: var(--dark-cyan); 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+
+.bar:before {
+    left:50%;
+}
+
+.bar:after {
+    right:50%; 
+}
+
+.form input:focus ~ .bar:before, .form input:focus ~ .bar:after, 
+.form textarea:focus ~ .bar:before, .form textarea:focus ~ .bar:after  {
+    width:50%;
+}
+
+.highlight {
+    position:absolute;
+    height:60%; 
+    width:325px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+.form input:focus ~ .highlight, .form textarea:focus ~ .highlight {
+    -webkit-animation:inputlighter 0.3s ease;
+    -moz-animation:inputlighter 0.3s ease;
+    animation:inputlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputlighter
+{
+    from
+    {
+        background:var(--dark-cyan);
+    }
+    to
+    {
+        width:0; background:transparent;
+    }
+}
+
+@-moz-keyframes inputlighter
+{
+    from
+    {
+        background:var(--dark-cyan);
+    }
+    to
+    { 
+        width:0; background:transparent;
+    }
+}
+@keyframes inputlighter
+{
+    from
+    {
+        background:var(--dark-cyan);
+    }
+    to
+    {
+        width:0; background:transparent;
+    }
+}

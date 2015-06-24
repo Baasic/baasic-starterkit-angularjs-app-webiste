@@ -1,0 +1,19 @@
+.plan__price {
+    font-family: var(--ff-serif);
+    display: block;
+    color: var(--bittersweet);
+}
+
+.plan__price--primary {
+    font-size: 6rem;
+    margin-top: calc(var(--base-line-height)*1);
+    margin-bottom: calc(var(--base-line-height)*1);
+    line-height: calc(var(--base-line-height)*3);
+}
+
+.plan__price--secondary {
+    font-size: 3rem;
+    margin-top: calc(var(--base-line-height)*1);
+    margin-bottom: calc(var(--base-line-height)*1.5);
+    line-height: calc(var(--base-line-height)*1);
+}
