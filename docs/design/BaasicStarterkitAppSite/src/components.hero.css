@@ -52,3 +52,20 @@
         min-height: 15rem;
     }
 }
+
+.hero--product {
+    background-image: url("../img/hero-product-sml.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    min-height: 15rem;
+    padding-top: 2rem;
+}
+@media all and (--from-medium) {
+    .hero--product {
+        background-image: url("../img/hero-product.jpg");
+        min-height: 15rem;
+    }
+}

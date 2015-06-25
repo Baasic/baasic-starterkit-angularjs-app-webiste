@@ -821,6 +821,9 @@ hr {
     width: 2rem;
     transition: all .15s ease-out
 }
+/*------------------------------------*\
+    # modules.meta
+\*------------------------------------*/
 .date {
     font-family: 'Signika Negative', Helvetica, Arial, sans-serif;
     color: rgb(179, 179, 179)
@@ -1354,8 +1357,24 @@ hr {
         min-height: 15rem
     }
 }
+.hero--product {
+    background-image: url("../img/hero-product-sml.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    min-height: 15rem;
+    padding-top: 2rem
+}
+@media all and (min-width: 48em) {
+    .hero--product {
+        background-image: url("../img/hero-product.jpg");
+        min-height: 15rem
+    }
+}
 /*------------------------------------*\
-# components.nav
+    # components.nav
 \*------------------------------------*/
 .header--fixed {
     position: fixed;
@@ -1480,7 +1499,7 @@ hr {
 }
 /*------------------------------------*\
     # components.logo
-    \*------------------------------------*/
+\*------------------------------------*/
 .logo-svg .bora-1,
 .logo-svg .bora-2,
 .logo-svg .bora-3 {
@@ -1746,6 +1765,9 @@ hr {
 .section__article {
     width: 60%
 }
+/*------------------------------------*\
+    # components.footer
+\*------------------------------------*/
 .footer {
     background-color: #FD6D6D;
     padding: 2.25rem 0
@@ -1755,22 +1777,15 @@ hr {
     text-align: center
 }
 .footer__icon--social {
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
     padding: .25rem;
     transition: box-shadow 0.4s;
     cursor: pointer;
     border-radius: 50%;
-    position: relative;
     z-index: 1;
     margin-right: .75rem
 }
 @media all and (min-width: 48em) {
     .footer__icon--social {
-        -webkit-flex: none;
-            -ms-flex: none;
-                flex: none;
         line-height: 0
     }
 }
@@ -1796,6 +1811,9 @@ hr {
         font-size: 0.7rem
     }
 }
+/*------------------------------------*\
+    # components.form
+\*------------------------------------*/
 .form-wrapper {
     position: relative;
     margin-bottom: 2.25rem;
@@ -2030,6 +2048,9 @@ hr {
         padding: 0
     }
 }
+/*------------------------------------*\
+    # components.price
+\*------------------------------------*/
 .plan__price {
     font-family: 'Alegreya', Times, Times New Roman, serif;
     display: block;
@@ -2047,6 +2068,37 @@ hr {
     margin-bottom: 2.25rem;
     line-height: 1.5rem
 }
+/* Plan details */
+.plan__detail {
+    padding-top: 1.125rem;
+    letter-spacing: .1rem;
+    font-family: 'Signika Negative', Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    padding: 0 1rem
+}
+.plan__detail--price {
+    color: #007D90;
+    font-weight: 700
+}
+.plan__terms {
+    font-family: 'Signika Negative', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    padding: 0 1rem
+}
+.plan__terms--item {
+    font-weight: 700;
+    color: rgb(138, 138, 138);
+    text-decoration: none;
+    transition: color .5s ease-out
+}
+.plan__terms--item:hover {
+    color: #007D90;
+    text-decoration: none
+}
+/*------------------------------------*\
+    # components.blog
+\*------------------------------------*/
 .blog__header__title {
     color: #202020;
     font-size: 2.441rem;
@@ -2201,6 +2253,9 @@ hr {
         max-width: 100%
     }
 }
+/*------------------------------------*\
+    # components.avatar
+\*------------------------------------*/
 .avatar {
     margin-top: 2.25rem;
     margin-bottom: 0.75rem;
@@ -2236,13 +2291,15 @@ hr {
     letter-spacing: .05rem
 }
 
-
 /**
 * Project specific external plugins
 * All project Sass or CSS plugins such as Select2, Dropit etc. 
 */
 
 /*@import "plugins.pluginname.css";*/
+/*------------------------------------*\
+    # plugins.headroom
+\*------------------------------------*/
 /**
  * Note: I have omitted any vendor-prefixes for clarity.
  * Adding them is left as an exercise for the reader.

@@ -1,3 +1,7 @@
+/*------------------------------------*\
+    # components.footer
+\*------------------------------------*/
+
 .footer {
     background-color: var(--bittersweet);
     padding: calc(var(--base-line-height)*1.5) 0;
@@ -9,19 +13,16 @@
 }
 
 .footer__icon--social {
-    flex: 1;
     padding: .25rem;
     transition: box-shadow 0.4s;
     cursor: pointer;
     border-radius: 50%;
-    position: relative;
     z-index: 1;
     margin-right: .75rem;
 }
 
 @media all and (--from-medium) {
     .footer__icon--social {
-        flex: none;
         line-height: 0;
     }
 }
