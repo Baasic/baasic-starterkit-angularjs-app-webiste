@@ -1,0 +1,15 @@
+﻿<article class="blog__article--tertiary" ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo:2">
+    <a ui-sref="master.blog-detail({slug:blog.slug})" >
+        <div>
+            <img ng-src="{{blog.featured}}" alt="#">
+            <h2 class="article--secondary__title">{{blog.title}}</h2>
+            <p class="article--secondary__body">{{blog.excerpt}}</p>
+            <span class="date">{{blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
+            <span class="author">blog.author</span>
+            <br />
+            <span class="minute article__readingtime">{{ blog.readingTime.text }} </span>
+            <br />
+            <a ng-if="$root.user.isAuthenticated" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
+        </div>
+    </a>
+</article>

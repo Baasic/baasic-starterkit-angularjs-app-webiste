@@ -58,7 +58,7 @@ angular.module('myBlog', [
             .state('master.main.blog', {
                 url: 'blog',
                 templateUrl: 'templates/blog/blog-home.html'
-            })
+            })         
             .state('login', {
                 url: '/login',
                 templateUrl: 'templates/login.html',
@@ -70,7 +70,7 @@ angular.module('myBlog', [
                 controller: 'NewBlogPostCtrl'
             })
             .state('master.blog-detail', {
-                url: 'blog-post/{slug}',
+                url: 'blog/{slug}',
                 templateUrl: 'templates/blog/blog-post.html',
                 controller: 'BlogPostCtrl'
             })

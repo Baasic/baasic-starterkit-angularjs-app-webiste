@@ -1320,8 +1320,7 @@ hr {
 }
 @media all and (min-width: 48em) {
     .hero--primary {
-        background-image: url("../assets/img/hero.jpg");
-        min-height: 60rem;
+        background-image: url("../assets/img/hero.jpg")/*min-height: 60rem;*/
     }
 }
 .hero--secondary {
@@ -1340,7 +1339,7 @@ hr {
     }
 }
 .hero--blog {
-    /*background-image: url("../assets/img/article-primary-sml.jpg");*/
+    background-image: url("../assets/img/article-primary-sml.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1351,7 +1350,7 @@ hr {
 }
 @media all and (min-width: 48em) {
     .hero--blog {
-       /*background-image: url("../assets/img/article-primary.jpg");*/
+        background-image: url("../assets/img/article-primary.jpg");
         min-height: 15rem
     }
 }
@@ -2097,9 +2096,6 @@ hr {
         text-decoration: none
     }
 }
-.full-width{
-    width:100%;
-}
 .article--primary__title {
     font-family: 'Signika Negative', Helvetica, Arial, sans-serif;
     font-size: 1.953rem;
@@ -2185,12 +2181,8 @@ hr {
         display: flex;
         width: 45%;
         margin-bottom: 3rem;
-        border-bottom: none;
-        float:left;
+        border-bottom: none
     }
-    .blog__article--tertiary:nth-of-type(2){
-            float:right;
-        };
 }
 .blog__article--tertiary a {
     text-decoration: none;
@@ -2245,74 +2237,18 @@ hr {
 }
 
 .minute{
-    background-color: #007D90;
+    background-color: #FD6D6D;
     color:#f5f5f5;
     padding:0 5px 0 7px;
 }
 
 .article--link{
     text-decoration:none;
-}
-.article--link:hover{
+    &:hover{
         text-decoration:none;
-}
-.post__tags{
-    margin-bottom:25px;
+    }
 }
 
-.tags__link, .control__link, .back__link{
-    font-family:'Signika Negative', Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size:small;
-    line-height: 3em;
-    text-decoration: none!important;
-    padding:10px;
-    border:1px solid;
-    border-radius:8px;
-    transition: all .2s ease-in-out;
-}
-
-.tags__link:focus, .control__link:focus,.back__link:focus{
-    outline: 0;
-}
-
-.back__link, .control__link{
-    line-height: 1em;
-    margin-bottom:15px;
-}
-.tags__colors{
-    color:#007D90;
-    background: rgba(0, 125, 144, 0);
-    border-color:#007D90;
-}
-
-.tags__link:hover{
-    background: rgba(0, 125, 144, 1);
-    color:#ffffff;
-}
-.tags__item{
-    display:inline;
-}
-
-.back__colors{
-    color:#FD6D6D;
-    background: rgba(253, 109, 109, 0);
-    border-color:#FD6D6D;
-}
-.back__link:hover{
-    background: rgba(253, 109, 109, 1);
-    color:#ffffff;
-}
-
-.control__colors{
-    color:#FD6D6D;
-    background: rgba(253, 109, 109, 0);
-    border-color:#FD6D6D;
-}
-.control__link:hover{
-    background: rgba(253, 109, 109, 1);
-    color:#ffffff;
-}
 
 /**
 * Project specific external plugins

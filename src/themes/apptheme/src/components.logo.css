@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    # components.logo
+    \*------------------------------------*/
+
+.logo-svg .bora-1,
+.logo-svg .bora-2,
+.logo-svg .bora-3 {
+      transform: translateX(0);
+}
+
+.logo-svg:hover .bora-1,
+.logo-svg:hover .bora-3 {
+    animation: anim1 ease-in-out 1s;
+}
+
+.logo-svg:hover .bora-2 {
+    animation: anim2 ease-in-out 1s;
+}
+
+@keyframes anim1 {
+    from {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(.5rem);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes anim2 {
+    from {
+        transform: translateX(0);
+    }
+    50% {
+        transform: scale(0.9);
+        transform: translateX(-.5rem);
+    }
+
+    75% {
+        transform: translateX(.25rem);
+    }
+    
+    to   {
+        transform: translateX(0);
+    }
+}
