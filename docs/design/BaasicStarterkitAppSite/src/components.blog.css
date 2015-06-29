@@ -1,3 +1,7 @@
+/*------------------------------------*\
+    # components.blog
+\*------------------------------------*/
+
 .blog__header__title {
     color: var(--ultra-dark);
     font-size: var(--type-xxlarge);
