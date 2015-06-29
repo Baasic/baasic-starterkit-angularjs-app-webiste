@@ -1155,6 +1155,8 @@ hr {
     display: none!important
 }
 
+
+
 /**
 * Project specific components
 * All project components such as headers, footer, bars, dropdowns etc.
@@ -1734,7 +1736,8 @@ hr {
     font-weight: 300;
     line-height: 1.875rem;
     font-size: 1.953rem;
-    letter-spacing: .15rem
+    letter-spacing: .15rem;
+    margin:4em 0 1em 0;
 }
 .section__form {
     margin-top: 4.5rem
@@ -1805,6 +1808,46 @@ hr {
             flex: 1;
     padding: 0 1rem
 }
+
+.form-title{
+    font-family:'Signika Negative', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.form {
+}
+.form__field {
+    margin-bottom: 1.5rem;
+}
+.form__desc {
+    display: block;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-light);
+}
+.form__field--half {
+    margin-bottom: 1.5rem;
+}
+@media all and (--from-medium) {
+    .form__field--half {
+        float: left;
+        width: 50%;
+    }
+    .form__field--half:last-child {
+        float: right;
+        padding-left: 1rem;
+    }
+}
+
+.form__label {
+    font-family: var(--ff-sans);
+    font-size: var(--type-small);
+    font-weight: 700;
+    margin-bottom: .75rem;
+    display: block;
+    color: var(--color-grey);
+}
+
 .form input, .form textarea {
     font-family: 'Signika Negative', Helvetica, Arial, sans-serif;
     font-size: 1rem;
@@ -2268,7 +2311,6 @@ hr {
     text-decoration: none!important;
     padding:10px;
     border:1px solid;
-    border-radius:8px;
     transition: all .2s ease-in-out;
 }
 
@@ -2313,6 +2355,8 @@ hr {
     background: rgba(253, 109, 109, 1);
     color:#ffffff;
 }
+
+
 
 /**
 * Project specific external plugins

@@ -174,7 +174,7 @@ gulp.task('dist', ['vendors', 'assets', 'styles-dist', 'scripts-dist'], function
  */
 gulp.task('serve', ['watch'], g.serve({
     port: 3000,
-    root: ['./.tmp', './.tmp/src/app', './src/app', './bower_components', './src', './src/themes/' + theme],
+    root: ['./.tmp', './.tmp/src/app', './src/app', './bower_components', './src', './src/themes/' + theme, './src/themes/'+ theme + 'templates/assets'],
     middleware: function (req, res, next) {
         if (req.url.indexOf('.') === -1) {
             req.url = '/index.html';
@@ -286,6 +286,7 @@ function templateFiles(opt) {
     return gulp.src('./src/themes/' + theme + '/templates/**/*.html', opt)
     .pipe(opt && opt.min ? g.htmlmin(htmlminOpts) : noop());
 }
+
 
 /**
  * Build AngularJS templates/partials
