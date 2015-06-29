@@ -261,38 +261,53 @@
             <div class="container--primary">
                 <h2 class="section__heading center">Hook with us</h2>
                     <div class="section__form">
-                        <form>
+                        <form novalidate name="form">
                             <div class="flex">
                                 <div class="form-wrapper form">
-                                    <input name="fname" autocomplete="given-name" type="text" reqired>
-                                    <span class="highlight"></span>
-                                    <span class="bar"></span>
-                                    <label>Name</label>
+                                    <input name="fname" ng-model="first.name" autocomplete="given-name" type="text" required>                  
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <div ng-show="form.$submitted || form.fname.$dirty">                      
+                                            <br />
+                                            <span class="alert" ng-show="form.fname.$error.required"> First name field is required. </span>
+                                        </div>
+                                        
+                                        <label>Name</label>               
                                 </div>
                                 <div class="form-wrapper form">
-                                    <input name="lname" x-autocompletetype="family-name" type="text" reqired>
+                                    <input name="lname" ng-model="last.name" x-autocompletetype="family-name" type="text" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
+                                    <div ng-show="form.$submitted || form.lname.$dirty">                      
+                                        <br />
+                                        <span class="alert" ng-show="form.lname.$error.required"> Last name field is required. </span>
+                                    </div>
                                     <label>Last name</label>
                                 </div>
                                  <div class="form-wrapper form">
-                                    <input name="email" type="text" x-autocompletetype="email" reqired>
+                                    <input name="email" ng-model="email" type="email" x-autocompletetype="email" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
+                                    <div ng-show="form.$submitted || form.email.$dirty">
+                                        <br />
+                                        <span class="alert" ng-show="form.email.$error.required"> Email field is required. </span>
+                                    </div>                                    
                                     <label>Email</label>
                                 </div>
                             </div>
-                        </form>
-                        <form>
                             <div class="flex spc--top--med">
                                 <div class="form-wrapper form">
-                                    <textarea name="Your message" id="" rows="5"></textarea>
+                                    <textarea ng-model="message" name="message" rows="5" required></textarea>
                                     <span class="bar"></span>
+                                    <div ng-show="form.$submitted || form.message.$dirty">
+                                        <br />
+                                        <span class="alert" ng-show="form.message.$error.required"> Your message field is required. </span>
+                                    </div>
                                     <label>Your message</label>
                                 </div>
                             </div>
                             <div class="spc--bottom--lrg">
-                                <a href="#" class="btn btn--primary btn--med push">Send message</a>
+                                <button type="submit" class="btn btn--primary btn--med push">Send message</button>
                             </div>
                         </form>
                     </div>
