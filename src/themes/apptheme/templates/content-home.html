@@ -291,6 +291,7 @@
                                     <div ng-show="form.$submitted || form.email.$dirty">
                                         <br />
                                         <span class="alert" ng-show="form.email.$error.required"> Email field is required. </span>
+                                        <span class="alert" ng-show="form.email.$error.email"> Please type in correct email address. </span>
                                     </div>                                    
                                     <label>Email</label>
                                 </div>
@@ -301,7 +302,7 @@
                                     <span class="bar"></span>
                                     <div ng-show="form.$submitted || form.message.$dirty">
                                         <br />
-                                        <span class="alert" ng-show="form.message.$error.required"> Your message field is required. </span>
+                                        <span class="alert" ng-show="form.message.$error.required"> Message field is required. </span>
                                     </div>
                                     <label>Your message</label>
                                 </div>

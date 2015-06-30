@@ -142,19 +142,21 @@ gulp.task('build-all', ['styles', 'templates'], index);
 function index() {
     var opt = { read: false };
     return gulp.src('./src/app/index.html')
-      .pipe(g.inject(gulp.src(bowerFiles(), opt), { addRootSlash: false, ignorePath: 'bower_components', starttag: '<!-- inject:vendor:{{ext}} -->' }))
-      .pipe(g.inject(es.merge(appFiles(), cssFiles(opt)), { addRootSlash: false, ignorePath: ['.tmp', 'src/app',  'src/themes/' + theme] }))      
+      .pipe(g.inject(gulp.src(bowerFiles(),opt), { addRootSlash: false, ignorePath: 'bower_components', starttag: '<!-- inject:vendor:{{ext}} -->' }))
+      .pipe(g.inject(es.merge(appFiles(), cssFiles(opt)), { addRootSlash: false, ignorePath: ['.tmp', 'src/app', 'src/themes/' + theme] }))
+.pipe(g.inject(gulp.src('./src/themes/'+theme+'/assets/js/*.js'), { addRootSlash: false, ignorePath: 'src/themes/'+theme, starttag: '<!-- injectjs -->' }))
       .pipe(gulp.dest('./src/app/'))
       .pipe(g.embedlr())
       .pipe(gulp.dest('./.tmp/'))
       .pipe(livereload());
+
 }
 
 /**
  * Assets
  */
 gulp.task('assets', function () {
-    return gulp.src(['./src/assets/**', './src/themes/' + theme + '/assets/**'])
+    return gulp.src(['./src/assets/**', './src/themes/' + theme + '/assets/js/*<div class="js"></div>'])
     .pipe(gulp.dest('./dist/assets'));
 });
 
@@ -174,7 +176,7 @@ gulp.task('dist', ['vendors', 'assets', 'styles-dist', 'scripts-dist'], function
  */
 gulp.task('serve', ['watch'], g.serve({
     port: 3000,
-    root: ['./.tmp', './.tmp/src/app', './src/app', './bower_components', './src', './src/themes/' + theme, './src/themes/'+ theme + 'templates/assets'],
+    root: ['./.tmp', './.tmp/src/app', './src/app', './bower_components', './src', './src/themes/' + theme, './src/themes/'+ theme + 'templates/assets/'],
     middleware: function (req, res, next) {
         if (req.url.indexOf('.') === -1) {
             req.url = '/index.html';
