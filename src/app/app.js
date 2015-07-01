@@ -1,5 +1,5 @@
 angular.module('baasic.blog', [
-    'baasic.article'
+    'baasic.article', 'headroom'
 ]);
 
 angular.module('myBlog', [
@@ -83,6 +83,21 @@ angular.module('myBlog', [
                 url: 'blog-search?{search,tags}',
                 templateUrl: 'templates/blog/blog-search-results.html',
                 controller: 'BlogSearchResultsCtrl'
+            })
+            .state('main.new-plan', {
+                url: 'new-plan',
+                templateUrl: 'templates/plan/new-plan.html',
+                controller: 'NewPlanCtrl'
+            })
+            .state('master.main.plan-detail', {
+                url: 'plan',
+                templateUrl: 'templates/plan/plan-detail.html',
+                controller: 'PlanCtrl'
+            })
+            .state('main.plan-edit', {
+                url: 'plan/edit/{plan.name}',
+                templateUrl: 'templates/plan/plan-edit.html',
+                controller: 'PlanEditCtrl'
             })
             .state('404', {
                 templateUrl: 'templates/404.html'

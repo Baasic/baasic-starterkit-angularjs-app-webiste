@@ -1,16 +1,11 @@
-//when all other content loads, load this one
-document.addEventListener("DOMContentLoaded", function(event) { 
-  //do work
-
-
-
+window.onload = function () {
 
 // grab an element
 var myElement = document.querySelector("header");
 // construct an instance of Headroom, passing the element
 var headroom  = new Headroom(myElement);
 // initialise
-headroom.init(); 
+headroom.init();
 
 //<!-- You should bundle all SVG/Icons into one file using a build tool such as gulp and svg store -->
 (function(d, p) {
@@ -44,6 +39,4 @@ $(function() {
     }
     });
 });
-
-
-});
+ };

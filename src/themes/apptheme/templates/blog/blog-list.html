@@ -1,5 +1,5 @@
 ﻿        <div class="hero--secondary">
-            <header role="banner" class="header--fixed group headroom">
+            <header headroom role="banner" class="header--fixed group headroom">
                 <div class="container--secondary group">
                     <a href="/" ui-sref="master.main.index" rel="home">
                         <h1 class="pull">
@@ -85,8 +85,8 @@
                          </div>                 
                 </section>
                 
-                <section class="container--primary flex">
-                         <div ng-if="hasBlogs" ng-repeat="blog in blogList.item" ng-show="!$first" class="blog__article--secondary">
+                <section class="container--primary flex" ng-init="limit= 7">
+                         <div ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo: limit as posts" ng-show="!$first" class="blog__article--secondary">
                             <a ui-sref="master.blog-detail({slug:blog.slug})">
                                    <div>
                                         <img ng-src="{{blog.featured}}" >
@@ -104,18 +104,13 @@
                             
                          </div>
                                           
-                </section>               
+                </section>     
+                <div class="center">
+                    <button class="btn btn--primary" style="text-align:center;" ng-hide="posts.length === blog.length" ng-click="limit = limit +6">Show more</button>                   
+                </div>          
+                
         </main>
+                
 
 
-    <article ng-if="!hasBlogs">
-        <p>No blog posts added.</p>
-    </article>
 </div>
-<pager pager-data="pagerData" ng-show="pager.hasPrevious || pager.hasNext" class="pager">
-    <hr>
-    <a ui-sref="master.main.index({ page: pager.currentPage - 1 })" class="btn --light --med rounded" ng-show="pager.hasPrevious">Prev</a>
-    <a ui-sref="master.main.index({ page: pager.currentPage + 1 })" class="btn --light --med rounded" ng-show="pager.hasNext">Next</a>
-</pager>
-
-

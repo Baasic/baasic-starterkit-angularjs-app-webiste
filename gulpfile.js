@@ -144,7 +144,7 @@ function index() {
     return gulp.src('./src/app/index.html')
       .pipe(g.inject(gulp.src(bowerFiles(),opt), { addRootSlash: false, ignorePath: 'bower_components', starttag: '<!-- inject:vendor:{{ext}} -->' }))
       .pipe(g.inject(es.merge(appFiles(), cssFiles(opt)), { addRootSlash: false, ignorePath: ['.tmp', 'src/app', 'src/themes/' + theme] }))
-.pipe(g.inject(gulp.src('./src/themes/'+theme+'/assets/js/*.js'), { addRootSlash: false, ignorePath: 'src/themes/'+theme, starttag: '<!-- injectjs -->' }))
+      .pipe(g.inject(gulp.src('./src/themes/'+theme+'/assets/js/*.js'), { addRootSlash: false, ignorePath: 'src/themes/'+theme, starttag: '<!-- injectjs -->' }))
       .pipe(gulp.dest('./src/app/'))
       .pipe(g.embedlr())
       .pipe(gulp.dest('./.tmp/'))

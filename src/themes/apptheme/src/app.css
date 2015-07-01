@@ -2534,3 +2534,140 @@ red{
     
     margin-top:25px;
 }
+/*------------------------------------*\
+    # components.price
+\*------------------------------------*/
+
+.plan__price {
+    font-family: var(--ff-serif);
+    display: block;
+    color: var(--color-secondary);
+}
+
+.plan__price--primary {
+    font-size: 6rem;
+    margin-top: calc(var(--base-line-height)*1);
+    margin-bottom: calc(var(--base-line-height)*1);
+    line-height: calc(var(--base-line-height)*3);
+}
+
+.plan__price--secondary {
+    font-size: 3rem;
+    margin-top: calc(var(--base-line-height)*1);
+    margin-bottom: calc(var(--base-line-height)*1.5);
+    line-height: calc(var(--base-line-height)*1);
+}
+
+/* Plan details */
+.plan__detail {
+    padding-top: calc(var(--base-line-height)*.75);
+    letter-spacing: .1rem;
+    font-family: var(--ff-sans);
+    font-size: var(--type-medium);
+    line-height: calc(var(--base-line-height)*1.25);
+    padding: 0 1rem;
+}
+.plan__detail--price {
+    color: var(--color-primary);
+    font-weight: var(--type-bold);
+}
+
+.plan__terms {
+    font-family: var(--ff-sans);
+    font-size: var(--type-base);
+    padding: 0 1rem;
+}
+
+.plan__terms--item {
+    font-weight: var(--type-bold);
+    color: color(var(--ultra-light) blackness(80%));
+    text-decoration: none;
+    transition: color .5s ease-out;
+}
+
+.plan__terms--item:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/*------------------------------------*\
+    # vars.colors
+\*------------------------------------*/
+
+:root {
+    --ultra-light:      #f2f2f2;
+    --ultra-dark:       #202020;
+
+    --dark-cyan:        #007D90;
+    --bittersweet:      #FD6D6D;
+    --mindaro:          #BFEB66;
+
+
+    --color-primary:     var(--dark-cyan);
+    --color-secondary:   var(--bittersweet);
+    --color-tertiary:    var(--mindaro);
+
+    --color-warning:     red;
+    --color-success:     green;
+    --color-note:        orange;
+}
+
+/*------------------------------------*\
+    # modules.loader
+\*------------------------------------*/
+
+@keyframes spinneranimation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-dark);
+    padding-top: 6rem;
+    opacity: 1;
+    transition: all .5s;
+}
+
+.loader.ng-hide {
+    opacity: 0;
+    display: block !important;
+    visibility: hidden;
+}
+
+.loading__content {
+    text-align: center;
+}
+
+.loader__spinner {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 50%;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-left: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    animation: spinneranimation .5s infinite linear;
+    transform: translateZ(0);
+ }
+
+ .loading__message {
+    font-size: var(--type-small);
+    font-family: var(--ff-sans);;
+    text-transform: uppercase;
+    color: var(--color-grey);
+    letter-spacing: .1em;
+ }
