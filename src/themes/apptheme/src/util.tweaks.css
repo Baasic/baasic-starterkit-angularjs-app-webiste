@@ -9,3 +9,23 @@
 .btn--show__more{
     border:1px solid #FD6D6D;
 }
+
+.article--link{
+	text-decoration: none;
+}
+
+.minute{
+	text-decoration: none;
+	color:rgb(156, 156, 156);
+}
+
+.blog__article--tertiary:nth-of-type(1){
+	float:left;
+}
+
+.blog__article--tertiary:nth-of-type(1){
+	float:right;
+}
+.subscription__form{
+	width:100%;
+}

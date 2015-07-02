@@ -1,6 +1,6 @@
 {
-  "in": "app.css",
-  "out": "../css/app.css",
+  "in": "app_in.css",
+  "out": "app.css",
 
   "browsers": ["last 2 version"],
   "filters": true,

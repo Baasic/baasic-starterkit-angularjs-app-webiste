@@ -1,5 +1,5 @@
 ﻿<article class="blog__article--tertiary" ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo:2">
-    <a ui-sref="master.blog-detail({slug:blog.slug})" >
+    <a ui-sref="master.main.blog-detail({slug:blog.slug})" >
         <div>
             <img ng-src="{{blog.featured}}" alt="#">
             <h2 class="article--secondary__title">{{blog.title}}</h2>

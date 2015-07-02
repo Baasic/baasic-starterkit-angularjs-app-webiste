@@ -69,7 +69,7 @@ angular.module('myBlog', [
                 templateUrl: 'templates/blog/new-blog-post.html',
                 controller: 'NewBlogPostCtrl'
             })
-            .state('master.blog-detail', {
+            .state('master.main.blog-detail', {
                 url: 'blog/{slug}',
                 templateUrl: 'templates/blog/blog-post.html',
                 controller: 'BlogPostCtrl'

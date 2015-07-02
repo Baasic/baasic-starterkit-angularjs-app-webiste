@@ -1,6 +1,9 @@
 /*------------------------------------*\
     # components.logo
-    \*------------------------------------*/
+\*------------------------------------*/
+.logo-svg:focus {
+    outline: none;
+} 
 
 .logo-svg .bora-1,
 .logo-svg .bora-2,
@@ -8,13 +11,15 @@
       transform: translateX(0);
 }
 
-.logo-svg:hover .bora-1,
-.logo-svg:hover .bora-3 {
+.logo-svg:hover .bora-1, .logo-svg:hover .bora-3,
+.logo-svg:focus .bora-1, .logo-svg:focus .bora-3 {
     animation: anim1 ease-in-out 1s;
+    outline: none
 }
 
-.logo-svg:hover .bora-2 {
+.logo-svg:hover .bora-2, .logo-svg:focus .bora-2 {
     animation: anim2 ease-in-out 1s;
+    outline: none;
 }
 
 @keyframes anim1 {
