@@ -14,8 +14,7 @@
                planService.get($scope.planId, {})
                 .success(function(data) {
                     $scope.plan = data;
-                }); 
-               
+                });
             }]
         };
     });

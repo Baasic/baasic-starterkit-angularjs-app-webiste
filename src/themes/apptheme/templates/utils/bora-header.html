@@ -48,14 +48,20 @@
                     </span>
                     
                     <nav role="navigation" ng-class="{'header__nav':isActive, 'header__nav close':!isActive}">
+ 
+                    <div >
+                        <blog-menu ng-if="isBlog"></blog-menu>
+                    </div>
 
-                        <ul class="nav group">
-                            <li class="nav__item"><a href="#features" class="nav__link nav__link--primary">Features</a></li>
-                            <li class="nav__item"><a href="#video" class="nav__link nav__link--primary">Watch the video</a></li>
-                            <li class="nav__item"><a href="#plan" class="nav__link nav__link--primary">Plan</a></li>
-                            <li class="nav__item"><a href="/" ui-sref="master.main.blog" rel="blog" class="nav__link nav__link--primary" rel="blog">Blog</a></li>
-                            <li class="nav__item"><a href="#contact" class="nav__link nav__link--primary">Contact</a></li>
-                        </ul>
+                    <div >
+                        <app-menu ng-if="!isBlog"></app-menu>
+                    </div>
+                        
+                        
+
+                        
+
+
                     </nav>
 
 

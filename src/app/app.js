@@ -62,7 +62,10 @@
                 })
                 .state('master.main.blog', {
                     url: 'blog',
-                    templateUrl: 'templates/blog/blog-home.html'
+                    templateUrl: 'templates/blog/blog-home.html',
+                    data:{
+                        isBlog:'true'
+                    }
                 })         
                 .state('login', {
                     url: '/login',
@@ -72,22 +75,32 @@
                 .state('master.new-blog-post', {
                     url: 'new-blog-post',
                     templateUrl: 'templates/blog/new-blog-post.html',
-                    controller: 'NewBlogPostCtrl'
+                    controller: 'NewBlogPostCtrl',
+                    
                 })
                 .state('master.main.blog-detail', {
                     url: 'blog/{slug}',
                     templateUrl: 'templates/blog/blog-post.html',
-                    controller: 'BlogPostCtrl'
+                    controller: 'BlogPostCtrl',
+                    data:{
+                        isBlog:true
+                    }
                 })
                 .state('master.blog-edit', {
                     url: 'blog-post/edit/{slug}',
                     templateUrl: 'templates/blog/blog-post-edit.html',
-                    controller: 'BlogPostEditCtrl'
+                    controller: 'BlogPostEditCtrl',
+                    data:{
+                        
+                    }
                 })
                 .state('master.main.blog-search', {
                     url: 'blog-search?{search,tags}',
                     templateUrl: 'templates/blog/blog-search-results.html',
-                    controller: 'BlogSearchResultsCtrl'
+                    controller: 'BlogSearchResultsCtrl',
+                    data:{
+                        isBlog:true
+                    }
                 })
                 .state('main.new-plan', {
                     url: 'new-plan',
