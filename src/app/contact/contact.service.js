@@ -1,6 +1,6 @@
 ﻿(function(angular) {
     'use strict';    
-    angular.module('myBlog')
+    angular.module('myMobileApp')
         .service('contactService', ['baasicApiHttp', 'baasicDynamicResourceService',
             function baasicBlogService(baasicApiHttp, dynamincService) {
                 var resourceName = 'contacts';

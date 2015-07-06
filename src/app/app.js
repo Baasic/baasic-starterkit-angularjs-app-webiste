@@ -8,7 +8,7 @@
         'baasic.article', 'headroom'
     ]);
     
-    angular.module('myBlog', [
+    angular.module('myMobileApp', [
       'ui.router',
       'btford.markdown',
       'ngTagsInput',
