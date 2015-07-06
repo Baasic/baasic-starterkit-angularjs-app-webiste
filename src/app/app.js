@@ -58,13 +58,13 @@
                 })
                 .state('master.main.index', {
                     url: '?{page}',
-                    templateUrl: 'templates/content-home.html'
+                    templateUrl: 'templates/content-home.html',
                 })
                 .state('master.main.blog', {
                     url: 'blog',
                     templateUrl: 'templates/blog/blog-home.html',
                     data:{
-                        isBlog:'true'
+                        isBlog:true
                     }
                 })         
                 .state('login', {
@@ -90,9 +90,7 @@
                     url: 'blog-post/edit/{slug}',
                     templateUrl: 'templates/blog/blog-post-edit.html',
                     controller: 'BlogPostEditCtrl',
-                    data:{
-                        
-                    }
+                   
                 })
                 .state('master.main.blog-search', {
                     url: 'blog-search?{search,tags}',
@@ -102,7 +100,13 @@
                         isBlog:true
                     }
                 })
-                .state('main.new-plan', {
+                .state('master.main.plans', {
+                    url: 'plans',
+                    templateUrl: 'templates/plan/plans.html',
+                    //controller: 'PlanListCrtl',
+                   
+                })
+                .state('master.main.new-plan', {
                     url: 'new-plan',
                     templateUrl: 'templates/plan/new-plan.html',
                     controller: 'NewPlanCtrl'
@@ -112,7 +116,7 @@
                     templateUrl: 'templates/plan/plan-detail.html',
                     controller: 'PlanCtrl'
                 })
-                .state('main.plan-edit', {
+                .state('master.main.plan-edit', {
                     url: 'plan/edit/{plan.name}',
                     templateUrl: 'templates/plan/plan-edit.html',
                     controller: 'PlanEditCtrl'

@@ -1,0 +1,46 @@
+<div class="hero--product">
+    <bora-header></bora-header>
+</div>
+
+	<section class="container--primary" ng-controller="PlanFilterSorterCtrl" >
+
+		<div class="plan__filter">
+			<input type="text" class="plan__filter" name="planFilter" ng-model="plan.filter" placeholder="Type for filtering plans">
+		</div>
+	
+	
+		<table class="plan__table full-width">
+			<tr>
+				<th><a href="" ng-click="sort('id')">ID</a></th>
+				<th><a href="" ng-click="sort('name')">Name</a></th>
+				<th><a href="" ng-click="sort('time')">Subscription Time</a></th>
+				<th><a href="" ng-click="sort('description')">Description</a></th>
+				<th><a href="" ng-click="sort('price')">Price</a></th>
+				<th>Actions</th>
+			</tr>
+
+			<tr ng-repeat="plan in plans | orderBy:sortKey:reverse | filter: plan.filter">
+				<td>{{ plan.id }}</td>
+				<td>{{ plan.name }}</td>
+				<td>{{ plan.time }}</td>
+				<td>{{ plan.description }}</td>
+				<td>{{ plan.price | currency }}</td>
+				<td>
+					<p>
+						<a href="./plan/edit/{{plan.id}}">Edit</a> | 
+						<a href="./plan/{{plan.id}}">View</a> | 
+						<a ng-click="delete(plan.id)">Delete</a>
+					</p>
+				</td>
+
+			</tr>
+
+		</table>
+
+		<pager pager-data="pagerData" ng-show="pager.hasPrevious || pager.hasNext" class="pager">
+   			<hr>
+    		<a ui-sref="master.main.plans({ page: pager.currentPage - 1 })" class="btn --light --med rounded" ng-show="pager.hasPrevious">Prev</a>
+    		<a ui-sref="master.main.plans({ page: pager.currentPage + 1 })" class="btn --light --med rounded" ng-show="pager.hasNext">Next</a>
+		</pager>
+	
+	</section>

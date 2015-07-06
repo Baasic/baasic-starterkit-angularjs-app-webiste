@@ -1,6 +1,6 @@
 ﻿(function(angular) {
     'use strict';
-    angular.module('baasic.blog')
+    angular.module('baasic.mobileApp')
         .controller('MenuController', ['$scope','$state', 
           function($scope, $state) {
      		   

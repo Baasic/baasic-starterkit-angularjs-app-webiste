@@ -1,6 +1,6 @@
 ﻿(function(angular) {
     'use strict';
-    angular.module('baasic.blog')
+    angular.module('baasic.mobileApp')
         .directive('appMenu', function() {        	
          return {
             restrict: 'E',
