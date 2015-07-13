@@ -2,7 +2,7 @@
     <bora-header></bora-header>
 </div>
 
-	<section class="container--primary" ng-controller="PlanFilterSorterCtrl" >
+	<section class="container--primary">
 
 		<div class="plan__filter">
 			<input type="text" class="plan__filter" name="planFilter" ng-model="plan.filter" placeholder="Type for filtering plans">
@@ -11,19 +11,21 @@
 	
 		<table class="plan__table full-width">
 			<tr>
-				<th><a href="" ng-click="sort('id')">ID</a></th>
 				<th><a href="" ng-click="sort('name')">Name</a></th>
-				<th><a href="" ng-click="sort('time')">Subscription Time</a></th>
-				<th><a href="" ng-click="sort('description')">Description</a></th>
+				<th><a href="" ng-click="sort('period')">Subscription Time</a></th>
+				<th><a href="" ng-click="sort('sync')">Synchronization</a></th>
+				<th><a href="" ng-click="sort('navAccessLevel')">Navigator Access level</a></th>
+				<th><a href="" ng-click="sort('tickets')">Support Tickets</a></th>
 				<th><a href="" ng-click="sort('price')">Price</a></th>
 				<th>Actions</th>
 			</tr>
 
-			<tr ng-repeat="plan in plans | orderBy:sortKey:reverse | filter: plan.filter">
-				<td>{{ plan.id }}</td>
+			<tr ng-repeat="plan in plans | filter: plan.filter">
 				<td>{{ plan.name }}</td>
-				<td>{{ plan.time }}</td>
-				<td>{{ plan.description }}</td>
+				<td>{{ plan.period }}</td>
+				<td>{{ plan.sync }}</td>
+				<td>{{ plan.navAccessLevel }}</td>
+				<td>{{ plan.tickets }}</td>
 				<td>{{ plan.price | currency }}</td>
 				<td>
 					<p>
@@ -37,10 +39,10 @@
 
 		</table>
 
-		<pager pager-data="pagerData" ng-show="pager.hasPrevious || pager.hasNext" class="pager">
+		<pager pager-data="pagerData" plan ng-show="pager.hasPrevious || pager.hasNext" class="pager">
+    		<a ui-sref="master.main.plans({ page: pager.currentPage - 1 })" class="btn" ng-show="pager.hasPrevious">Prev</a>
    			<hr>
-    		<a ui-sref="master.main.plans({ page: pager.currentPage - 1 })" class="btn --light --med rounded" ng-show="pager.hasPrevious">Prev</a>
-    		<a ui-sref="master.main.plans({ page: pager.currentPage + 1 })" class="btn --light --med rounded" ng-show="pager.hasNext">Next</a>
+    		<a ui-sref="master.main.plans({ page: pager.currentPage + 1 })" class="btn" ng-show="pager.hasNext">Next</a>
 		</pager>
 	
 	</section>

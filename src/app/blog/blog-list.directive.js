@@ -1,4 +1,4 @@
-﻿angular.module('baasic.blog')
+﻿angular.module('baasic.mobileApp')
     .directive('baasicBlogList', ['$parse',
         function baasicBlogList($parse) {
             'use strict';
@@ -13,7 +13,7 @@
                         pageSizeFn = $parse(attrs.pageSize);
                     } else {
                         pageSizeFn = function () { return 10; };
-                    }
+                    } //blogova po stranici
                 },
                 controller: ['$scope', '$stateParams', 'baasicBlogService',
                     function baasicBlogListCtrl($scope, $stateParams, blogService) {

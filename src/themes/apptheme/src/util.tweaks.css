@@ -93,3 +93,11 @@
 	margin:15px;
 	display: block;
 }	
+
+
+/*form validation*/
+.alert{
+	font-family: 'Signika Negative', Helvetica,Arial,sans-serif;
+	color:#FD6D6D;
+	font-size:.8em;
+}

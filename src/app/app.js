@@ -54,11 +54,13 @@
                 .state('master.main', {
                     abstract: true,
                     templateUrl: 'templates/main.html',
-                    controller: 'MainCtrl'
+                    controller: 'MainCtrl',
+
                 })
                 .state('master.main.index', {
                     url: '?{page}',
                     templateUrl: 'templates/content-home.html',
+
                 })
                 .state('master.main.blog', {
                     url: 'blog',
@@ -101,7 +103,7 @@
                     }
                 })
                 .state('master.main.plans', {
-                    url: 'plans',
+                    url: 'plans?{page}',
                     templateUrl: 'templates/plan/plans.html',
                     //controller: 'PlanListCrtl',
                    
@@ -116,8 +118,8 @@
                     templateUrl: 'templates/plan/plan-detail.html',
                     controller: 'PlanCtrl'
                 })
-                .state('master.main.plan-edit', {
-                    url: 'plan/edit/{plan.name}',
+                .state('master.plan-edit', {
+                    url: 'plan/edit/{planId}',
                     templateUrl: 'templates/plan/plan-edit.html',
                     controller: 'PlanEditCtrl'
                 })

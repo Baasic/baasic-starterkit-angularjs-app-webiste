@@ -1,4 +1,4 @@
-﻿angular.module('baasic.blog')
+﻿angular.module('baasic.mobileApp')
     .directive('baasicBlogSmallList', ['$parse',
         function baasicBlogSmallList($parse) {
             'use strict';

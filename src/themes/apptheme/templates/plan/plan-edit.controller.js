@@ -1,6 +1,6 @@
-﻿angular.module('baasic.mobileApp')
-    .controller('BlogPostEditCtrl', ['$scope', '$state', 'baasicBlogService',
-        function BlogPostEditCtrl($scope, $state, blogService) {
+angular.module('baasic.mobileApp')
+    .controller('PlanEditCtrl', ['$scope', '$state', 'planService',
+        function PlanPostEditCtrl($scope, $state, planService) {
             'use strict';
 
             if (!$scope.$root.user.isAuthenticated) {
@@ -9,21 +9,21 @@
 
             $scope.$root.loader.suspend();
 
-            blogService.get($state.params.slug, {
+            planService.get($state.params.slug, {
                 embed: 'tags'
             })
-                .success(function (blog) {
-                    $scope.blog = blog;
+                .success(function (plan) {
+                    $scope.plan = plan;
                 })
                 .error(function (error) {
-                    conosle.log(error); // jshint ignore: line
+                    console.log(error); // jshint ignore: line
                 })
                 .finally(function () {
                     $scope.$root.loader.resume();
                 });
 
             $scope.backToDetails = function backToDetails() {
-                $state.go('master.blog-detail', { slug: $scope.blog.slug });
+                $state.go('master.main.plans', { id: plan.id });
             };
         }
     ]);

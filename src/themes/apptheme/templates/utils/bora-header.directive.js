@@ -8,7 +8,7 @@
             scope: true,
             controller: ['$scope','$state', 
 		          function($scope, $state) {
-		     		   $scope.isBlog = $state.$current.data;
+		     		   $scope.isBlog = $state.current.data;
 		  	}]
 
         };

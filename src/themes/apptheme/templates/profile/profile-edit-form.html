@@ -1,0 +1,55 @@
+<div class="section__form">
+    <form name="profile" novalidate class="form">
+        <h2>Change User Information</h2>
+        <div class="form__field form-wrapper">
+            <input type="text" name="username" id="fieldUsername" ng-model="profile.username" class="input input--text" required />
+            <label class="form__label" for="fieldUsername">Change username</label>
+            <p class="alert alert--warning" ng-show="(profile.$submitted || profile.username.$touched) && profile.username.$error.required">username is required.</p>
+        </div>
+
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="firstName" id="fieldFirstName" ng-model="profile.firstName" class="input input--text" />
+            <label class="form__label" for="fieldFirstName">Change first name</label>
+            <p class="alert alert--warning" ng-show="(profile.$submitted || profile.firstName.$touched) && profile.firstName.$error.required">First name is required.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="lastName" id="fieldLastName" ng-model="profile.lastName" class="input input--text" />
+            <label class="form__label" for="fieldLastName">Change last name</label>
+            <p class="alert alert--warning" ng-show="(profile.$submitted || profile.lastName.$touched) && profile.lastName.$error.required">Last name is required.</p>
+        </div>
+        <h2>Change Password</h2>
+        <div class="form__field form-wrapper">
+            <input type="password" name="password" id="fieldPassword" ng-model="profile.password" class="input input--text" />
+            <label class="form__label" for="fieldPassword">Change password</label>
+            <p class="alert alert--warning" ng-show="(profile.$submitted || profile.password.$touched) && profile.password.$error.required">Password is required.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="repeatPassword" name="repeatPassword" id="fieldRepeatPassword" ng-model="profile.repeatPassword" class="input input--text" />
+            <label class="form__label" for="fieldRepeatPassword">Repeat new password</label>
+            <p class="alert alert--warning" ng-show="(profile.$submitted || profile.repeatPassword.$touched) && profile.repeatPassword.$error.required">Password is required.</p>
+        </div>
+
+        <div class="form__field spc--bottom--med form-wrapper">     
+            
+            
+        </div>
+      
+        <div class="form__field form-wrapper">
+            <button type="submit" class="control__link control__colors" ng-click="savePlan()">Save</button>
+            <button type="button" class="control__link control__colors" ng-click="cancelEdit()">Cancel</button>
+        </div>
+        <div ng-show="error">
+            {{ error }}
+        </div>
+    </form>
+
+    <h2>Change Avatar</h2>
+    <div>
+        <img src="" alt="user avatar">
+        <a href="">Drop your photo here or click to upload</a>
+    </div>
+    
+    </div>

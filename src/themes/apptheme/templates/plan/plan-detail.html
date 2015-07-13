@@ -9,16 +9,17 @@
                 <section class="group spc--top--lrg spc--bottom--lrg section__form">
                     <div class="pull">
                         <p class="plan__detail">Your order:</p>
-                        <p class="plan__detail plan__detail--price">Maestral</p>
+                        <p class="plan__detail plan__detail--price">{{plan.name}}</p>
                     </div>
                     
                     <div class="push">
                         <p class="plan__detail">Total:</p>
-                         <p class="plan__detail plan__detail--price">$22</p>
+                         <p class="plan__detail plan__detail--price">{{plan.price}}</p>
                     </div>
+
+                    <p>{{planId}}</p>
                 </section>
                     
-
                 <section>
                 <form novalidate name="form" class="subscription__form">
                     <div class="section__form group">
@@ -28,7 +29,7 @@
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <div ng-show="form.$submitted || form.fname.$dirty">                      
-                                            <br />
+                                            
                                             <span class="alert" ng-show="form.fname.$error.required"> First name field is required. </span>
                                         </div>
                                         
@@ -41,7 +42,7 @@
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <div ng-show="form.$submitted || form.lname.$dirty">                
-                                    <br />
+                                    
                                     <span class="alert" ng-show="form.lname.$error.required"> Last name field is required. </span>
                                 </div>
                                 <label>Last name</label>
@@ -53,7 +54,7 @@
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <div ng-show="form.$submitted || form.email.$dirty">
-                                        <br />
+                                        
                                         <span class="alert" ng-show="form.email.$error.required"> Email field is required. </span>
                                         <span class="alert" ng-show="form.email.$error.email"> Please type in correct email address. </span>
                                     </div>                                    
@@ -63,23 +64,23 @@
 
                         <div class="flex spc--top--med">
                             <div class="form-wrapper form">
-                                <input name="password" autocomplete="password" type="password" ng-model="password" required>
+                                <input name="password" type="password" ng-model="password" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 
                                 <div ng-show="form.$submitted || form.password.$dirty">
-                                        <br />
+                                        
                                         <span class="alert" ng-show="form.password.$error.required"> Password field is required. </span>
                                 </div>
 
                                 <label>Password</label>
                             </div>
                             <div class="form-wrapper form">
-                                <input name="passConf" ng-model="password.confirm" type="text" required>
+                                <input name="confirmpass" ng-model="confirmpass" type="password" required>
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <div ng-show="form.$submitted || form.passConf.$dirty">
-                                        <br />
+                                        
                                         <span class="alert" ng-show="form.passConf.$error.required"> Repeat password field is required. </span>
                                 </div>
                                 <label>Repeat Password</label>
@@ -107,6 +108,8 @@
                 </div>
             </section>
         </main>
+
+
 
 
 

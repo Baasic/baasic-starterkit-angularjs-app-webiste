@@ -1,4 +1,4 @@
-﻿angular.module('baasic.blog')
+﻿angular.module('baasic.mobileApp')
     .controller('NewBlogPostCtrl', ['$scope', '$state',
         function NewBlogPostCtrl($scope, $state) {
             'use strict';

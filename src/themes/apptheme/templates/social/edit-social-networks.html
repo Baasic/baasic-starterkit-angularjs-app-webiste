@@ -1,0 +1,89 @@
+<div class="section__form">
+    <form name="social" novalidate class="form">
+        <h2>Edit Social Connections</h2>
+        <div class="form__field form-wrapper">
+            <input type="text" name="pinterest" id="pinterest" ng-model="social.pinterest" class="input input--text" required />
+            <label class="form__label" for="pinterest">Pinterest URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.pinterest.$touched)">Enter Pinterest URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="dribbble" id="dribbble" ng-model="social.dribbble" class="input input--text" required />
+            <label class="form__label" for="dribbble">Dribbble URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.dribbble.$touched)">Enter Dribbble URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="facebook" id="facebook" ng-model="social.facebook" class="input input--text" required />
+            <label class="form__label" for="facebook">Facebook URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.facebook.$touched)">Enter Facebook URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="vimeo" id="vimeo" ng-model="social.vimeo" class="input input--text" required />
+            <label class="form__label" for="vimeo">Vimeo URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.vimeo.$touched)">Enter Vimeo URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="tumblr" id="tumblr" ng-model="social.tumblr" class="input input--text" required />
+            <label class="form__label" for="tumblr">Tumblr URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.tumblr.$touched)">Enter Tumblr URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="google_plus" id="google_plus" ng-model="social.google_plus" class="input input--text" required />
+            <label class="form__label" for="google_plus">Google+ URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.google_plus.$touched)">Enter Google+ URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="wordpress" id="wordpress" ng-model="social.wordpress" class="input input--text" required />
+            <label class="form__label" for="wordpress">Wordpress URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.wordpress.$touched)">Enter Wordpress URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="instagram" id="instagram" ng-model="social.instagram" class="input input--text" required />
+            <label class="form__label" for="instagram">Instagram URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.instagram.$touched)">Enter Instagram URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="stumbleupon" id="stumbleupon" ng-model="social.stumbleupon" class="input input--text" required />
+            <label class="form__label" for="stumbleupon">StumbleUpon URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.stumbleupon.$touched)">Enter StumbleUpon URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="linkedin" id="linkedin" ng-model="social.linkedin" class="input input--text" required />
+            <label class="form__label" for="linkedin">LinkedIn URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.linkedin.$touched)">Enter LinkedIn URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="twitter" id="twitter" ng-model="social.twitter" class="input input--text" required />
+            <label class="form__label" for="twitter">Twitter URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.twitter.$touched)">Enter Twitter URL.</p>
+        </div>
+
+        <div class="form__field form-wrapper">
+            <input type="text" name="github" id="github" ng-model="social.github" class="input input--text" required />
+            <label class="form__label" for="github">GitHub URL</label>
+            <p class="alert alert--warning" ng-show="(social.$submitted || social.github.$touched)">Enter GitHub URL.</p>
+        </div>
+
+        <div class="form__field spc--bottom--med form-wrapper">     
+            
+            
+        </div>
+      
+        <div class="form__field form-wrapper">
+            <button type="submit" class="control__link control__colors" ng-click="savePlan()">Save</button>
+            <button type="button" class="control__link control__colors" ng-click="cancelEdit()">Cancel</button>
+        </div>
+        <div ng-show="error">
+            {{ error }}
+        </div>
+    </form>    
+    </div>

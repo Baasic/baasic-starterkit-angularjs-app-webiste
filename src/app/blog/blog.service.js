@@ -1,4 +1,4 @@
-﻿angular.module('baasic.blog')
+﻿angular.module('baasic.mobileApp')
     .service('baasicBlogService', ['baasicApiHttp', 'baasicArticleService', 'baasicArticleTagsService',
         function baasicBlogService(baasicApiHttp, baasicArticleService, baasicArticleTagsService) {
             'use strict';
