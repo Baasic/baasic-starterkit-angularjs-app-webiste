@@ -54,12 +54,12 @@
                 .state('master.main', {
                     abstract: true,
                     templateUrl: 'templates/main.html',
-                    controller: 'MainCtrl',
+                    controller: 'MainCtrl'
 
                 })
                 .state('master.main.index', {
                     url: '?{page}',
-                    templateUrl: 'templates/content-home.html',
+                    templateUrl: 'templates/content-home.html'
 
                 })
                 .state('master.main.blog', {
@@ -77,7 +77,7 @@
                 .state('master.new-blog-post', {
                     url: 'new-blog-post',
                     templateUrl: 'templates/blog/new-blog-post.html',
-                    controller: 'NewBlogPostCtrl',
+                    controller: 'NewBlogPostCtrl'
                     
                 })
                 .state('master.main.blog-detail', {
@@ -91,7 +91,7 @@
                 .state('master.blog-edit', {
                     url: 'blog-post/edit/{slug}',
                     templateUrl: 'templates/blog/blog-post-edit.html',
-                    controller: 'BlogPostEditCtrl',
+                    controller: 'BlogPostEditCtrl'
                    
                 })
                 .state('master.main.blog-search', {
@@ -105,12 +105,12 @@
                 .state('master.main.plans', {
                     url: 'plans?{page}',
                     templateUrl: 'templates/plan/plans.html',
-                    //controller: 'PlanListCrtl',
+                    //controller: 'PlanListCrtl'
                    
                 })
                 .state('master.main.new-plan', {
                     url: 'new-plan',
-                    templateUrl: 'templates/plan/new-plan.html',
+                    templateUrl: 'templates/plan/plan-edit.html',
                     controller: 'NewPlanCtrl'
                 })
                 .state('master.main.plan-detail', {
@@ -123,6 +123,22 @@
                     templateUrl: 'templates/plan/plan-edit.html',
                     controller: 'PlanEditCtrl'
                 })
+                .state('master.profile-edit', {
+                    url: 'profile/edit',
+                    templateUrl: 'templates/profile/profile-edit-form.html',
+                    controller: 'ProfileEditCtrl'
+                })      
+                .state('contact-edit', {
+                    url: 'contact/edit',
+                    templateUrl: 'templates/contact/contact-edit-form.html',
+                    controller: 'ContactEditCtrl'
+                })    
+                  .state('master.social', {
+                    url: 'edit/social-connections',
+                    templateUrl: 'templates/social/edit-social-networks.html',
+                    controller: 'SocialEditCtrl'
+                })          
+                
                 .state('404', {
                     templateUrl: 'templates/404.html'
                 });

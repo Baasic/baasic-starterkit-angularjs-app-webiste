@@ -2885,3 +2885,37 @@ hr {
 	color:#FD6D6D;
 	font-size:.8em;
 }
+
+
+/*add/edit plan*/
+.plan__edit__section{
+	margin-bottom: 2rem;
+}
+
+.add__edit__title{
+	margin-top: 2rem;
+}
+
+.left__padding{
+	padding-left: 16px;
+}
+
+
+/* additional buttons*/
+.btn--save {
+    color: #f2f2f2;
+    background-color: /*var(--bittersweet)*/#007D90;
+}
+
+.btn--save:hover, .btn--save:active, .btn--save:focus  {
+    background-color: rgb(0, 106, 122);
+}
+
+.btn--cancel {
+    color: #f2f2f2;
+    background-color: /*var(--bittersweet)*/#B3B3B3;
+}
+
+.btn--cancel:hover, .btn--cancel:active, .btn--cancel:focus  {
+    background-color: rgb(152, 152, 152);
+}

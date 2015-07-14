@@ -12,8 +12,8 @@
 
                 planService.find({
                     page: 1,
-                    rpp: 2,
-                    sort: 'name|asc'
+                    rpp: 10,
+                    sort: 'planname|asc'
                 })
                 //make sorting and filtering with code above
 

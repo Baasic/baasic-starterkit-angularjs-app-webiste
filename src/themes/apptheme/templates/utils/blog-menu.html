@@ -2,5 +2,6 @@
     <li class="nav__item"><a ui-sref="master.main.index" class="nav__link nav__link--primary">Home</a></li>
     <li class="nav__item"><a ui-sref="master.main.blog" rel="blog" class="nav__link nav__link--primary" rel="blog">Blog</a></li>
     <li class="nav__item"><a ui-sref="master.main.index({ '#': 'contact' })" class="nav__link nav__link--primary">Contact</a></li>
-    <li class="nav__item"><a ui-sref="master.main.index" class="nav__link nav__link--primary" ng-if="$root.user.isAuthenticated">usermenu</a></li>
+    <li class="nav__item" ng-hide="$root.user.isAuthenticated"><a ui-sref="login"" class="nav__link nav__link--primary">Login</a></li>
+    <li class="nav__item" ng-show="$root.user.isAuthenticated"><a ui-sref="master.new-blog-post" class="nav__link nav__link--primary">New Post</a></li>
 </ul>

@@ -1,9 +1,10 @@
-﻿<div class="layout__form container--primary">
-    <h1 class="spc--bottom--lrg  section__heading">{{ isNew ? 'Add New' : 'Edit' }} Plan</h1>
+﻿<div class=" container--primary">
+    
 
 <div class="section__form">
+    <h1 class="spc--bottom--lrg  section__heading add__edit__title">{{ isNew ? 'Add New' : 'Edit' }} Plan</h1>
                         <form novalidate name="planForm">
-                            <h2 class="planName">{{plan.name}}</h2>
+                            <p class="plan__detail plan__detail--price plan__edit__section">plan.name</p>
                             <div class="flex">
                                 <div class="form-wrapper form">
                                     <input name="planName" ng-model="plan.name"  type="text" required>                  
@@ -28,11 +29,11 @@
                                 </div>
                             </div>
 
-                            <h2>Content in the plan</h2>
+                            <h3 class="plan__edit__section left__padding">Content in the plan</h3>
                             <div class="flex spc--top--med">
                                 
                                 <div class="form-wrapper form">
-                                    <input name="firstField" ng-model="firstField" type="firstField" required>
+                                    <input name="firstField" ng-model="firstField" type="text" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <div ng-show="planForm.$submitted || planForm.firstField.$dirty">
@@ -43,7 +44,7 @@
                                 </div>
 
                                 <div class="form-wrapper form">
-                                    <input name="secondField" ng-model="secondField" type="secondField" required>
+                                    <input name="secondField" ng-model="secondField" type="text" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <div ng-show="planForm.$submitted || planForm.secondField.$dirty">
@@ -57,79 +58,79 @@
                             <div class="flex spc--top--med">
                                 
                                 <div class="form-wrapper form">
-                                    <input name="firstField" ng-model="firstField" type="firstField" required>
+                                    <input name="thirdField" ng-model="thirdField" type="text" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
-                                    <div ng-show="planForm.$submitted || planForm.firstField.$dirty">
+                                    <div ng-show="planForm.$submitted || planForm.thirdField.$dirty">
                                         
-                                        <span class="alert" ng-show="planForm.firstField.$error.required"> First field is required. </span>
+                                        <span class="alert" ng-show="planForm.thirdField.$error.required"> Third field is required. </span>
                                     </div>                                    
-                                    <label>First field</label>
+                                    <label>Third field</label>
                                 </div>
 
                                 <div class="form-wrapper form">
-                                    <input name="secondField" ng-model="secondField" type="secondField" required>
+                                    <input name="fourthField" ng-model="fourthField" type="text" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
-                                    <div ng-show="planForm.$submitted || planForm.secondField.$dirty">
+                                    <div ng-show="planForm.$submitted || planForm.fourthField.$dirty">
                                         
-                                        <span class="alert" ng-show="planForm.secondField.$error.required"> Second field is required. </span>
+                                        <span class="alert" ng-show="planForm.fourthField.$error.required"> Second field is required. </span>
                                     </div>                                    
-                                    <label>Second field</label>
+                                    <label>Fourth field</label>
                                 </div>
                             </div>
 
                             <div class="flex spc--top--med">
                                 
                                 <div class="form-wrapper form">
-                                    <input name="firstField" ng-model="firstField" type="firstField" required>
+                                    <input name="fifthField" ng-model="fifthField" type="text" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
-                                    <div ng-show="planForm.$submitted || planForm.firstField.$dirty">
+                                    <div ng-show="planForm.$submitted || planForm.fifthField.$dirty">
                                         
-                                        <span class="alert" ng-show="planForm.firstField.$error.required"> First field is required. </span>
+                                        <span class="alert" ng-show="planForm.fifthField.$error.required"> Fifth field is required. </span>
                                     </div>                                    
-                                    <label>First field</label>
+                                    <label>Fifth field</label>
                                 </div>
 
                                 <div class="form-wrapper form">
-                                    <input name="secondField" ng-model="secondField" type="secondField" required>
+                                    <input name="sixthField" ng-model="sixthField" type="text" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
-                                    <div ng-show="planForm.$submitted || planForm.secondField.$dirty">
+                                    <div ng-show="planForm.$submitted || planForm.sixthField.$dirty">
                                         
-                                        <span class="alert" ng-show="planForm.secondField.$error.required"> Second field is required. </span>
+                                        <span class="alert" ng-show="planForm.sixthField.$error.required"> Sixth field is required. </span>
                                     </div>                                    
-                                    <label>Second field</label>
+                                    <label>Sixth field</label>
                                 </div>
                             </div>
 
                                 
                             
-                            <h2>Plan duration</h2>
+                            <h3 class="plan__edit__section left__padding">Plan duration</h3>
 
                                 <div class="flex spc--top--med">
                                 
                                 <div class="form-wrapper form">
-                                    <input name="firstField" ng-model="firstField" type="firstField" required>
+                                    <input name="startField" ng-model="startField" type="date" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
-                                    <div ng-show="planForm.$submitted || planForm.firstField.$dirty">
+                                    <div ng-show="planForm.$submitted || planForm.startField.$dirty">
                                         
-                                        <span class="alert" ng-show="planForm.firstField.$error.required"> First field is required. </span>
+                                        <span class="alert" ng-show="planForm.startField.$error.required"> Start date is required. </span>
                                     </div>                                    
-                                    <label>First field</label>
+                                    <label>Start date</label>
                                 </div>
 
                                 <div class="form-wrapper form">
-                                    <input name="secondField" ng-model="secondField" type="secondField" required>
+                                    <input name="endField" ng-model="endField" type="date" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <div ng-show="planForm.$submitted || planForm.secondField.$dirty">
                                         
-                                        <span class="alert" ng-show="planForm.secondField.$error.required"> Second field is required. </span>
+                                        <span class="alert" ng-show="planForm.secondField.$error.required"> End date is required. </span>
                                     </div>                                    
-                                    <label>Second field</label>
+                                    <label>End date</label>
                                 </div>
                             </div>
                            
@@ -141,8 +142,8 @@
         </div>
       
         <div class="form__field form-wrapper">
-            <button type="submit" class="control__link control__colors" ng-click="savePlan()">Save</button>
-            <button type="button" class="control__link control__colors" ng-click="cancelEdit()">Cancel</button>
+            <button type="submit" class="btn btn--save btn--med push" ng-click="savePlan()">Save</button>
+            <button type="button" class="btn btn--cancel btn--med push" ng-click="cancelEdit()">Cancel</button>
         </div>
         <div ng-show="error">
             {{ error }}

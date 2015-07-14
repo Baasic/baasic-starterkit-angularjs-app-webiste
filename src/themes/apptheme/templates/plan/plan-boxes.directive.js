@@ -12,7 +12,7 @@
                planService.find({
                    page: 1,
                    rpp: 10,
-                   sort: 'name|asc'                   
+                   sort: 'planname|asc'                   
                })
                 .success(function(data) {
                     $scope.plans = data.item;

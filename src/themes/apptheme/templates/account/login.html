@@ -1,27 +1,31 @@
-﻿<div class="layout__form">
-    <h1 class="spc--bottom--lrg">Login</h1>
-    <form name="login" novalidate ng-submit="submitLogin()">
-        <div class="group">
-            <div class="form__field--half">
-                <label class="form__label" for="fieldUsername">Username</label>
-                <input class="input input--text" type="text" id="fieldUsername" name="username" ng-model="username" required placeholder="Enter your email or username" />
-                <div ng-show="login.$submitted || login.username.$touched">
-                    <p class="alert alert--warning" ng-show="login.username.$error.required">Username is required.</p>
-                </div>
+﻿<div class="section__form">
+    <form name="login" ng-submit="submitLogin()">
+        <div class="flex">
+            <div class="form-wrapper form">
+                
+                <input type="text" name="username" ng-model="username" required  />
+                 <span class="highlight"></span>
+                 <span class="bar"></span>
+                <label>Username</label>
+                <p ng-show="(login.$submitted || login.username.$touched) && login.username.$error.required">Username is required.</p>
             </div>
-            <div class="form__field--half">
-                <label class="form__label" for="fieldPassword">Password</label>
-                <input class="input input--text" type="password" id="fieldPassword" name="password" ng-model="password" required placeholder="Password" autocomplete="off" />
-                <div ng-show="login.$submitted || login.password.$touched">
-                    <p class="alert alert--warning" ng-show="login.password.$error.required">Password is required.</p>
-                </div>
+       
+            <div class="form-wrapper form">    
+                
+                <input type="password" name="password" ng-model="password" required  autocomplete="off" />
+                 <span class="highlight"></span>
+                 <span class="bar"></span>
+                <label>Password</label>
+                <p ng-show="(login.$submitted || login.password.$touched) && login.password.$error.required">Password is required.</p>
             </div>
         </div>
-        <div class="form__field">
-            <button class="btn --primary --med rounded" type="submit" ng-disabled="logging">Login</button>
+            <div class="form-wrapper form">
+                
+                <button type="submit" class="btn btn--save btn--med push">Login</button>
+                <span ng-show="loginError" class="alert">
+                    {{loginError}}
+                </span>    
+            </div>
         </div>
-        <p ng-show="loginError">
-            {{loginError}}
-        </p>
     </form>
 </div>

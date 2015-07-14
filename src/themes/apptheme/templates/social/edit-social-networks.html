@@ -1,6 +1,7 @@
-<div class="section__form">
+<div class="container--primary">
+  <div class="section__form">
     <form name="social" novalidate class="form">
-        <h2>Edit Social Connections</h2>
+        <h2 class="spc--bottom--lrg  section__heading add__edit__title">Edit Social Connections</h2>
         <div class="form__field form-wrapper">
             <input type="text" name="pinterest" id="pinterest" ng-model="social.pinterest" class="input input--text" required />
             <label class="form__label" for="pinterest">Pinterest URL</label>
@@ -79,11 +80,12 @@
         </div>
       
         <div class="form__field form-wrapper">
-            <button type="submit" class="control__link control__colors" ng-click="savePlan()">Save</button>
-            <button type="button" class="control__link control__colors" ng-click="cancelEdit()">Cancel</button>
+            <button type="submit" class="btn btn--save btn--med push" ng-click="savePlan()">Save</button>
+            <button type="button" class="btn btn--cancel btn--med push" ng-click="cancelEdit()">Cancel</button>
         </div>
         <div ng-show="error">
             {{ error }}
         </div>
     </form>    
-    </div>
+  </div>
+</div>

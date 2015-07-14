@@ -101,3 +101,37 @@
 	color:#FD6D6D;
 	font-size:.8em;
 }
+
+
+/*add/edit plan*/
+.plan__edit__section{
+	margin-bottom: 2rem;
+}
+
+.add__edit__title{
+	margin-top: 2rem;
+}
+
+.left__padding{
+	padding-left: 16px;
+}
+
+
+/* additional buttons*/
+.btn--save {
+    color: var(--ultra-light);
+    background-color: /*var(--bittersweet)*/#007D90;
+}
+
+.btn--save:hover, .btn--save:active, .btn--save:focus  {
+    background-color: color(/*var(--bittersweet)*/#007D90 shade(15%));
+}
+
+.btn--cancel {
+    color: var(--ultra-light);
+    background-color: /*var(--bittersweet)*/#B3B3B3;
+}
+
+.btn--cancel:hover, .btn--cancel:active, .btn--cancel:focus  {
+    background-color: color(/*var(--bittersweet)*/#B3B3B3 shade(15%));
+}
