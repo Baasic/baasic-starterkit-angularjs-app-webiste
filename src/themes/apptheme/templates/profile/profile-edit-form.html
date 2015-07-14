@@ -1,3 +1,4 @@
+<div class="container--primary">
 <div class="section__form">
     <form name="profile" novalidate class="form">
         <h2 class="spc--bottom--lrg  section__heading add__edit__title">Change User Information</h2>
@@ -19,7 +20,7 @@
             <label class="form__label" for="fieldLastName">Change last name</label>
             <p class="alert alert--warning" ng-show="(profile.$submitted || profile.lastName.$touched) && profile.lastName.$error.required">Last name is required.</p>
         </div>
-        <h2>Change Password</h2>
+        <h3 class="plan__edit__section left__padding">Change password</h3>
         <div class="form__field form-wrapper">
             <input type="password" name="password" id="fieldPassword" ng-model="profile.password" class="input input--text" />
             <label class="form__label" for="fieldPassword">Change password</label>
@@ -38,18 +39,21 @@
         </div>
       
         <div class="form__field form-wrapper">
-            <button type="submit" class="control__link control__colors" ng-click="savePlan()">Save</button>
-            <button type="button" class="control__link control__colors" ng-click="cancelEdit()">Cancel</button>
+            <button type="submit" class="btn btn--save btn--med push" ng-click="savePlan()">Save</button>
+            <button type="button" class="btn btn--cancel btn--med push" ng-click="cancelEdit()">Cancel</button>
         </div>
         <div ng-show="error">
             {{ error }}
         </div>
     </form>
+    <br />
 
-    <h2>Change Avatar</h2>
+    <h3 class="plan__edit__section left__padding">Change avatar</h3>
     <div>
         <img src="" alt="user avatar">
         <a href="">Drop your photo here or click to upload</a>
     </div>
     
     </div>
+    
+</div>
