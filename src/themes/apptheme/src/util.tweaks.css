@@ -135,3 +135,48 @@
 .btn--cancel:hover, .btn--cancel:active, .btn--cancel:focus  {
     background-color: color(/*var(--bittersweet)*/#B3B3B3 shade(15%));
 }
+
+/* social icons and input*/
+.social__icons{
+	width:60px;
+	height:auto;
+	float:left;
+	
+}
+
+.social__input{
+	margin-left:60px;
+}
+.header__nav{
+	margin-top:0!important;
+}
+
+.cog{
+	width:30px;
+}
+
+/**
+ * Tooltip Styles
+ */
+.hasTooltip span {
+    display: none;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.hasTooltip:hover span {
+    display: block;
+    position: absolute;
+    margin: 50px 0 0 -60px;
+    border-radius:8px;
+}
+
+.tooltip--invert span{
+	color: #FD6D6D;
+    background-color: #FFF;
+}
+
+.tooltip span{
+	color: #FFF;
+    background-color: #FD6D6D;
+}
