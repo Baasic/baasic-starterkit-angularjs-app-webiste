@@ -2,7 +2,7 @@
         <div class="container--secondary">
             <h2 class="push">
                 
-                <a ui-sref="master.social" class="hasTooltip tooltip--invert">
+                <a ui-sref="master.social" ng-show="$root.user.isAuthenticated" class="hasTooltip tooltip--invert">
                     <span>Edit Social Connections</span>
                 <img src="../../assets/img/cog-invert.svg" class="cog">
                </a>

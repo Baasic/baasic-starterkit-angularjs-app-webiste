@@ -1,6 +1,6 @@
 angular.module('baasic.mobileApp')
-    .controller('ProfileEditCtrl', ['$scope', '$state', 'profileService',
-        function ProfileDataEditCtrl($scope, $state, profileService) {
+    .controller('SocialEditCtrl', ['$scope', '$state', 'socialService',
+        function SocialEditCtrl($scope, $state, socialService) {
             'use strict';
 
             if (!$scope.$root.user.isAuthenticated) {
@@ -8,10 +8,12 @@ angular.module('baasic.mobileApp')
             }
 
             $scope.$root.loader.suspend();
-
-            profileService.get($state.params.profileId)
-                .success(function (profile) {
-                    $scope.profile = profile;
+            
+   
+            socialService.get($state.params.socialId)
+            
+                .success(function (social) {
+                    $scope.social = social;
                 })
                 .error(function (error) {
                     console.log(error); // jshint ignore: line
@@ -21,7 +23,7 @@ angular.module('baasic.mobileApp')
                 });
 
             $scope.backToDetails = function backToDetails() {
-                $state.go('master.main.profile-edit', { id: profileId });
+                $state.go('master.main.index');
             };
         }
     ]);

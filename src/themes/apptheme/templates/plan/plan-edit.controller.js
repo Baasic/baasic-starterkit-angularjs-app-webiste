@@ -1,6 +1,6 @@
 angular.module('baasic.mobileApp')
     .controller('PlanEditCtrl', ['$scope', '$state', 'planService',
-        function PlanPostEditCtrl($scope, $state, planService) {
+        function PlanEditCtrl($scope, $state, planService) {
             'use strict';
 
             if (!$scope.$root.user.isAuthenticated) {
@@ -8,10 +8,10 @@ angular.module('baasic.mobileApp')
             }
 
             $scope.$root.loader.suspend();
-
-            planService.get($state.params.slug, {
-                embed: 'tags'
-            })
+            
+   
+            planService.get($state.params.planId)
+            
                 .success(function (plan) {
                     $scope.plan = plan;
                 })
@@ -23,7 +23,7 @@ angular.module('baasic.mobileApp')
                 });
 
             $scope.backToDetails = function backToDetails() {
-                $state.go('master.main.plans', { id: plan.id });
+                $state.go('master.main.plans');
             };
         }
     ]);

@@ -13,7 +13,7 @@
                 planService.find({
                     page: 1,
                     rpp: 10,
-                    sort: 'planname|asc'
+                    sort: 'sync|asc'
                 })
                 //make sorting and filtering with code above
 

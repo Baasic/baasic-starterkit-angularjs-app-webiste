@@ -17,9 +17,7 @@
                 .success(function(data) {
                     $scope.plans = data.item;
                 }); 
-               
             }]
         };
     });
-    
 }(angular));        

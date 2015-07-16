@@ -1,6 +1,6 @@
 ﻿angular.module('baasic.mobileApp')
-    .directive('baasicPlanEdit', ['$parse',
-        function baasicPlanList($parse) {
+    .directive('baasicSocialEdit', ['$parse',
+        function baasicSocialList($parse) {
             'use strict';
 
             return {
@@ -9,9 +9,9 @@
                 compile: function () {
                     return {
                         pre: function (scope, elem, attrs) {
-                            if (attrs.plan) {
-                                scope.$parent.$watch(attrs.plan, function (newValue) {
-                                    scope.plan = newValue;
+                            if (attrs.socialConnection) {
+                                scope.$parent.$watch(attrs.socialConnection, function (newValue) {
+                                    scope.socialConnection = newValue;
                                     scope.isNew = newValue === undefined || newValue === null;
                                 });
                             }
@@ -25,22 +25,29 @@
                         }
                     };
                 },
-               controller: ['$scope', '$q', 'planService',
-                    function baasicPlanEditCtrl($scope, $q, planService) {
-                        
+                controller: ['$scope', '$q', 'socialService',
+                    function baasicSocialEditCtrl($scope, $q, socialService) {
+                        function whitespace(c) {
+                            return (
+                                (' ' === c) ||
+                                ('\n' === c) ||
+                                ('\t' === c)
+                            );
+                        }
+
                         $scope.isNew = true;
 
                         $scope.state = {};
 
-                        $scope.savePlan = function savePlan() {
-                            if ($scope.plan.$valid) {
+                        $scope.saveSocialConnection = function saveSocialConnection() {
+                            if ($scope.socialConnection.$valid) {
                                 $scope.$root.loader.suspend();
 
                                 var promise;
                                 if ($scope.isNew) {
-                                    promise = planService.create($scope.plan);
+                                    promise = socialService.create($scope.socialConnection);
                                 } else {
-                                    promise = planService.update($scope.plan);
+                                    promise = socialService.update($scope.socialConnection);
                                 }
 
                                 promise
@@ -64,10 +71,19 @@
                             }
                         };
 
-                    }
+                        $scope.getHtml = function getHtml(content) {
+                            return markdownConverter.makeHtml(content);
+                        };
+
+                        $scope.setViewMode = function setViewMode(mode) {
+                            $scope.state.conentent.viewMode = mode;
+                        };
+
+                           // return deferred.promise;
+                        }
                     
                 ],
-                templateUrl: 'templates/plan/plan-edit-form.html'
+                templateUrl: 'templates/social/edit-social-networks.html'
             };
         }
     ]

@@ -141,6 +141,7 @@
 	width:60px;
 	height:auto;
 	float:left;
+	margin-top:-20px;
 	
 }
 
@@ -179,4 +180,48 @@
 .tooltip span{
 	color: #FFF;
     background-color: #FD6D6D;
+}
+
+.editor__preview{
+	margin-top:2rem;
+}
+.editor__field{
+	max-height:500px;
+	overflow:auto;
+}
+
+.tags{
+	box-shadow:none!important;
+}
+.tags .input{
+	border-bottom:1px solid #B3B3B3;
+}
+.tags-input.tags.focused{
+	box-shadow:none;
+	border:none;
+}
+
+.tags-input.tags{
+	box-shadow:none;
+}
+
+.radio__label, .radio__label--title{
+	font-family: 'Signika Negative', Helvetica, Arial, sans-serif;
+	top:0;
+
+}
+.radio__label{
+	margin:10px 10px 20px 10px;;
+}
+
+.radio__label--title{
+	margin-bottom: 10px;
+}
+
+.radio__button__group{
+	margin:10px;
+}
+
+.form__select{
+	min-width:100%;
 }

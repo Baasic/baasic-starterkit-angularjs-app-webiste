@@ -108,7 +108,7 @@
                     //controller: 'PlanListCrtl'
                    
                 })
-                .state('master.main.new-plan', {
+                .state('master.new-plan', {
                     url: 'new-plan',
                     templateUrl: 'templates/plan/plan-edit.html',
                     controller: 'NewPlanCtrl'
@@ -116,7 +116,8 @@
                 .state('master.main.plan-detail', {
                     url: 'plan/{planId}',
                     templateUrl: 'templates/plan/plan-detail.html',
-                    controller: 'PlanCtrl'
+                    controller: 'PlanCtrl',
+                    
                 })
                 .state('master.plan-edit', {
                     url: 'plan/edit/{planId}',
@@ -135,7 +136,7 @@
                 })    
                   .state('master.social', {
                     url: 'edit/social-connections',
-                    templateUrl: 'templates/social/edit-social-networks.html',
+                    templateUrl: 'templates/social/social-edit.html',
                     controller: 'SocialEditCtrl'
                 })          
                 
