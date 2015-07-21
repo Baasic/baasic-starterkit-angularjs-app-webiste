@@ -42,8 +42,7 @@
                     planService.remove($scope.plans[plan])
                         .success(function () {
                             $scope.plans.splice(plan,1);
-                            $state.go('master.main.plans');
-                            console.log(success);
+                            $state.go('master.main.plans');                            
                         })
                         .error(function (error) {
                             console.log(error); // jshint ignore: line

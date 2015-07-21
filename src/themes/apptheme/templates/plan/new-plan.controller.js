@@ -8,11 +8,11 @@ angular.module('baasic.mobileApp')
             }
             
 
-            $scope.savePlan = function savePlan() {
+            $scope.savePlan = function() {
                 $state.go('master.main.plans');
             };
             
-            $scope.backToDetails = function backToDetails() {
+            $scope.backToDetails = function() {
                 $state.go('master.main.plans');
             };
         }
