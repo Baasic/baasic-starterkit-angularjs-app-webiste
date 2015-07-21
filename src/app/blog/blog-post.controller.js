@@ -3,7 +3,7 @@
         function BlogPostCtrl($scope, $state, blogService) {
             'use strict';
 
-            $scope.$root.loader.suspend();
+            //$scope.$root.loader.suspend();
 
             blogService.get($state.params.slug, {
                 embed: 'tags'
@@ -30,7 +30,7 @@
                             conosle.log(error); // jshint ignore: line
                         })
                         .finally(function () {
-                            $scope.$root.loader.resume();
+                           // $scope.$root.loader.resume();
                         });
                 }
             };

@@ -1,3 +1,11 @@
-﻿<baasic-plan-edit on-save="savePlan()" on-cancel="cancelEdit()">
+﻿<div class="hero--product">
+    <bora-header></bora-header>
+</div>
 
-</baasic-plan-edit>
+	<section class="container--primary">
+		<br />
+		<baasic-plan-new on-save="savePlan()" on-cancel="backToDetails()" ng-init="show">
+
+		</baasic-plan-new>
+		<br />
+	</section>

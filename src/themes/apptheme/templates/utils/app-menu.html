@@ -5,6 +5,25 @@
     <li class="nav__item"><a ui-sref="master.main.blog" rel="blog" class="nav__link nav__link--primary" rel="blog">Blog</a></li>
     <li class="nav__item"><a ui-sref="master.main.index({ '#': 'contact' })" class="nav__link nav__link--primary">Contact</a></li>
      
-    <li class="nav__item" ng-hide="$root.user.isAuthenticated"><a ui-sref="login"" class="nav__link nav__link--primary">Login</a></li>
-    <li class="nav__item" ng-show="$root.user.isAuthenticated"><a ui-sref="master.profile-edit"" class="nav__link nav__link--primary">Edit Profile</a></li>
+    
+    <h2 class="nav__item" >
+        
+            <a ng-hide="$root.user.isAuthenticated" ui-sref="login" class="a__profile__icon hasTooltip tooltip">
+                <span>Login</span>
+                <img class="profile__icon" src="../../assets/img/profile.svg" />
+            </a>
+    </h2>
+
+
+	<h2 class="nav__item" >
+    	<baasic-logout on-logout="setEmptyUser()">
+    		<a ng-show="$root.user.isAuthenticated" href="" ng-click="logout()" class="a__profile__icon hasTooltip tooltip">
+                <span>Logout</span>
+    			<!--span>Edit Profile</span> this is for future use-->
+    			<img class="profile__icon" src="../../assets/img/profile.svg" />
+    		</a>
+        </baasic-logout>
+    </h2>
+
+
 </ul>

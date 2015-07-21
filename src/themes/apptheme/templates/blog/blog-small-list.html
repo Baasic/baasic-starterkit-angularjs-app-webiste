@@ -9,7 +9,7 @@
             <br />
             <span class="minute article__readingtime">{{ blog.readingTime.text }} </span>
             <br />
-            <a ng-if="$root.user.isAuthenticated" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
+            <a ng-if="$root.user.isAuthenticated" class="btn btn--save btn--edit" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
         </div>
     </a>
 </article>

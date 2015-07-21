@@ -33,7 +33,7 @@
                         $scope.state = {};
 
                         $scope.savePlan = function savePlan() {
-                            if ($scope.plan.$valid) {
+                            if ($scope.plan) {
                                 $scope.$root.loader.suspend();
 
                                 var promise;
@@ -57,18 +57,10 @@
                                     });
                             }
                         };
-
-                        $scope.cancelEdit = function cancelEdit() {
-                            if ($scope.onCancelFn) {
-                                $scope.onCancelFn($scope.$parent);
-                            }
-                        };
-
                     }
-                    
                 ],
                 templateUrl: 'templates/plan/plan-edit-form.html'
             };
         }
     ]
-    );
+);

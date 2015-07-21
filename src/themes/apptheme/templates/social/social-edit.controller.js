@@ -7,23 +7,23 @@ angular.module('baasic.mobileApp')
                 $state.go('login');
             }
 
-            $scope.$root.loader.suspend();
+           // $scope.$root.loader.suspend();
             
    
-            socialService.get($state.params.socialId)
+            socialService.find()
             
                 .success(function (social) {
-                    $scope.social = social;
+                    $scope.social = social.item;
                 })
                 .error(function (error) {
                     console.log(error); // jshint ignore: line
                 })
                 .finally(function () {
-                    $scope.$root.loader.resume();
+                   // $scope.$root.loader.resume();
                 });
 
-            $scope.backToDetails = function backToDetails() {
-                $state.go('master.main.index');
-            };
+
+
+
         }
     ]);

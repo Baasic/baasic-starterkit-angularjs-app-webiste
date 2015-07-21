@@ -7,7 +7,13 @@
             restrict: 'E',
             templateUrl:'templates/plan/plan-list.html',
             scope: {},
-            controller: ['$scope', 'planService', function($scope, planService) {
+            controller: ['$scope', '$state', 'planService', function($scope, $state, planService) {
+                
+                if (!$scope.$root.user.isAuthenticated) {
+                    $state.go('login');
+                }
+
+
                 $scope.plans =[];
 
                 planService.find({
@@ -27,6 +33,28 @@
                         };
 
                 });
+
+
+                $scope.deletePlan = function deletePlan(plan) {
+                /* global confirm */
+                if (confirm('Are you sure you want to delete this plan?')) {
+                   
+                    planService.remove($scope.plans[plan])
+                        .success(function () {
+                            $scope.plans.splice(plan,1);
+                            $state.go('master.main.plans');
+                            console.log(success);
+                        })
+                        .error(function (error) {
+                            console.log(error); // jshint ignore: line
+                        })
+                        .finally(function () {
+                           
+                        });
+                }
+            };
+
+
 
             }]
         };

@@ -7,7 +7,6 @@ angular.module('baasic.mobileApp')
                 $state.go('login');
             }
             
-            $scope.$root.loader.suspend();
 
             $scope.savePlan = function savePlan() {
                 $state.go('master.main.plans');

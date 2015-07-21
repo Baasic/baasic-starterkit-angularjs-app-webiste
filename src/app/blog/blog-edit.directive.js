@@ -25,8 +25,8 @@
                         }
                     };
                 },
-                controller: ['$scope', '$q', 'baasicBlogService', 'markdownConverter',
-                    function baasicBlogEditCtrl($scope, $q, blogService, markdownConverter) {
+                controller: ['$scope', '$q','$state','baasicBlogService', 'markdownConverter',
+                    function baasicBlogEditCtrl($scope, $q, $state, blogService, markdownConverter) {
                         function readingTime(text) {
                             var words = 0, start = 0, end = text.length - 1, i;
 

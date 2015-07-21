@@ -1,0 +1,3 @@
+<div class="flex--alt footer__icon--wrapper">
+	<a ng-repeat="soc in socials | orderBy:'order'" href="http://{{soc.url}}" ng-hide="!soc.url" class="footer__icon--social" ><img src="./assets/img/footer/{{soc.name}}.svg" alt="{{soc.name}}"></a>        
+</div>

@@ -4,49 +4,26 @@
 
 	<section class="container--primary">
 
-		<div class="plan__filter">
+		<div class="plan__filter container--primary">
 			<input type="text" class="plan__filter" name="planFilter" ng-model="plan.filter" placeholder="Type for filtering plans">
+			<a ui-sref="master.main.new-plan" class="btn btn--add__new btn--med"><span class="add__new__plan__text">Add new plan</span> <img src="../../assets/img/addnew.svg" alt="add new" class="del__btn"></a>
 		</div>
+
+		<div class="clear"></div>
+
+		<div class="plan__container container--primary">
+
+		<div ng-repeat="plan in plans | filter: plan.filter">
+			
+			<baasic-plan-edit plan="plan" on-save="backToDetails()" on-cancel="backToDetails()">
+			</baasic-plan-edit>
 		
-		<div class="push">
-			<a class="" ui-sref="master.new-plan">Add New Plan</a>
 		</div>
-	
-	
-		<table class="plan__table full-width">
-			<tr>
-				<th><a href="" ng-click="sort('name')">Name</a></th>
-				<th><a href="" ng-click="sort('period')">Subscription Time</a></th>
-				<th><a href="" ng-click="sort('sync')">Synchronization</a></th>
-				<th><a href="" ng-click="sort('navAccessLevel')">Navigator Access level</a></th>
-				<th><a href="" ng-click="sort('tickets')">Support Tickets</a></th>
-				<th><a href="" ng-click="sort('price')">Price</a></th>
-				<th>Actions</th>
-			</tr>
 
-			<tr ng-repeat="plan in plans | filter: plan.filter">
-				<td>{{ plan.name }}</td>
-				<td>{{ plan.period }}</td>
-				<td>{{ plan.sync }}</td>
-				<td>{{ plan.navAccessLevel }}</td>
-				<td>{{ plan.tickets }}</td>
-				<td>{{ plan.price | currency }}</td>
-				<td>
-					<p>
-						<a href="./plan/edit/{{plan.id}}">Edit</a> | 
-						<a href="./plan/{{plan.id}}">View</a> | 
-						<a ng-click="delete(plan.id)">Delete</a>
-					</p>
-				</td>
-
-			</tr>
-
-		</table>
 
 		<pager pager-data="pagerData" plan ng-show="pager.hasPrevious || pager.hasNext" class="pager">
     		<a ui-sref="master.main.plans({ page: pager.currentPage - 1 })" class="btn" ng-show="pager.hasPrevious">Prev</a>
    			<hr>
     		<a ui-sref="master.main.plans({ page: pager.currentPage + 1 })" class="btn" ng-show="pager.hasNext">Next</a>
 		</pager>
-	
 	</section>

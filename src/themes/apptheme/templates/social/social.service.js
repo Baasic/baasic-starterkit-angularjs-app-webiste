@@ -18,7 +18,6 @@
                 };
     
                 this.update = function update(social) {
-                    profile.createDate = new Date();
                     return dynamicResourceService.update(social);
                 };
     

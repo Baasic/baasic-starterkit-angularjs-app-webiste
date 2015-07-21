@@ -1,10 +1,22 @@
-﻿<div class=" container--primary">
+﻿<div class="plan__border__class">
     
 
-<div class="section__form">
-    <h1 class="spc--bottom--lrg  section__heading add__edit__title">{{ isNew ? 'Add New' : 'Edit' }} Plan</h1>
-                        <form novalidate name="planForm">
-                            <p class="plan__detail plan__detail--price plan__edit__section">{{plan.name}}</p>
+<div >
+    
+                        <ng-form novalidate name="planForm">
+                           <div>
+                                <p class="plan__detail plan__detail--price pull">{{plan.name}}</p>
+
+                                <div class="actions push">
+                                    <a ng-click="hide=!hide" href=""><img src="../../assets/img/edit.svg" alt="edit plan"></a>
+                                    <!--a href=""><img src="../../assets/img/copy.svg" alt="copy plan"></a-->
+                                    <a href="" ng-click="deletePlan($index)"><img src="../../assets/img/delete.svg" alt="delete plan"></a>
+                                </div>
+                           </div> 
+                           <div class="clear"></div>
+                            
+                                                
+                        <div class="plan__edit__form" ng-hide="!hide"> 
                             <div class="flex">
                                 <div class="form-wrapper form">
                                     <input name="planName" ng-model="plan.name"  type="text" required>                  
@@ -30,14 +42,18 @@
                             </div>
 
                             <h3 class="plan__edit__section left__padding">Content in the plan</h3>
-                           <div class="spc--top--med">
+                           <div class="spc--top--med pull">
                             <div class="form-wrapper" >
-                                <label class="radio__label--title" for="sync">Synchronization</label>
-                                <div class="radio__button__group">
-                                    <input name="sync" ng-model="plan.sync" id="sync_no" ng-value="false" type="radio" ng-required="!plan.sync"/><label class="radio__label" for="sync_no">NO</label>
-                                        <br />
-                                    <input name="sync" ng-model="plan.sync" id="sync_yes" ng-value="true" type="radio" ng-required="!plan.sync"/><label class="radio__label" >YES</label>
-                                </div>                                    
+                                <div class="checkbox-group">
+                                    <input id="{{plan.id}}" name="plan.sync" class="checkbox" ng-model="plan.sync" type="checkbox"  />
+                                    <label class="radio__label label--checkbox" for="{{plan.id}}">
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                    Synchronization
+                                    </label>
+                                </div>  
+
+                                                           
                                 <div ng-show="planForm.$submitted">
                                     <span class="alert" ng-show="planForm.sync.$error.required">It is required to select if the plan has synchronization or not. </span>
                                 </div>                             
@@ -45,7 +61,7 @@
                            </div>
                                 
 
-                                <div class="spc--top--med">
+                                <div class="spc--top--med push fifty">
 
                                 <div class="form-wrapper form">
                                     
@@ -59,7 +75,7 @@
                                     <label>Tickets</label>
                                 </div>
                             </div>
-
+                            <div class="clear"></div>
                             <div class="flex spc--top--med">
                                 
                                 <div class="form-wrapper">
@@ -107,12 +123,14 @@
                                 </div>
     
         <div class="form__field form-wrapper">
-            <button type="submit" class="btn btn--save btn--med push" ng-click="savePlan()">Save</button>
-            <button type="button" class="btn btn--cancel btn--med push" ng-click="cancelEdit()">Cancel</button>
+            <button ng-disabled="planForm.$invalid" type="submit" class="btn btn--save btn--med push" ng-click="savePlan();hide=!hide;">Save</button>
+            <button type="button" class="btn btn--cancel btn--med push" ng-click="backToDetails();hide=!hide">Cancel</button>
+            <div class="clear"></div>
         </div>
-        <div ng-show="error">
-            {{ error }}
         </div>
-    </form>
+    </ng-form>
+
     </div>
 </div>
+
+ 

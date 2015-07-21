@@ -39,4 +39,5 @@ $(function() {
     }
     });
 });
- };
+
+};//end of window.onload

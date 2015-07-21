@@ -108,9 +108,9 @@
                     //controller: 'PlanListCrtl'
                    
                 })
-                .state('master.new-plan', {
+                .state('master.main.new-plan', {
                     url: 'new-plan',
-                    templateUrl: 'templates/plan/plan-edit.html',
+                    templateUrl: 'templates/plan/new-plan.html',
                     controller: 'NewPlanCtrl'
                 })
                 .state('master.main.plan-detail', {
@@ -129,16 +129,13 @@
                     templateUrl: 'templates/profile/profile-edit-form.html',
                     controller: 'ProfileEditCtrl'
                 })      
-                .state('contact-edit', {
-                    url: 'contact/edit',
-                    templateUrl: 'templates/contact/contact-edit-form.html',
-                    controller: 'ContactEditCtrl'
-                })    
+                  
                   .state('master.social', {
                     url: 'edit/social-connections',
-                    templateUrl: 'templates/social/social-edit.html',
+                    templateUrl: 'templates/social/social-list.html',
                     controller: 'SocialEditCtrl'
                 })          
+               
                 
                 .state('404', {
                     templateUrl: 'templates/404.html'

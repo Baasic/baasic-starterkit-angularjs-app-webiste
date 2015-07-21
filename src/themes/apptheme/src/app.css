@@ -2792,6 +2792,14 @@ hr {
     width:100%;
 }
 
+.btn--slanted{
+	-webkit-transform: skew(-10deg);
+	        transform: skew(-10deg);
+	padding:0 5px;
+	display:block;
+	float:left;
+}
+
 .btn--show__more{
     border:1px solid #FD6D6D;
 }
@@ -2850,6 +2858,8 @@ hr {
 }
 
 .plan__filter{
+	outline:none!important;
+	max-width:80em;
 }
 
 /* plan table pagination */
@@ -2873,11 +2883,15 @@ hr {
 /* plans filter */
 .plan__filter input{
 	border:1px solid #007D90;
-	line-height: 1.6em;
-	padding:5px;
+	line-height: 2em;
+	padding:7px;
 	color:#007d90;
-	margin:15px;
+	margin:20px 0;
 	display: block;
+	float:left;
+	width: calc(100% - 200px);
+	
+	
 }	
 
 
@@ -2904,6 +2918,11 @@ hr {
 
 
 /* additional buttons*/
+.btn--edit{
+	margin:0;
+	padding: .1rem .5rem;
+}
+
 .btn--save {
     color: #f2f2f2;
     background-color: /*var(--bittersweet)*/#007D90;
@@ -2922,25 +2941,80 @@ hr {
     background-color: rgb(152, 152, 152);
 }
 
+.btn--add__new {
+	height:3em;
+    color:#007D90;
+    border:1px solid;
+    border-color:#007D90;
+    transition: border-color .3s ease-in-out;
+    display: block;
+    float: right;
+    margin:20px 0 0 0 !important;
+    line-height: 2em;
+}
+
+.btn--add__new:hover, .btn--add__new:active, .btn--add__new:focus  {
+    border-color: rgb(0, 106, 122);
+     color:#007D90;
+}
+
+
+
 /* social icons and input*/
 .social__icons{
-	width:60px;
+	width:50px;
 	height:auto;
+	display:block;
 	float:left;
-	margin-top:-20px;
+	margin-top:-10px;
+	margin-right:10px;
 	
 }
 
-.social__input{
+.social__input input{
+	display:block;
+	width:calc(100% - 60px);
+	float:right;
+}
+
+.social__input .form__label{
 	margin-left:60px;
 }
+.social__input .bar, .social__input .highlight{
+	width:calc(100% - 60px);
+	float:right;
+}
+
 .header__nav{
 	margin-top:0!important;
 }
 
 .cog{
-	width:30px;
+	width:28px;
+	background:url('../../assets/img/cog.svg') center center;
+	border-radius:8px;
+	transition:all .3s ease-in-out;
 }
+
+.cog:hover{
+	width:28px;
+	background:url('../../assets/img/cog-invert.svg') center center #FD6D6D;
+}
+
+
+
+.cog--invert{
+	width:28px;
+	background:url('../../assets/img/cog-invert.svg') center center;
+	border-radius:8px;
+	transition:all .3s ease-in-out;
+}
+
+.cog--invert:hover{
+	width:28px;
+	background:url('../../assets/img/cog.svg') center center #ffffff;
+}
+
 
 /**
  * Tooltip Styles
@@ -2949,23 +3023,64 @@ hr {
     display: none;
     text-decoration: none;
     padding: 10px;
+
 }
 
 .hasTooltip:hover span {
     display: block;
     position: absolute;
-    margin: 50px 0 0 -60px;
+    margin: 50px 0 0 -30px;
     border-radius:8px;
+}
+
+.tooltip span::before{
+	content:'';
+	position: absolute;
+	top:-5px;
+	left:40px;
+	width: 0; 
+	height: 0; 
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	
+	border-bottom: 5px solid #fd6d6d;
+
+	z-index: 9999;
+}
+
+.tooltip--invert span::before{
+	content:'';
+	position: absolute;
+	top:-5px;
+	left:40px;
+	width: 0; 
+	height: 0; 
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	
+	border-bottom: 5px solid #ffffff;
+
+	z-index: 9999;
 }
 
 .tooltip--invert span{
 	color: #FD6D6D;
     background-color: #FFF;
+    transition:background-color .3s ease-in-out;
+	padding:10px 20px;	
+
 }
 
 .tooltip span{
 	color: #FFF;
     background-color: #FD6D6D;
+    transition:background-color .3s ease-in-out;
+	padding:10px 20px;
+}
+
+.tooltip span, .tooltip--invert span{
+	font-size:14px;
+	font-family: 'Signika Negative', Helvetica,Arial,sans-serif;
 }
 
 .editor__preview{
@@ -2978,9 +3093,10 @@ hr {
 
 .tags{
 	box-shadow:none!important;
+	border: none!important;
 }
 .tags .input{
-	border-bottom:1px solid #B3B3B3;
+	border:none;
 }
 .tags-input.tags.focused{
 	box-shadow:none;
@@ -2989,6 +3105,19 @@ hr {
 
 .tags-input.tags{
 	box-shadow:none;
+}
+.host{
+	border-bottom:1px solid rgb(242,242,242);
+}
+
+.tag-item{
+	color:#ffffff!important;
+	background:#007d90!important;
+	border-radius: 0!important;
+	border: none!important;
+}
+.remove-button{
+	color:#FD6D6D!important;
 }
 
 .radio__label, .radio__label--title{
@@ -3009,5 +3138,177 @@ hr {
 }
 
 .form__select{
+	font-family:'Signika Negative', Helvetica, Arial, sans-serif;
 	min-width:100%;
+	border:none;
+	border-bottom:1px solid rgb(242, 242, 242);
+	outline:none;
+	height:50px;
+}
+
+.planForm::after{
+	content:'';
+	clear:both;
+	margin-bottom:575px;
+}
+
+.clear{
+	clear:both;	
+}
+.actions a img{
+	width:35px !important;
+	height:auto;
+}
+
+.profile__icon{
+	width:30px!important;
+	margin-bottom:-5px;
+
+}
+.a__profile__icon{
+	padding:5px;
+	transition: background .3s ease-in-out;
+	border-radius:20%;
+}
+
+.a__profile__icon:hover{
+	background:#FD6D6D;
+	
+}
+.group{
+	overflow: visible;
+}
+
+.spc--top--lrg{
+	min-width:31%;
+}
+
+.spc--top--lrg:nth-of-type(3n+3){
+	margin-right:0;
+}
+
+.social > .form-wrapper:nth-of-type(2n+2){
+	clear:both;
+}
+
+.form-wrapper{
+	margin-bottom: 3rem!important;
+}
+
+
+.half{
+	min-width:50%;
+	float:left;
+}
+.del__btn{
+	width:30px;
+	margin-top: 4px;
+	height:auto;
+}
+
+.add__new__plan__text{
+	float:left;
+	margin:4px;
+}
+.flex__wrapper{
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+  	width:100%;
+  	height: 50vh;
+  	min-height:300px;
+}
+.headroom--top .menu-icon-container{
+	z-index:-1;
+}
+
+.login__margin--top{
+	margin-top:10rem;
+}
+
+.social__title{
+	margin-bottom: 4rem;
+}
+.plan__border__class{
+	border:1px solid #cccccc;
+	padding-top:10px;
+	margin-bottom:10px;
+}
+.plan__edit__form{
+	margin-top:30px;
+}
+
+/**/
+
+.checkbox-group {
+    position:relative;
+    margin-left:10px;
+}
+ 
+/* Hide Checkbox Input */
+.checkbox-group input[type=checkbox] {
+    display:none
+}
+ 
+/* Style Label */
+.checkbox-group label {
+    padding-left:30px;
+    cursor:pointer;
+}
+ 
+/* Style span tag */
+.checkbox-group label span {
+    display:block;
+    position:absolute;
+    left:0;
+    transition-duration:.3s
+}
+/* Style box */
+.checkbox-group label .box {
+    background:#d9e1e7;
+    height:20px;
+    width:20px;
+    z-index:9;
+    transition-delay:.2s
+}
+ 
+/* Style check icon. give it a border on the bottom and right only and then rotate */
+.checkbox-group label .check {
+    top:0;
+    left:7px;
+    width:7px;
+    height:15px;
+    border:2px solid #fff;
+    border-top:none;
+    border-left:none;
+    opacity:0;
+    z-index:10;
+    -webkit-transform:rotate(180deg);
+            transform:rotate(180deg);
+    transition-delay:.3s;
+
+
+}
+ 
+/* Change color of box when checkbox is checked */
+input[type=checkbox]:checked ~ label .box {
+    background:#007D90;
+
+}
+ 
+/* Rotate and show check icon when checkbox is checked */
+input[type=checkbox]:checked ~ label .check {
+    opacity:1;
+    -webkit-transform:scale(1) rotate(45deg);
+            transform:scale(1) rotate(45deg);
+ 
+}
+.fifty{
+	width:50%;
+}
+option{
+	border:none;
 }

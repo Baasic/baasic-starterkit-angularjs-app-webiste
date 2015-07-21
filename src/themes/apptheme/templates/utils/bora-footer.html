@@ -4,18 +4,12 @@
                 
                 <a ui-sref="master.social" ng-show="$root.user.isAuthenticated" class="hasTooltip tooltip--invert">
                     <span>Edit Social Connections</span>
-                <img src="../../assets/img/cog-invert.svg" class="cog">
+                <img src="../../assets/img/spacer.png" width:28px; class="cog--invert">
                </a>
                
             </h2>
             
-            <div class="flex--alt footer__icon--wrapper">
-                <a href="#" class="footer__icon--social"><img src="./assets/img/twitter.svg" alt="Twitter"></a>
-                <a href="#" class="footer__icon--social"><img src="./assets/img/facebook.svg" alt="Facebook"></a>
-                <a href="#" class="footer__icon--social"><img src="./assets/img/behance.svg" alt="Behance"></a>
-                <a href="#" class="footer__icon--social"><img src="./assets/img/pinterest.svg" alt="Pinterest"></a>
-                <a href="#" class="footer__icon--social"><img src="./assets/img/dribble.svg" alt="Dribble"></a>
-            </div>
+            <social-list-footer> </social-list-footer>
 
             <nav role="footer__nav center">
                 <ul class="nav group">
