@@ -4,26 +4,37 @@
     <li class="nav__item"><a ui-sref="master.main.index({ '#': 'plan' })" class="nav__link nav__link--primary">Plan</a></li>
     <li class="nav__item"><a ui-sref="master.main.blog" rel="blog" class="nav__link nav__link--primary" rel="blog">Blog</a></li>
     <li class="nav__item"><a ui-sref="master.main.index({ '#': 'contact' })" class="nav__link nav__link--primary">Contact</a></li>
-     
     
     <h2 class="nav__item" >
-        
-            <a ng-hide="$root.user.isAuthenticated" ui-sref="login" class="a__profile__icon hasTooltip tooltip">
-                <span>Login</span>
-                <img class="profile__icon" src="../../assets/img/profile.svg" />
-            </a>
+        <div class="link" ng-hide="$root.user.isAuthenticated" >
+          <img class="profile__icon" src="../../assets/img/profile.svg" />
+          <div class="panel">
+              <div class="arrow">
+                <div class="drop">
+                    <baasic-logout on-logout="setEmptyUser()">
+                        <a class="drop__text" ui-sref="login">Login</a>
+                    </baasic-logout>
+                </div>
+              </div>
+          </div>
+        </div>
     </h2>
 
-
-	<h2 class="nav__item" >
-    	<baasic-logout on-logout="setEmptyUser()">
-    		<a ng-show="$root.user.isAuthenticated" href="" ng-click="logout()" class="a__profile__icon hasTooltip tooltip">
-                <span>Logout</span>
-    			<!--span>Edit Profile</span> this is for future use-->
-    			<img class="profile__icon" src="../../assets/img/profile.svg" />
-    		</a>
-        </baasic-logout>
+    <h2 class="nav__item" >
+        <div class="link" ng-show="$root.user.isAuthenticated" >
+          <img class="profile__icon" src="../../assets/img/profile.svg" />
+          <div class="panel">
+              <div class="arrow">
+                <div class="drop">
+                    <baasic-logout on-logout="setEmptyUser()">
+                        <a class="drop__text" href="#" ng-click="logout()">Logout</a>
+                    </baasic-logout>
+                </div>
+              </div>
+          </div>
+        </div>
     </h2>
-
 
 </ul>
+
+

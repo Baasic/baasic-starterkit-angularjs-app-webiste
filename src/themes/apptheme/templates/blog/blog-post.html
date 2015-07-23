@@ -1,11 +1,11 @@
-﻿<div class="hero--blog" ng-style="{ 'background-image': blog.featured ? 'url(' + blog.featured + ')' : 'none' }">
+﻿<div class="hero--blog" ng-style="{ 'background-image': blog.featured ? 'linear-gradient(rgba(255,255,255, 0.8), rgba(255,255,255, 0.6)), url(' + blog.featured + ')' : 'none' }">
     
         <bora-header></bora-header>
         
         <div class="container--secondary">
             <div class="container--article" >
                 <h2 class="blog__header__title">{{blog.title}}</h2>
-                <button type="button" class="btn btn--cancel" href="javascript:void(0);" ui-sref="master.main.blog" rel="blog">Back</button>
+               
             </div>
         </div>
     </div>
@@ -36,15 +36,7 @@
             </div>
        </section>
         
-        <section class="container--primary group">
-            <div class="container--article">
-                <a href="#" class="avatar">
-                    <img src="./assets/img/avatar.jpg" alt="" class="avatar__img">
-                    <p class="avatar__name">Herman Melvile</p>
-                    <p class="avatar__position">Author and Writer</p>
-                </a>
-            </div>
-        </section>
+        
         
         <section class="container--primary">
          <div class="container--article  flex blog__wrapper--tertiaty ">

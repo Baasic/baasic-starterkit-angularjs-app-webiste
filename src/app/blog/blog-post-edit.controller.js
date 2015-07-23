@@ -23,7 +23,7 @@
                 });
 
             $scope.backToDetails = function backToDetails() {
-                $state.go('master.main.blog', { slug: $scope.blog.slug });
+                $state.go('master.main.blog-detail', { slug: $scope.blog.slug });
             };
         }
     ]);

@@ -130,13 +130,11 @@
                     controller: 'ProfileEditCtrl'
                 })      
                   
-                  .state('master.social', {
+                .state('master.social', {
                     url: 'edit/social-connections',
                     templateUrl: 'templates/social/social-list.html',
                     controller: 'SocialEditCtrl'
-                })          
-               
-                
+                })               
                 .state('404', {
                     templateUrl: 'templates/404.html'
                 });

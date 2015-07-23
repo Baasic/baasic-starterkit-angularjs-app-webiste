@@ -6,14 +6,12 @@
             return {
                 restrict: 'AE',
                 scope: true,
+                replace:true,
                 compile: function () {
                     return {
                         pre: function (scope, elem, attrs) {
                             if (attrs.plan) {
-                                scope.$parent.$watch(attrs.plan, function (newValue) {
-                                    scope.plan = newValue;
-                                    scope.isNew = newValue === undefined || newValue === null;
-                                });
+                                scope.plan = attrs.plan;
                             }
                             if (attrs.onSave) {
                                 scope.onSaveFn = $parse(attrs.onSave);
@@ -26,18 +24,14 @@
                     };
                 },
                controller: ['$scope', '$q', 'planService',
-                    function baasicPlanEditCtrl($scope, $q, planService) {
+                    function ($scope, $q, planService) {
                         
-                        $scope.isNew = true;
 
-                        $scope.state = {};
-
-                        $scope.savePlan = function savePlan() {
+                        $scope.savePlan = function savePlan(plan) {
                             if ($scope.plan) {
-                                $scope.$root.loader.suspend();
-
+                               
                                 var promise;
-                                if ($scope.isNew) {
+                                if (!$scope.plan.id) {
                                     promise = planService.create($scope.plan);
                                 } else {
                                     promise = planService.update($scope.plan);
@@ -53,12 +47,30 @@
                                         $scope.error = error.message;
                                     })
                                     .finally(function () {
-                                        $scope.$root.loader.resume();
+                                        //poslije savea - collapse
                                     });
                             }
                         };
-                    }
-                ],
+
+                        $scope.cancelEdit = function(){
+                            if ($scope.plan){
+                                var cancel;
+                                    if(!$scope.plan.id){
+                                        cancel = $scope.plans.pop();
+                                    } else {
+                                        var plan = $scope.plan;
+                                        cancel = {'isCollapsed':true, 'plan':[plan]};
+                                        console.log(cancel);
+                                    }
+
+                                    
+                                    }
+                            
+                            };
+
+
+                        }
+                ],                
                 templateUrl: 'templates/plan/plan-edit-form.html'
             };
         }

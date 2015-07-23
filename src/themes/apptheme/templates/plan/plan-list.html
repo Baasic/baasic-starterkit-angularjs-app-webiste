@@ -1,29 +1,23 @@
 <div class="hero--product">
-    <bora-header></bora-header>
+	<bora-header></bora-header>
 </div>
 
-	<section class="container--primary">
+<section class="container--primary">
 
-		<div class="plan__filter container--primary">
-			<input type="text" class="plan__filter" name="planFilter" ng-model="plan.filter" placeholder="Type for filtering plans">
-			<a ui-sref="master.main.new-plan" class="btn btn--add__new btn--med"><span class="add__new__plan__text">Add new plan</span> <img src="../../assets/img/addnew.svg" alt="add new" class="del__btn"></a>
-		</div>
+	<div class="plan__filter container--primary">
+		<input type="text" class="plan__filter" name="planFilter" ng-model="plan.filter" placeholder="Type for filtering plans">
 
-		<div class="clear"></div>
+		<a href="" ng-click="add()" class="btn btn--add__new btn--med"><span class="add__new__plan__text">Add new plan</span> <img src="../../assets/img/addnew.svg" alt="add new" class="del__btn"></a>
+	</div>
 
-		<div class="plan__container container--primary">
+	<div class="clear"></div>
+
+	<div class="plan__container container--primary">
 
 		<div ng-repeat="plan in plans | filter: plan.filter">
-			
-			<baasic-plan-edit plan="plan" on-save="backToDetails()" on-cancel="backToDetails()">
-			</baasic-plan-edit>
+
+		<baasic-plan-edit></baasic-plan-edit>
 		
-		</div>
+	</div>
 
-
-		<pager pager-data="pagerData" plan ng-show="pager.hasPrevious || pager.hasNext" class="pager">
-    		<a ui-sref="master.main.plans({ page: pager.currentPage - 1 })" class="btn" ng-show="pager.hasPrevious">Prev</a>
-   			<hr>
-    		<a ui-sref="master.main.plans({ page: pager.currentPage + 1 })" class="btn" ng-show="pager.hasNext">Next</a>
-		</pager>
-	</section>
+</section>

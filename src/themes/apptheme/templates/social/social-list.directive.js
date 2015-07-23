@@ -15,7 +15,7 @@
                     rpp: 15,
                     sort: 'order|asc'
                 })
-                //make sorting and filtering with code above
+                
 
                 .success(function(data) {
                     $scope.socials = data.item;
@@ -36,11 +36,11 @@
 
                 $scope.saveSocial = function saveSocial(){
                     if($scope.social){
-                         //$scope.$root.loader.suspend();
+                        
 
                         var promises = [];
                                                 
-                        //spinner
+                        
                         for (var i = 0; i < $scope.socials.length; i++) {
                             promises.push(socialService.update($scope.socials[i]));                            
                         }
@@ -51,7 +51,6 @@
                             .then(function(){
                                 if ($scope.onSaveFn) {
                                     $scope.onSaveFn($scope.$parent);
-                                    console.log('success');
                                 }
                             },
                             function (error) {

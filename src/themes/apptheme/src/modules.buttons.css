@@ -14,6 +14,7 @@
     position: relative;
     user-select: none;
     margin: .5rem; 
+    letter-spacing: 1px;    
 }
 
 .btn:focus {
@@ -23,15 +24,18 @@
 .btn--primary {
     color: var(--ultra-light);
     background-color: var(--bittersweet);
+    letter-spacing: 1px;
 }
 
 .btn--primary:hover, .btn--primary:active, .btn--primary:focus  {
     background-color: color(var(--bittersweet) shade(15%));
+
 }
 
 .btn--secondary {
     color: var(--ultra-light);
     background-color: var(--mindaro);
+    letter-spacing: 1px;
 }
 
 .btn--secondary:hover, .btn--secondary:active, .btn--secondary:focus  {
@@ -42,6 +46,7 @@
     border: 2px solid var(--bittersweet);
     font-family: var(--ff-sans);
     color: var(--bittersweet);
+    letter-spacing: 1px;
 }
 
 .btn--tertiary:hover, .btn--tertiary:active, .btn--tertiary:focus  {
@@ -54,6 +59,7 @@
     border: 2px solid var(--ultra-light);
     font-family: var(--ff-sans);
     color: var(--ultra-light);
+    letter-spacing: 1px;
 }
 
 .btn--tertiary--negative:hover, .btn--tertiary--negative:active, .btn--tertiary--negative:focus  {
@@ -67,24 +73,28 @@
     padding: .25rem .5rem;
     font-size: var(--type-base);    
     font-weight: var(--type-regular);
+    letter-spacing: 1px;
 }
 
 .btn--lrg {
     padding: .25rem .5rem;
-    font-size: var(--type-base);
+    font-size: var(--type-medium);
     font-weight: var(--type-regular);
+    letter-spacing: 1px;
 }
 
 @media all and (min-width: 21em) {
     .btn--lrg {
         padding: .5rem 1.15rem;
-        font-size: var(--type-base);
+        font-size: var(--type-medium);
+        letter-spacing: 1px;
     }    
 }
 
 @media all and (--from-medium) {
     .btn--lrg {
         padding: .75rem 1.15rem;
+        letter-spacing: 1px;
     }    
 }
 
@@ -92,5 +102,6 @@
     .btn--lrg {
         padding: .75rem 1.15rem;
         font-size: var(--type-large);
+        letter-spacing: 1px;
     }    
 }

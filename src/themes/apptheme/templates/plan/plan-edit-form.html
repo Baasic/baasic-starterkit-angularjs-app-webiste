@@ -1,135 +1,137 @@
 ﻿<div class="plan__border__class">
     
+    <div>
+        
+        <ng-form novalidate name="planForm">
+        <div>
+            <p class="plan__detail plan__detail--price pull">{{plan.name}}</p>
 
-<div >
-    
-                        <ng-form novalidate name="planForm">
-                           <div>
-                                <p class="plan__detail plan__detail--price pull">{{plan.name}}</p>
+            <div class="actions push">
 
-                                <div class="actions push">
-                                    <a ng-click="hide=!hide" href=""><img src="../../assets/img/edit.svg" alt="edit plan"></a>                                    
-                                    <a href="" ng-click="deletePlan($index)"><img src="../../assets/img/delete.svg" alt="delete plan"></a>
-                                </div>
-                           </div> 
-                           <div class="clear"></div>
-                            
-                                                
-                        <div class="plan__edit__form" ng-hide="!hide"> 
-                            <div class="flex">
-                                <div class="form-wrapper form">
-                                    <input name="planName" ng-model="plan.name"  type="text" required>                  
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <div ng-show="planForm.$submitted || planForm.planName.$dirty">                      
-                                            
-                                            <span class="alert" ng-show="planForm.planName.$error.required"> Plan name field is required. </span>
-                                        </div>
-                                        
-                                        <label>Plan Name</label>               
-                                </div>
-                                <div class="form-wrapper form">
-                                    <input name="price" ng-model="plan.price"type="number" required>
-                                    <span class="highlight"></span>
-                                    <span class="bar"></span>
-                                    <div ng-show="planForm.$submitted || planForm.price.$dirty">                      
-                                        <span class="alert" ng-show="planForm.price.$error.number"> Please use the numbers only. </span> 
-                                        <span class="alert" ng-show="planForm.price.$error.required"> Price field is required. </span>
-                                    </div>
-                                    <label>Price</label>
-                                </div>
-                            </div>
+                <a ng-click="" href=""><img src="../../assets/img/edit.svg" alt="edit plan"></a>
 
-                            <h3 class="plan__edit__section left__padding">Content in the plan</h3>
-                           <div class="spc--top--med pull">
-                            <div class="form-wrapper" >
-                                <div class="checkbox-group">
-                                    <input id="{{plan.id}}" name="plan.sync" class="checkbox" ng-model="plan.sync" type="checkbox"  />
-                                    <label class="radio__label label--checkbox" for="{{plan.id}}">
-                                        <span class="check"></span>
-                                        <span class="box"></span>
-                                    Synchronization
-                                    </label>
-                                </div>  
+                <a href="" ng-click="plan.id ? deletePlan($index) : cancelEdit()"><img src="../../assets/img/delete.svg" alt="delete plan"></a>
 
-                                                           
-                                <div ng-show="planForm.$submitted">
-                                    <span class="alert" ng-show="planForm.sync.$error.required">It is required to select if the plan has synchronization or not. </span>
-                                </div>                             
-                            </div>
-                           </div>
-                                
+            </div>
 
-                                <div class="spc--top--med push fifty">
+        </div> 
+        <div class="clear"></div>
 
-                                <div class="form-wrapper form">
-                                    
-                                    <input name="tickets" ng-model="plan.tickets" type="number" min="0" step="1" required>
-                                    <span class="highlight"></span>
-                                    <span class="bar"></span>
-                                    <div ng-show="planForm.$submitted || planForm.tickets.$dirty">
-                                        <span class="alert" ng-show="planForm.tickets.$error.number"> Please use the numbers only. </span>                                        
-                                        <span class="alert" ng-show="planForm.tickets.$error.required"> It is required to determine number of support tickets. </span>
-                                    </div>                                    
-                                    <label>Tickets</label>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="flex spc--top--med">
-                                
-                                <div class="form-wrapper">
-                                    <label class="radio__label--title" for="navAccessLevel">Navigator Level</label>
-                                    <select class="form__select" name="navAccessLevel" ng-model="plan.navAccessLevel">
-                                      <option value="N/A">N/A</option>
-                                      <option value="Junior">Junior</option>
-                                      <option value="Intermediate">Intermediate</option>
-                                      <option value="Experts">Experts</option>
-                                    </select>
-                                    <div ng-show="planForm.$submitted || planForm.navAccessLevel.$dirty">
-                                        
-                                        <span class="alert" ng-show="planForm.navAccessLevel.$error.required"> Please choose one option. Navigator Level is mandatory field. </span>
-                                    </div>                                    
-                                    
-                                </div>
 
-                                <div class="form-wrapper">
-                                    <label class="radio__label--title" for="period">Plan Duration</label>
-                                    <select class="form__select" name="period" ng-model="plan.period">
-                                      <option value="Month">Month</option>
-                                      <option value="3 Months">3 Months</option>
-                                      <option value="6 Months">6 Months</option>
-                                      <option value="Year">Year</option>
-                                    </select>
-                                    <div ng-show="planForm.$submitted || planForm.period.$dirty">
-                                        
-                                        <span class="alert" ng-show="planForm.period.$error.required">Period field is mandatory. </span>
-                                    </div>                                    
-                                    
-                                </div>
-                               </div>
-                                
-                                
+        <div class="plan__edit__form"> 
+            <div class="flex">
+                <div class="form-wrapper form">
+                    <input name="planName" ng-model="plan.name" type="text" required>                  
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <div ng-show="planForm.$submitted || planForm.planName.$dirty">                      
+                        
+                        <span class="alert" ng-show="planForm.planName.$error.required"> Plan name field is required. </span>
+                    </div>
+                    
+                    <label>Plan Name</label>               
+                </div>
+                <div class="form-wrapper form">
+                    <input name="price" ng-model="plan.price" type="number" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <div ng-show="planForm.$submitted || planForm.price.$dirty">                      
+                        <span class="alert" ng-show="planForm.price.$error.number"> Please use the numbers only. </span> 
+                        <span class="alert" ng-show="planForm.price.$error.required"> Price field is required. </span>
+                    </div>
+                    <label>Price</label>
+                </div>
+            </div>
 
-                                <div class="form-wrapper form">
-                                    
-                                    <textarea rows="5" name="description" ng-model="plan.description" required></textarea>
-                                    <span class="highlight"></span>
-                                    <span class="bar"></span>
-                                    <div ng-show="planForm.$submitted || planForm.description.$dirty">
-                                       <span class="alert" ng-show="planForm.description.$error.required">Please use brief description of plan. This is mandatory. </span>
-                                    </div>                                    
-                                    <label>Description</label>
-                                </div>
-    
-        <div class="form__field form-wrapper">
-            <button ng-disabled="planForm.$invalid" type="submit" class="btn btn--save btn--med push" ng-click="savePlan();hide=!hide;">Save</button>
-            <button type="button" class="btn btn--cancel btn--med push" ng-click="backToDetails();hide=!hide">Cancel</button>
+            <h3 class="plan__edit__section left__padding">Content in the plan</h3>
+            <div class="spc--top--med pull">
+                <div class="form-wrapper" >
+                    <div class="checkbox-group">
+                        <input id="sync-{{plan.id}}" name="plan.sync" class="checkbox" ng-model="plan.sync" type="checkbox"  />
+                        <label class="radio__label label--checkbox" for="sync-{{plan.id}}">
+                            <span class="check"></span>
+                            <span class="box"></span>
+                            Synchronization
+                        </label>
+                    </div>  
+
+                    
+                    <div ng-show="planForm.$submitted">
+                        <span class="alert" ng-show="planForm.sync.$error.required">It is required to select if the plan has synchronization or not. </span>
+                    </div>                             
+                </div>
+            </div>
+            
+
+            <div class="spc--top--med push fifty">
+
+                <div class="form-wrapper form">
+                    
+                    <input name="tickets" ng-model="plan.tickets" type="number" min="0" step="1" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <div ng-show="planForm.$submitted || planForm.tickets.$dirty">
+                        <span class="alert" ng-show="planForm.tickets.$error.number"> Please use the numbers only. </span>                                        
+                        <span class="alert" ng-show="planForm.tickets.$error.required"> It is required to determine number of support tickets. </span>
+                    </div>                                    
+                    <label>Tickets</label>
+                </div>
+            </div>
             <div class="clear"></div>
-        </div>
-        </div>
-    </ng-form>
+            <div class="flex spc--top--med">
+                
+                <div class="form-wrapper">
+                    <label class="radio__label--title" for="navAccessLevel">Navigator Level</label>
+                    <select class="form__select" name="navAccessLevel" ng-model="plan.navAccessLevel">
+                      <option value="N/A">N/A</option>
+                      <option value="Junior">Junior</option>
+                      <option value="Intermediate">Intermediate</option>
+                      <option value="Experts">Experts</option>
+                  </select>
+                  <div ng-show="planForm.$submitted || planForm.navAccessLevel.$dirty">
+                    
+                    <span class="alert" ng-show="planForm.navAccessLevel.$error.required"> Please choose one option. Navigator Level is mandatory field. </span>
+                </div>                                    
+                
+            </div>
 
+            <div class="form-wrapper">
+                <label class="radio__label--title" for="period">Plan Duration</label>
+                <select class="form__select" name="period" ng-model="plan.period">
+                  <option value="Month">Month</option>
+                  <option value="3 Months">3 Months</option>
+                  <option value="6 Months">6 Months</option>
+                  <option value="Year">Year</option>
+              </select>
+              <div ng-show="planForm.$submitted || planForm.period.$dirty">
+                
+                <span class="alert" ng-show="planForm.period.$error.required">Period field is mandatory. </span>
+            </div>                                    
+            
+        </div>
     </div>
+    
+    
+
+    <div class="form-wrapper form">
+        
+        <textarea rows="5" name="description" ng-model="plan.description" required></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <div ng-show="planForm.$submitted || planForm.description.$dirty">
+         <span class="alert" ng-show="planForm.description.$error.required">Please use brief description of plan. This is mandatory. </span>
+     </div>                                    
+     <label>Description</label>
+ </div>
+ 
+ <div class="form__field form-wrapper">
+    <button ng-disabled="planForm.$invalid" type="submit" class="btn btn--save btn--med push" ng-click="savePlan();">Save</button>
+    <button type="button" class="btn btn--cancel btn--med push" ng-click="cancelEdit();">Cancel</button>
+    <div class="clear"></div>
+</div>
+</div>
+</ng-form>
+
+</div>
 </div>
 
- 

@@ -15,8 +15,6 @@
                     rpp: 12,
                     sort: 'order|asc'
                 })
-                //make sorting and filtering with code above
-
                 .success(function(data) {
                     $scope.socials = data.item;
                 });

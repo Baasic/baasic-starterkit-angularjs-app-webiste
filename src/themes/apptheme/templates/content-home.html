@@ -119,8 +119,27 @@
 
         <section  id="plan" class="section__tertiary">
             <div class="container--primary">
-                <h2 ng-show="$root.user.isAuthenticated" class="push"><a ui-sref="master.main.plans" class="hasTooltip tooltip"><span>Edit Plans</span><img src="../../assets/img/spacer.png" width="28px" class="cog" /></a></h2>
+
+                <h2 class="push" >
+        <div class="link cog" ng-show="$root.user.isAuthenticated" >
+        <span class="invisible">P</span>
+          <div class="panel">
+              <div class="arrow">
+                <div class="drop">
+                    <baasic-logout on-logout="setEmptyUser()">
+                        <a class="drop__text" ui-sref="master.main.plans">Edit Plans</a>
+                    </baasic-logout>
+                </div>
+              </div>
+          </div>
+        </div>
+    </h2>
+
+
+
                 <h2 class="section__heading center">Select a Plan</h2>
+
+
                 
                     <plan-boxes class="flex center"></plan-boxes>
                 

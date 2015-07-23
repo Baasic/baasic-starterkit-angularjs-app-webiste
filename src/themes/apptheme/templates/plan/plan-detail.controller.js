@@ -6,7 +6,6 @@
                    
                 $scope.planId = $state.params.planId;
                 
-                $scope.$root.loader.suspend();
          }       
         ]);
 }(angular));                

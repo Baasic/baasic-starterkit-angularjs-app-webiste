@@ -17,7 +17,7 @@
 }
 
 .box__item {
-    margin-top: calc(var(--base-line-height)*3);
+    margin-top: calc(var(--base-line-height)*6);
     margin-bottom: calc(var(--base-line-height)*2);
 }
 

@@ -1,13 +1,19 @@
     <footer class="footer center" role="content-info">
         <div class="container--secondary">
-            <h2 class="push">
-                
-                <a ui-sref="master.social" ng-show="$root.user.isAuthenticated" class="hasTooltip tooltip--invert">
-                    <span>Edit Social Connections</span>
-                <img src="../../assets/img/spacer.png" width:28px; class="cog--invert">
-               </a>
-               
-            </h2>
+            <h2 class="push" >
+        <div class="link cog--invert" ng-show="$root.user.isAuthenticated" >
+        <span class="invisible">S</span>
+          <div class="panel">
+              <div class="arrow--invert">
+                <div class="drop--invert">
+                    <baasic-logout on-logout="setEmptyUser()">
+                        <a class="drop__text--invert" ui-sref="master.social">Edit Social Connections</a>
+                    </baasic-logout>
+                </div>
+              </div>
+          </div>
+        </div>
+    </h2>
             
             <social-list-footer> </social-list-footer>
 

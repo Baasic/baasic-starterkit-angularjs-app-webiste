@@ -14,7 +14,7 @@ angular.module('baasic.mobileApp')
                     $scope.profile = profile;
                 })
                 .error(function (error) {
-                    console.log(error); // jshint ignore: line
+                
                 })
                 .finally(function () {
                     $scope.$root.loader.resume();

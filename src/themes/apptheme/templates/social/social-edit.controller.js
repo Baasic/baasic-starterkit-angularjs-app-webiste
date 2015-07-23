@@ -5,10 +5,7 @@ angular.module('baasic.mobileApp')
 
             if (!$scope.$root.user.isAuthenticated) {
                 $state.go('login');
-            }
-
-           // $scope.$root.loader.suspend();
-            
+            }            
    
             socialService.find()
             
@@ -16,10 +13,9 @@ angular.module('baasic.mobileApp')
                     $scope.social = social.item;
                 })
                 .error(function (error) {
-                    console.log(error); // jshint ignore: line
+                
                 })
                 .finally(function () {
-                   // $scope.$root.loader.resume();
                 });
 
 

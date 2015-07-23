@@ -91,7 +91,7 @@
     height:60%; 
     width:325px; 
     top:25%; 
-    left:0;
+    /*left:0;*/
     pointer-events:none;
     opacity:0.5;
 }
