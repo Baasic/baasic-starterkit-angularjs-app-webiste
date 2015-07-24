@@ -32,8 +32,10 @@
             }
 
 
+
             $scope.plans =[];
-            
+           
+
             planService.find({
                 page: 1,
                 rpp: 20,
@@ -46,10 +48,19 @@
                     currentPage: data.page,
                     pageSize: data.recordsPerPage,
                     totalRecords: data.totalRecords
-                };
+                }; 
+                    var allPlans = $scope.plans;
+                    var masterPlans = [];
+
+            for (var i = $scope.plans.length - 1; i >= 0; i--) {
+                    var injectPlan = allPlans[i]
+                    masterPlans.push({
+                    isCollapsed:true,
+                    plan:{injectPlan}
+                });
+            };
 
             });
-
             
             $scope.deletePlan = function(plan) {                
                 if (confirm('Are you sure you want to delete this plan?')) {
@@ -67,12 +78,11 @@
             };
 
             $scope.add = function() {
-                $scope.plans.push({
-                    isCollapsed: true,
-                    plan: {}
-                });
+                $scope.plans.push([
+                ]);  
             };
 
+            
 
 
 

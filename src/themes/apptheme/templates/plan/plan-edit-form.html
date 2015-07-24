@@ -8,7 +8,7 @@
 
             <div class="actions push">
 
-                <a ng-click="" href=""><img src="../../assets/img/edit.svg" alt="edit plan"></a>
+                <a ng-click="collapseToggle()" href=""><img src="../../assets/img/edit.svg" alt="edit plan"></a>
 
                 <a href="" ng-click="plan.id ? deletePlan($index) : cancelEdit()"><img src="../../assets/img/delete.svg" alt="delete plan"></a>
 
@@ -17,11 +17,11 @@
         </div> 
         <div class="clear"></div>
 
-
-        <div class="plan__edit__form"> 
+       
+        <div ng-class="{'collapsed__true': !plan.isCollapsed, 'collapsed__true': plan.isCollapsed}" class="plan__edit__form"> 
             <div class="flex">
                 <div class="form-wrapper form">
-                    <input name="planName" ng-model="plan.name" type="text" required>                  
+                    <input name="planName" ng-model="plan.name" type="text" required>  
                     <span class="highlight"></span>
                     <span class="bar"></span>
                     <div ng-show="planForm.$submitted || planForm.planName.$dirty">                      
@@ -29,7 +29,7 @@
                         <span class="alert" ng-show="planForm.planName.$error.required"> Plan name field is required. </span>
                     </div>
                     
-                    <label>Plan Name</label>               
+                    <label>Plan Name</label><p>{{plan.isCollapsed}}</p>               
                 </div>
                 <div class="form-wrapper form">
                     <input name="price" ng-model="plan.price" type="number" required>
@@ -125,7 +125,7 @@
  </div>
  
  <div class="form__field form-wrapper">
-    <button ng-disabled="planForm.$invalid" type="submit" class="btn btn--save btn--med push" ng-click="savePlan();">Save</button>
+    <button ng-disabled="planForm.$invalid" type="submit" class="btn btn--save btn--med push" ng-click="setCollapsed();savePlan();">Save</button>
     <button type="button" class="btn btn--cancel btn--med push" ng-click="cancelEdit();">Cancel</button>
     <div class="clear"></div>
 </div>

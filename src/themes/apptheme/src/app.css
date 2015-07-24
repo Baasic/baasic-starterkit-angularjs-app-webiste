@@ -3403,3 +3403,9 @@ a.drop__text--invert{
 	height:250px;
 	background-size: cover;
 }
+
+/*plan-list toggle*/
+.collapsed__true{
+    display:none;
+
+}

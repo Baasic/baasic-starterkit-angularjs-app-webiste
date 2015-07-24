@@ -58,9 +58,8 @@
                                     if(!$scope.plan.id){
                                         cancel = $scope.plans.pop();
                                     } else {
-                                        var plan = $scope.plan;
-                                        cancel = {'isCollapsed':true, 'plan':[plan]};
-                                        console.log(cancel);
+                                        $scope.plan.isCollapsed = true;
+                                        console.log($scope.plan);
                                     }
 
                                     
@@ -68,7 +67,22 @@
                             
                             };
 
+                        $scope.collapseToggle = function(){
+                            if(!$scope.plan.isCollapsed){
+                                $scope.plan.isCollapsed = true;
+                                console.log($scope.plan);
+                            } else {
+                                $scope.plan.isCollapsed = false;
+                                console.log($scope.plan);
+                            }   
+                        };
 
+                        $scope.setCollapsed = function(){
+                            $scope.plan.isCollapsed = true;
+                        };
+
+
+                    
                         }
                 ],                
                 templateUrl: 'templates/plan/plan-edit-form.html'
