@@ -3480,3 +3480,26 @@ a.drop__text--invert{
 	padding:50px;
 	color:#ffffff;
 }
+
+body{
+-webkit-animation: fadeInLoad 2s;
+        animation: fadeInLoad 2s;
+}
+
+@-webkit-keyframes fadeInLoad {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes fadeInLoad {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}

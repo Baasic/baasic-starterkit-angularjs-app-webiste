@@ -672,3 +672,16 @@ a.drop__text--invert{
 	padding:50px;
 	color:#ffffff;
 }
+
+body{
+animation: fadeInLoad 2s;
+}
+
+@keyframes fadeInLoad {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
