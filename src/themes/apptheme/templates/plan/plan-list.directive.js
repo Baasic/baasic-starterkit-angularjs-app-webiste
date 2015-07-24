@@ -53,10 +53,10 @@
                     var masterPlans = [];
 
             for (var i = $scope.plans.length - 1; i >= 0; i--) {
-                    var injectPlan = allPlans[i]
+                    var injectPlan = allPlans[i];
                     masterPlans.push({
                     isCollapsed:true,
-                    plan:{injectPlan}
+                    plan:[injectPlan]
                 });
             };
 

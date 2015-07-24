@@ -47,7 +47,6 @@
                                         $scope.error = error.message;
                                     })
                                     .finally(function () {
-                                        //poslije savea - collapse
                                     });
                             }
                         };
@@ -59,7 +58,7 @@
                                         cancel = $scope.plans.pop();
                                     } else {
                                         $scope.plan.isCollapsed = true;
-                                        console.log($scope.plan);
+                                        
                                     }
 
                                     
@@ -70,10 +69,10 @@
                         $scope.collapseToggle = function(){
                             if(!$scope.plan.isCollapsed){
                                 $scope.plan.isCollapsed = true;
-                                console.log($scope.plan);
+                               
                             } else {
                                 $scope.plan.isCollapsed = false;
-                                console.log($scope.plan);
+                                
                             }   
                         };
 
