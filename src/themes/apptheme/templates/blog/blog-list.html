@@ -27,9 +27,9 @@
                                     <span class="article--primary__title">&mdash;</span>
                                     <p class="article--primary__body">{{ blog.excerpt }}</p>
                                     <span class="date">{{blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
-                                    <span class="minute article__readingtime">{{ blog.readingTime.text }} </span>
+                                    <span class="minute article__readingtime"> {{ blog.readingTime.text }} </span>
                                     <br/>
-                                    <a ng-if="$root.user.isAuthenticated" class="btn btn--save btn--edit" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
+                                    <a ng-if="$root.user.isAuthenticated" class="btn btn--edit" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
                                 </div>
                             </a>
                          </div>                 
@@ -43,10 +43,9 @@
                                         <h2 class="article--secondary__title">{{ blog.title }}</h2>
                                         <p class="article--secondary__body">{{ blog.excerpt }}</p>
                                         <span class="date">{{blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
+                                        <span class="minute article__readingtime push">{{ blog.readingTime.text }} </span>
                                         <br />
-                                        <span class="minute article__readingtime">{{ blog.readingTime.text }} </span>
-                                        <br />
-                                        <a ng-if="$root.user.isAuthenticated" class="btn btn--save btn--edit" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
+                                        <a ng-if="$root.user.isAuthenticated" class="btn btn--edit" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
                                     </div>
                             </a> 
                             
@@ -55,7 +54,7 @@
                                           
                 </section>     
                 <div class="center">
-                    <button class="btn btn--primary" style="text-align:center;" ng-hide="blogList.length <7" ng-click="limit = limit +6">Show more</button>                   
+                    <button class="btn btn--primary" style="text-align:center;" ng-show="" ng-click="limit = limit +6">Show more</button>                   
                 </div>          
                 
         </main>

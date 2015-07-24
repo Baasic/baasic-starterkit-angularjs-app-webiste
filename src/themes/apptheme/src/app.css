@@ -2105,11 +2105,13 @@ hr {
     -webkit-transition:0.2s ease all;
 }
 
-.form input:focus ~ label, .form input:valid ~ label, .form textarea:focus ~ label, .form textarea:valid ~ label  {
+.form input:focus ~ label, .form input:valid ~ label, .form textarea:focus ~ label, .form textarea:valid ~ label, .form .email input:invalid ~ label {
     top:-20px;
     font-size:14px;
     color: rgb(93, 93, 93);
 }
+
+
 
 .bar {
     position:relative;
@@ -2828,6 +2830,9 @@ hr {
 .minute{
 	text-decoration: none;
 	color:rgb(156, 156, 156);
+	font-family: 'Signika Negative', Helvetica,Arial,sans-serif;
+	text-transform: uppercase;
+	margin-left:15px;
 }
 
 .blog__article--tertiary:nth-of-type(1){
@@ -2936,13 +2941,40 @@ hr {
 
 /* additional buttons*/
 .btn--edit{
-	margin:0;
+	margin:15px 0;
 	padding: .1rem .5rem;
+	border:1px solid #FD6D6D;
+	color:#FD6D6D;
+	transition: all .3s ease-in-out;
 }
+.btn--edit:hover, .btn--edit:active, .btn--edit:focus  {
+    border-color: rgb(215, 93, 93);
+    color:rgb(215, 93, 93);
+}
+
+.btn--delete{
+	margin:15px 0;
+	padding: .1rem .5rem;
+	border:1px solid #FD6D6D;
+	color:#ffffff;
+	background-color:#fd6d6d;
+	transition: all .3s ease-in-out;
+}
+
+
+.btn--delete:hover, .btn--delete:active, .btn--delete:focus  {
+    border-color: rgb(215, 93, 93);
+    color:rgb(217, 217, 217);
+    background-color:rgb(215, 93, 93);
+}
+
+
 
 .btn--save {
     color: #f2f2f2;
     background-color: /*var(--bittersweet)*/#007D90;
+    border:1px solid #FD6D6D;
+    transition: all .3s ease-in-out;
 }
 
 .btn--save:hover, .btn--save:active, .btn--save:focus  {
@@ -2952,6 +2984,7 @@ hr {
 .btn--cancel {
     color: #f2f2f2;
     background-color: /*var(--bittersweet)*/#B3B3B3;
+    transition: all .3s ease-in-out;
 }
 
 .btn--cancel:hover, .btn--cancel:active, .btn--cancel:focus  {
@@ -2963,7 +2996,7 @@ hr {
     color:#007D90;
     border:1px solid;
     border-color:#007D90;
-    transition: border-color .3s ease-in-out;
+    transition: all .3s ease-in-out;
     display: block;
     float: right;
     margin:20px 0 0 0 !important;
@@ -3010,15 +3043,15 @@ hr {
 	content: ' ';
 	width:50px;
 	border-radius: 8px;
-	background:url('../../assets/img/cog.svg') center center;
-	transition:all .3s ease-in-out;
+	background:url('../../assets/img/cog.svg') center center!important;
+	transition:background .3s ease-in-out;
 }
 
 .cog:hover{
 	content: ' ';
 	width:50px;
 	border-radius: 8px;
-	background:url('../../assets/img/cog-invert.svg') center center #FD6D6D;
+	background:url('../../assets/img/cog-invert.svg') center center #FD6D6D!important;
 }
 
 
@@ -3026,14 +3059,14 @@ hr {
 .cog--invert{
 	width:50px;
 	border-radius: 8px;
-	background:url('../../assets/img/cog-invert.svg') center center;
-	transition:all .3s ease-in-out;
+	background:url('../../assets/img/cog-invert.svg') center center!important;
+	transition:background .3s ease-in-out;
 }
 
 .cog--invert:hover{
 	width:50px;
 	border-radius: 8px;
-	background:url('../../assets/img/cog.svg') center center #ffffff;
+	background:url('../../assets/img/cog.svg') center center #ffffff!important;
 }
 
 .invisible{
@@ -3136,13 +3169,11 @@ hr {
 	box-sizing: border-box;
 	width:30px!important;
 	padding:5px;
-	border:2px solid rgba(253, 109, 109, 0);
-	transition: border .3s ease-in-out;
 	
 }
 
 .a__profile__icon:hover{
-	border:2px solid rgba(253, 109, 109, 1);
+	background:#fd6d6d;
 	
 }
 .group{
@@ -3322,15 +3353,17 @@ input[type=checkbox]:checked ~ label .check {
 
 
 .link{
-  border:2px solid transparent;
   width:50px;
   height:50px;
   padding:7px;
   text-align:center;
-  transition:border .3s ease-in-out;
+  border-radius:15px;
+  background:none;
+  transition:background .3s ease-in-out;
 }
 .link:hover{
-	border:2px solid #fd6d6d;
+	background:  #fd6d6d;
+	border-radius:15px;
 }
 
 /*Notification Info-Box outer frame*/
@@ -3364,7 +3397,7 @@ input[type=checkbox]:checked ~ label .check {
   border-right:10px solid transparent;
   border-bottom:10px solid #fd6d6d;
   margin-top:10px;
-  margin-left:10px;
+  margin-left:17px;
 }
 
 .link:hover .arrow--invert{
@@ -3373,7 +3406,7 @@ input[type=checkbox]:checked ~ label .check {
   border-right:10px solid transparent;
   border-bottom:10px solid #ffffff;
   margin-top:10px;
-  margin-left:10px;
+  margin-left:17px;
 }
 
 
@@ -3422,9 +3455,10 @@ a.drop__text--invert{
 
 /*---------------*/
 .small__featured__image {
-	width:372px;
+	width:100%;
 	height:250px;
 	background-size: cover;
+	background-position: center center;
 }
 
 /*plan-list toggle*/
@@ -3435,4 +3469,14 @@ a.drop__text--invert{
 
 .collapsed__false{
     max-height:1200px;
+}
+
+.center__content{
+	margin:50px auto;
+}
+
+.cyan__bg{
+	background:#007d90;
+	padding:50px;
+	color:#ffffff;
 }

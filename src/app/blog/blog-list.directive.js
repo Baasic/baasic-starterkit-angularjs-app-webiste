@@ -35,7 +35,7 @@
                                 };
 
                                 $scope.blogList = blogList;
-
+                               
                                 $scope.hasBlogs = blogList.totalRecords > 0;
                             })
                             .error(function (error) {
@@ -49,7 +49,12 @@
                         $scope.hasBlogs = true;
 
                         loadBlogs();
+
+                       
                     }
+
+                    
+
                 ],
                 templateUrl: 'templates/blog/blog-list.html'
             };
