@@ -121,7 +121,7 @@
             <div class="container--primary">
 
                 <h2 class="push" >
-        <div class="link cog" ng-show="$root.user.isAuthenticated" >
+        <div class="admin__link cog" ng-show="$root.user.isAuthenticated" >
         <span class="invisible">P</span>
           <div class="panel">
               <div class="arrow">
@@ -207,7 +207,7 @@
                                         <span class="alert" ng-show="form.email.$error.required"> Email field is required. </span>
                                         <span class="alert" ng-show="form.email.$error.email"> Please type in correct email address. </span>
                                     </div>                                    
-                                    <label>Email</label>
+                                    <label ng-class="form.email.$pristine ? '' : 'label--on-top'">Email</label>
                                 </div>
                             </div>
                             <div class="flex spc--top--med">

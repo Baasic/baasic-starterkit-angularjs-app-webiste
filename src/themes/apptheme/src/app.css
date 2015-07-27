@@ -2105,7 +2105,7 @@ hr {
     -webkit-transition:0.2s ease all;
 }
 
-.form input:focus ~ label, .form input:valid ~ label, .form textarea:focus ~ label, .form textarea:valid ~ label, .form .email input:invalid ~ label {
+.form input:focus ~ label, .form input:valid ~ label, .form textarea:focus ~ label, .form textarea:valid ~ label{
     top:-20px;
     font-size:14px;
     color: rgb(93, 93, 93);
@@ -2973,7 +2973,7 @@ hr {
 .btn--save {
     color: #f2f2f2;
     background-color: /*var(--bittersweet)*/#007D90;
-    border:1px solid #FD6D6D;
+    border:1px solid #007d90;
     transition: all .3s ease-in-out;
 }
 
@@ -3352,16 +3352,16 @@ input[type=checkbox]:checked ~ label .check {
 }
 
 
-.link{
+.admin__link{
   width:50px;
   height:50px;
   padding:7px;
   text-align:center;
   border-radius:15px;
   background:none;
-  transition:background .3s ease-in-out;
+  transition:background-color .3s ease-in-out;
 }
-.link:hover{
+.admin__link:hover{
 	background:  #fd6d6d;
 	border-radius:15px;
 }
@@ -3391,7 +3391,7 @@ input[type=checkbox]:checked ~ label .check {
 
 /*On-Hover Animation*/
 
-.link:hover .arrow{
+.admin__link:hover .arrow{
   position:absolute;
   border-left:10px solid transparent;
   border-right:10px solid transparent;
@@ -3400,7 +3400,7 @@ input[type=checkbox]:checked ~ label .check {
   margin-left:17px;
 }
 
-.link:hover .arrow--invert{
+.admin__link:hover .arrow--invert{
   position:absolute;
   border-left:10px solid transparent;
   border-right:10px solid transparent;
@@ -3410,21 +3410,21 @@ input[type=checkbox]:checked ~ label .check {
 }
 
 
-.link a{
+.admin__link a{
   display:none;
   
 }
-.link:hover a{
+.admin__link:hover a{
   display:inline-block;
 }
-.link:hover .drop{
+.admin__link:hover .drop{
   position:absolute;
   background:#fd6d6d;
   margin-top:10px;
   margin-left:-40px;
   border-radius:5px;
 }
-.link:hover .drop--invert{
+.admin__link:hover .drop--invert{
   position:absolute;
   background:#ffffff;
   margin-top:10px;
@@ -3502,4 +3502,10 @@ body{
     to {
         opacity:1;
     }
+}
+
+.label--on-top{
+    top:-20px!important;
+    font-size:14px!important;
+    color: rgb(93, 93, 93)!important;
 }
