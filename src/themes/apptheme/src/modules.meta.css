@@ -25,3 +25,10 @@
         margin-bottom: calc(var(--base-line-height)*1.5);
     }
 }
+
+.reading-time {
+    text-decoration: none;
+    color: color(var(--ultra-light) blackness(40%));
+    font-family: var(--ff-sans);
+    text-transform: uppercase;
+}

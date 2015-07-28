@@ -145,8 +145,6 @@
     .constant('recaptchaKey', '6LcmVwMTAAAAAKIBYc1dOrHBR9xZ8nDa-oTzidES')
     .controller('MainCtrl', ['$scope', '$state', 'baasicBlogService',
     	function MainCtrl($scope, $state, blogService) {
-    	    'use strict';
-    
     	    blogService.tags.find({
     	        rpp: 10
     	    })
@@ -173,8 +171,6 @@
     ])
     .controller('LoginCtrl', ['$scope', '$state',
         function LoginCtrl($scope, $state) {
-            'use strict';
-    
             $scope.goHome = function goHome() {
                 $state.go('master.main.index');
             };
@@ -182,8 +178,6 @@
     ])
     .run(['$rootScope', '$window', 'baasicAuthorizationService',
         function moduleRun($rootScope, $window, baasicAuthService) {
-            'use strict';
-    
             var token = baasicAuthService.getAccessToken();
             var userDetails;
             if (token) {

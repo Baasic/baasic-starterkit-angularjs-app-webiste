@@ -5,8 +5,11 @@
 .articles {
     display: flex;
     flex-wrap: wrap;
+    text-decoration: none;
 }
-.article {}
+.article {
+
+}
 
 .article--ingrid {
     display: flex;

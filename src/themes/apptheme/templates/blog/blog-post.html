@@ -1,47 +1,43 @@
 ﻿<div class="hero--blog" ng-style="{ 'background-image': blog.featured ? 'linear-gradient(rgba(255,255,255, 0.8), rgba(255,255,255, 0.6)), url(' + blog.featured + ')' : 'none' }">
-    
-        <bora-header></bora-header>
-        
-        <div class="container--secondary">
-            <div class="container--article" >
-                <h2 class="blog__header__title">{{blog.title}}</h2>
-               
-            </div>
+    <bora-header></bora-header>
+    <div class="container--secondary">
+        <div class="container--article" >
+            <h2 class="blog__header__title">{{blog.title}}</h2>
         </div>
     </div>
+</div>
 
-<main role="main">
-        <section class="container--primary">
-            <div class="container--article">
-                <div class="meta__blog--primary">
-                    <span class="date">{{ blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
-                    <p class="date">&mdash;</p>
-                </div>
-                <article class="styledtext" btf-markdown="blog.content">            
-                </article>           
+<main role="main" class="group">
+    <section class="container--primary">
+        <div class="container--article">
+            <div class="meta__blog--primary">
+                <span class="date">{{ blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
+                <p class="date">&mdash;</p>
             </div>
-            
-            <ul class="post__tags tags group">
-                <li ng-repeat="tag in blog.tags" class="tags__item">
-                    <a class="btn btn--cancel btn--slanted" ui-sref="master.main.blog-search({ tags: tag.slug })">{{ tag.tag }}</a>
+            <article class="styledtext" btf-markdown="blog.content">            
+            </article>           
+        </div>
+
+        <div>
+            <ul>
+                <li ng-repeat="tag in blog.tags" class="pull">
+                    <a class="btn btn--sml btn--quartiary" ui-sref="master.main.blog-search({ tags: tag.slug })">{{ tag.tag }}</a>
                 </li>
             </ul>
-       </section>
-       <div class="clear"><br /></div>
-       
-       <section class="container--primary">
-           <div ng-hide="isEdit" ng-if="$root.user.isAuthenticated" class="container--article">
-                <button type="button" class="btn btn--edit" ng-click="editBlog()">Edit</button>
-                <button type="button" class="btn btn--delete" ng-click="deleteBlog()">Delete</button>
-            </div>
-       </section>
-        
-        
-        
-        <section class="container--primary">
-         <div class="container--article  flex blog__wrapper--tertiaty ">
-             <baasic-blog-small-list page-size="2"></baasic-blog-small-list>
-         </div>
-        </section>
+        </div>
+    </section>
+
+    <section class="container--primary">
+        <div ng-hide="isEdit" ng-if="$root.user.isAuthenticated" class="container--article">
+            <button type="button" class="btn btn--tertiary btn--med" ng-click="editBlog()">Edit</button>
+            <button type="button" class="btn btn--primary btn--med" ng-click="deleteBlog()">Delete</button>
+        </div>
+    </section>
+
+    <section class="container--primary">
+        <div class="container--article flex blog__wrapper--tertiaty">
+            <baasic-blog-small-list page-size="2"></baasic-blog-small-list>
+        </div>
+    </section>
 </main>
 

@@ -34,7 +34,7 @@
 * All our modules such as buttons, inputs, labels, tables etc. 
 */
 
-/*@import "modules.grid.css";*/
+@import "modules.grid.css";
 @import "modules.buttons.css";
 @import "modules.toggle.css";
 @import "modules.meta.css";
@@ -56,6 +56,8 @@
 @import "components.price.css";
 @import "components.blog.css";
 @import "components.avatar.css";
+@import "components.plan.css";
+@import "components.socialedit.css";
 
 /**
 * Project specific external plugins

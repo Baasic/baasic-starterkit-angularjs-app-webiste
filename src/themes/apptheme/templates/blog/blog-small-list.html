@@ -1,15 +1,19 @@
-﻿<article class="blog__article--tertiary" ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo:2">
-    <a ui-sref="master.main.blog-detail({slug:blog.slug})" >
+﻿<div class="container--article  flex blog__wrapper--tertiaty">
+    <article class="blog__article--tertiary" ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo:2">
         <div>
-            <img ng-src="{{blog.featured}}" alt="#">
-            <h2 class="article--secondary__title">{{blog.title}}</h2>
-            <p class="article--secondary__body">{{blog.excerpt}}</p>
-            <span class="date">{{blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
-            <span class="author">blog.author</span>
-            <br />
-            <span class="minute article__readingtime">{{ blog.readingTime.text }} </span>
-            <br />
+            <a ui-sref="master.main.blog-detail({slug:blog.slug})" >
+                <img ng-src="{{blog.featured}}" alt="#">
+                <h2 class="article--secondary__title">{{blog.title}}</h2>
+                <p class="article--secondary__body">{{blog.excerpt}}</p>
+                <div>
+                    <span class="date">{{blog.publishDate | date : 'MMMM dd, yyyy' }} | </span>
+                    <span class="reading-time">{{ blog.readingTime.text }} </span>
+                </div>
+            </a>
+        </div>
+        <div>
             <a ng-if="$root.user.isAuthenticated" class="btn btn--edit" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
         </div>
-    </a>
-</article>
+    </article>
+</div>
+

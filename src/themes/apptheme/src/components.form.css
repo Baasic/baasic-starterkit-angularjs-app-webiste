@@ -55,8 +55,6 @@
     color: color(var(--ultra-dark) whiteness(50%));
 }
 
-
-
 .bar {
     position:relative;
     display:block;
@@ -102,6 +100,12 @@
     -webkit-animation:inputlighter 0.3s ease;
     -moz-animation:inputlighter 0.3s ease;
     animation:inputlighter 0.3s ease;
+}
+
+.form--alert {
+    font-family: var(--ff-sans);
+    color: var(--color-secondary);
+    font-size: var(--type-small);
 }
 
 @-webkit-keyframes inputlighter

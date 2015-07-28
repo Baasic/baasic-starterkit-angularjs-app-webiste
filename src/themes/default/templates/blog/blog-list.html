@@ -21,7 +21,7 @@
                 </div>
                 <div class="article__info">
                     <div class="article__readmore">
-                        <a ui-sref="master.blog-detail({ slug: blog.slug })" class="btn --light --med rounded">Read more</a>
+                        <a ui-sref="master.blog-detail({ slug: blog.slug })" class="btn --light --med rounded pull">Read more</a>
                         <a ng-if="$root.user.isAuthenticated" ui-sref="master.blog-edit({ slug: blog.slug })" class="btn --light --med rounded">Edit</a>
                     </div>
                     <span class="article__readingtime">{{ blog.readingTime.text }}</span>

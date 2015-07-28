@@ -7,6 +7,10 @@
     padding: calc(var(--base-line-height)*1.5) 0;
 }
 
+.footer__nav {
+    display: block;
+}
+
 .footer__icon--wrapper {
     text-align: center;
     margin-bottom: var(--base-line-height);

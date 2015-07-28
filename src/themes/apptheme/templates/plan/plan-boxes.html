@@ -8,6 +8,8 @@
         <p><strong>Synchronization</strong> {{::plan.sync ? 'Yes' : 'No'}}</p>
         <p><strong>Navigator access level</strong> {{::plan.navAccessLevel}}</p>
         <p><strong>Support tickets</strong> {{::plan.tickets}}</p>
-        <a ui-sref="master.main.plan-detail({planId:plan.id})" class="btn btn--tertiary btn--med">See more</a>
+        <div class="spc--top--med">
+            <a ui-sref="master.main.plan-detail({planId:plan.id})" class="btn btn--tertiary btn--med">See more</a>
+        </div>
     </div>
 </div>

@@ -1,78 +1,69 @@
-﻿<div class="layout__form container--primary">
-
- <div class="container--secondary">
-  <h1 class="spc--bottom--lrg  section__heading add__edit__title">{{ isNew ? 'Add New' : 'Edit' }} Blog Post</h1>  
-  <form name="blogPost" novalidate class="form">
-    <div class="flex">
-        <div class="form__field form-wrapper">
-            <input type="text" name="title" id="fieldTitle" ng-model="blog.title" class="input input--text" required />
-            <label class="form__label" for="fieldTitle">Title</label>
-            <p class="alert alert--warning" ng-show="(blogPost.$submitted || blogPost.title.$touched) && blogPost.title.$error.required">Title is required.</p>
-        </div>
-        <div class="form__field form-wrapper">
-
-            <input type="text" name="featured" id="fieldBody" ng-model="blog.featured" class="input input--text" />
-            <label class="form__label" for="fieldBody">Featured image</label>
-        </div>
-    </div>
-
-    <div class="form__field form-wrapper">
-
-        <textarea name="excerpt" id="fieldExcerpt" ng-model="blog.excerpt" class="input input--textarea"></textarea>
-        <label class="form__label" for="fieldExcerpt">Excerpt</label>
-    </div>
-    <div class="form__field spc--bottom--med form-wrapper">
-        <div class="group">
-            <div class="editor__type">
-                <div class="editor__header">
-                    <small class="editor__explain">Write your post below in markdown format. You can use right side for preview, HTML view or help with markdown syntax.</small>
+﻿<div class="container--primary">
+    <div class="container--secondary">
+        <h1 class="spc--bottom--lrg  section__heading add__edit__title">{{ isNew ? 'Add New' : 'Edit' }} Blog Post</h1>  
+        <form name="blogPost" novalidate class="form">
+            <div class="flex">
+                <div class="form__field form-wrapper">
+                    <input type="text" name="title" id="fieldTitle" ng-model="blog.title" class="input input--text" required />
+                    <label class="form__label" for="fieldTitle">Title</label>
+                    <p class="form--alert form--alert--warning" ng-show="(blogPost.$submitted || blogPost.title.$touched) && blogPost.title.$error.required">Title is required.</p>
                 </div>
-
-
-                    <div class="editor__header push">
-                        <button class="btn btn--border btn--med pull" type="button" ng-class="{ 'active': state.conentent.viewMode === 'markdown' }" ng-click="setViewMode('markdown')">Preview</button>
-                        <button class="btn btn--border btn--med pull" type="button" ng-class="{ 'active': state.conentent.viewMode === 'html' }" ng-click="setViewMode('html')">Html</button>
-                        <button class="btn btn--border btn--med pull" type="button" ng-class="{ 'active': state.conentent.viewMode === 'help' }" ng-click="setViewMode('help')">Help</button>
-                    </div>
-                    <div style="clear:both;"></div>
-
-
-                <div class="editor__preview fifty__margin--left push">
-                    
-                    <div class="editor__field styledtext" ng-if="state.conentent.viewMode === 'markdown'" btf-markdown="blog.content">
-                    </div>
-                    <div class="editor__field" ng-if="state.conentent.viewMode === 'html'">
-                        {{ getHtml(blog.content) }}
-                    </div>
-                    <div class="editor__field" ng-if="state.conentent.viewMode === 'help'" ng-include="'templates/markdown-syntax-highlight.html'">
-
-                    </div>
-                </div>
-
-                <div class="fifty__margin--right add__edit__title">
-                <textarea placeholder="Type your markdown text here.." name="content" id="fieldContent" ng-model="blog.content" class="editor__field"></textarea>
-                <label class="form__label" for="fieldContent">Content</label>
+                <div class="form__field form-wrapper">
+                    <input type="text" name="featured" id="fieldBody" ng-model="blog.featured" class="input input--text" />
+                    <label class="form__label" for="fieldBody">Featured image</label>
                 </div>
             </div>
 
+            <div class="form__field form-wrapper">
+                <textarea name="excerpt" id="fieldExcerpt" ng-model="blog.excerpt" class="input input--textarea"></textarea>
+                <label class="form__label" for="fieldExcerpt">Excerpt</label>
+            </div>
 
-        </div>
-    </div>        
-    <div class="form__field form-wrapper">
-        <tags-input class="form__label" -input ng-model="blog.tags" display-property="tag" add-on-comma="true">
-        <auto-complete source="loadTags($query)">
-    </auto-complete>
-</tags-input>
-</div>
+            <div class="form__field spc--bottom--med form-wrapper">
+                <div class="group">
+                    <div class="editor__type">
+                        <div class="editor__header">
+                            <small class="editor__explain">Write your post below in markdown format. You can use right side for preview, HTML view or help with markdown syntax.</small>
+                        </div>
+                        <div class="editor__header row flex--right">
+                            <div>
+                                <button class="btn btn--quinary btn--med pull" type="button" ng-class="{ 'active': state.conentent.viewMode === 'markdown' }" ng-click="setViewMode('markdown')">Preview</button>
+                                <button class="btn btn--quinary btn--med pull" type="button" ng-class="{ 'active': state.conentent.viewMode === 'html' }" ng-click="setViewMode('html')">Html</button>
+                                <button class="btn btn--quinary btn--med pull" type="button" ng-class="{ 'active': state.conentent.viewMode === 'help' }" ng-click="setViewMode('help')">Help</button>
+                            </div>
+                        </div>
+                        <div class="group row">
+                            <div class="col-1-2 add__edit__title">
+                                <textarea placeholder="Type your markdown text here.." name="content" id="fieldContent" ng-model="blog.content" class="editor__field"></textarea>
+                                <label class="form__label" for="fieldContent">Content</label>
+                            </div>
+                            <div class="col-1-2 editor__preview">
+                                <div class="editor__field styledtext" ng-if="state.conentent.viewMode === 'markdown'" btf-markdown="blog.content">
+                                </div>
+                                <div class="editor__field" ng-if="state.conentent.viewMode === 'html'">
+                                    {{ getHtml(blog.content) }}
+                                </div>
+                                <div class="editor__field" ng-if="state.conentent.viewMode === 'help'" ng-include="'templates/markdown-syntax-highlight.html'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+            <div class="form__field form-wrapper">
+                <tags-input class="form__label" -input ng-model="blog.tags" display-property="tag" add-on-comma="true">
+                    <auto-complete source="loadTags($query)"></auto-complete>
+                </tags-input>
+            </div>
 
+            <div class="form__field form-wrapper">
+                <button type="submit" class="btn btn--quinary btn--med push" ng-click="saveBlog()">Save</button>
+                <button type="button" class="btn btn--primary btn--med push" ng-click="cancelEdit()">Cancel</button>
+            </div>
 
-<div class="form__field form-wrapper">
-    <button type="submit" class="btn btn--save btn--med push" ng-click="saveBlog()">Save</button>
-    <button type="button" class="btn btn--cancel btn--med push" ng-click="cancelEdit()">Cancel</button>
-</div>
-<div ng-show="error">
-    {{ error }}
-</div>
-</form>
-</div>
+            <div ng-show="error">
+                {{ error }}
+            </div>
+        </form>
+    </div>
 </div>

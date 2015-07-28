@@ -1,61 +1,48 @@
-﻿        <div class="hero--secondary">
-          <bora-header></bora-header>
-
-            <div class="container--primary">
-                <h2 class="blog__header__title">Dead man tell no tales</h2>
-            </div>
-        </div>
-
+﻿    <div class="hero--secondary">
+        <bora-header></bora-header>
         <div class="container--primary">
-            <div class="push"><a ng-show="$root.user.isAuthenticated" ui-sref="master.new-blog-post" class="btn btn--add__new btn--med"><span class="add__new__plan__text">New Post</span> <img src="../../assets/img/addnew.svg" alt="add new" class="del__btn"></a>
+            <h2 class="blog__header__title">Dead man tell no tales</h2>
+        </div>
+    </div>
+
+    <div class="container--primary flex flex--right">
+        <a ng-show="$root.user.isAuthenticated" ui-sref="master.new-blog-post" class="btn btn--quinary btn--med spc--top--sml">
+            Add New Post
+        </a>
+    </div>
+
+    <main role="main" class="article">
+        <section class="container--primary flex">
+            <div ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo:1">
+                <a ui-sref="master.main.blog-detail({slug:blog.slug})">
+                    <div ng-style="{ 'background-image': blog.featured ? 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(' + blog.featured + ')' : 'none' }" class="blog__article--primary">                                    
+                        <h2 class="article--primary__title">{{ blog.title }}</h2>
+                        <span class="article--primary__title">&mdash;</span>
+                        <p class="article--primary__body">{{ blog.excerpt }}</p>
+                        <div>
+                            <span class="date">{{blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
+                            <span class="reading-time"> {{ blog.readingTime.text }} </span>
+                        </div>
+                        <a ng-if="$root.user.isAuthenticated" class="btn btn--tertiary btn--med" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
+                    </div>
+                </a>
+            </div>                 
+        </section>
             
-        </div>
-        <div class="clear"></div>
-        </div>
-<div class="clear"></div>
-
-
-        
-        
-
-        <main role="main" class="articles">
-                <section class="container--primary flex">
-                         <div class="full-width" ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo:1">
-                            <a ui-sref="master.main.blog-detail({slug:blog.slug})" class="article--link">
-                                <div  ng-style="{ 'background-image': blog.featured ? 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(' + blog.featured + ')' : 'none' }" class="blog__article--primary">                                    
-                                    <h2 class="article--primary__title">{{ blog.title }}</h2>
-                                    <span class="article--primary__title">&mdash;</span>
-                                    <p class="article--primary__body">{{ blog.excerpt }}</p>
-                                    <span class="date">{{blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
-                                    <span class="minute article__readingtime"> {{ blog.readingTime.text }} </span>
-                                    <br/>
-                                    <a ng-if="$root.user.isAuthenticated" class="btn btn--edit" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
-                                </div>
-                            </a>
-                         </div>                 
-                </section>
-                
-                <section class="container--primary flex" ng-init="limit= 7">
-                         <div ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo: limit as posts" ng-show="!$first" class="blog__article--secondary">
-                            <a ui-sref="master.main.blog-detail({slug:blog.slug})">
-                                   <div>
-                                        <div class="small__featured__image"  ng-style="{ 'background-image': blog.featured ? 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(' + blog.featured + ')' : 'none' }"></div>
-                                        <h2 class="article--secondary__title">{{ blog.title }}</h2>
-                                        <p class="article--secondary__body">{{ blog.excerpt }}</p>
-                                        <span class="date">{{blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
-                                        <span class="minute article__readingtime push">{{ blog.readingTime.text }} </span>
-                                        <br />
-                                        <a ng-if="$root.user.isAuthenticated" class="btn btn--edit" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
-                                    </div>
-                            </a> 
-                            
-                            
-                         </div>
-                                          
-                </section>     
-                <div class="center">
-                    <button class="btn btn--primary" style="text-align:center;" ng-show="" ng-click="limit = limit +6">Show more</button>                   
-                </div>          
-                
-        </main>
-</div>
+        <section class="container--primary flex" ng-init="limit= 10">
+            <div ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo: limit as posts" ng-show="!$first" class="blog__article--secondary">
+                <a ui-sref="master.main.blog-detail({slug:blog.slug})">
+                    <div>
+                        <div class="secondary__article__image"  ng-style="{ 'background-image': blog.featured ? 'url(' + blog.featured + ')' : 'none' }"></div>
+                        <h2 class="article--secondary__title">{{ blog.title }}</h2>
+                        <p class="article--secondary__body">{{ blog.excerpt }}</p>
+                        <div>
+                            <span class="date">{{blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
+                            <span class="reading-time push">{{ blog.readingTime.text }} </span>
+                        </div>
+                        <a ng-if="$root.user.isAuthenticated" class="btn btn--tertiary btn--med" ui-sref="master.blog-edit({ slug: blog.slug })" >Edit</a>
+                    </div>
+                </a> 
+            </div>
+        </section>  
+    </main>

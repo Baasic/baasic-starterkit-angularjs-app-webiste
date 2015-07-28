@@ -1,32 +1,22 @@
 <div class="container--primary">
   <div class="section__form">
-    <form name="social" novalidate class="form">
-        <h2 class="spc--bottom--lrg  section__heading add__edit__title social__title">Edit Social Connections</h2>
+    <form name="social" novalidate class="form" class="socialedit__container">
+        <h2 class="spc--bottom--lrg  section__heading">Edit Social Connections</h2>
         
-        <div class="form-wrapper half" ng-repeat="soc in socials | orderBy: 'order'">
-        <img src="../../assets/img/social/{{soc.name}}.svg" class="social__icons" />
-           <div class="social__input">
-            
-            <input type="text" name="{{soc.name}}" id="{{soc.name}}" ng-model="soc.url" class="input input--text"  />
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label class="form__label" for="{{soc.name}}">{{soc.name}} URL</label>
+        <div class="" ng-repeat="soc in socials | orderBy: 'order'">
+            <img src="../../assets/img/social/{{soc.name}}.svg" class="socialedit__icon" />
+            <div class="">
+                <input type="text" name="{{soc.name}}" id="{{soc.name}}" ng-model="soc.url" class="input input--text"  />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label class="form__label" for="{{soc.name}}">{{soc.name}} URL</label>
             </div>
-            <br />
-            <br />
-
-
         </div>
                 
-        <div class="form__field spc--bottom--med form-wrapper">
-            
-        </div>
-      
         <div class="form__field form-wrapper">
             <button type="submit" class="btn btn--save btn--med push" ng-click="saveSocial()">Save</button>
             <button type="button" class="btn btn--cancel btn--med push" ng-click="backToDetails()">Cancel</button>
         </div>
-
     </form>    
   </div>
 </div>
