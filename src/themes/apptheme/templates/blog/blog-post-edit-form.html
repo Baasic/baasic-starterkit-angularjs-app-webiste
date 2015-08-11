@@ -40,7 +40,7 @@
                             <div class="col-1-2 editor__preview">
                                 <div class="editor__field styledtext" ng-if="state.conentent.viewMode === 'markdown'" btf-markdown="blog.content">
                                 </div>
-                                <div class="editor__field" ng-if="state.conentent.viewMode === 'html'">
+                                <div class="editor__field styledtext" ng-if="state.conentent.viewMode === 'html'">
                                     {{ getHtml(blog.content) }}
                                 </div>
                                 <div class="editor__field" ng-if="state.conentent.viewMode === 'help'" ng-include="'templates/markdown-syntax-highlight.html'">

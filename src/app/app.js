@@ -146,7 +146,7 @@
     .controller('MainCtrl', ['$scope', '$state', 'baasicBlogService',
     	function MainCtrl($scope, $state, blogService) {
     	    blogService.tags.find({
-    	        rpp: 10
+    	        rpp: 4
     	    })
             .success(function (tagList) {
                 $scope.tags = tagList.item;

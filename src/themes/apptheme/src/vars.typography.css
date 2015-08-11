@@ -26,4 +26,5 @@
     /* Type families */
     --ff-sans: 'Signika Negative', Helvetica, Arial, sans-serif;
     --ff-serif: 'Alegreya', Times, Times New Roman, serif;
+    --ff-monospace: monospace, monospace;
 }

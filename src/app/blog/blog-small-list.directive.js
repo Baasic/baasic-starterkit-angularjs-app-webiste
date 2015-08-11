@@ -12,7 +12,7 @@
                     if (attrs.pageSize) {
                         pageSizeFn = $parse(attrs.pageSize);
                     } else {
-                        pageSizeFn = function () { return 10; };
+                        pageSizeFn = function () { return 2; };
                     }
                 },
                 controller: ['$scope', '$stateParams', 'baasicBlogService',

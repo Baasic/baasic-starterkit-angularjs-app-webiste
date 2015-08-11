@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .hero--primary {
-    background-image: url("../assets/img//hero-sml.jpg");
+    background-image: url("../../../../../../../assets/img/hero-sml.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,13 +15,13 @@
 
 @media all and (--from-medium) {
     .hero--primary {
-        background-image: url("../assets/img//hero.jpg");
+        background-image: url("../../../../../../../assets/img/hero.jpg");
         /*min-height: 60rem;*/
     }
 }
 
 .hero--secondary {
-    background-image: url("../assets/img//hero-blog-sml.jpg");
+    background-image: url("../../../../../../../assets/img/hero-blog-sml.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,13 +31,13 @@
 }
 @media all and (--from-medium) {
     .hero--secondary {
-        background-image: url("../assets/img//hero-blog.jpg");
+        background-image: url("../../../../../../../assets/img//hero-blog.jpg");
         min-height: 15rem;
     }
 }
 
 .hero--blog {
-    background-image: url("../assets/img//article-primary-sml.jpg");
+    background-image: url("../../../../../../../assets/img/article-primary-sml.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,13 +48,13 @@
 }
 @media all and (--from-medium) {
     .hero--blog {
-        background-image: url("../assets/img//article-primary.jpg");
+        background-image: url("../../../../../../../assets/img/article-primary.jpg");
         min-height: 15rem;
     }
 }
 
 .hero--product {
-    background-image: url("../assets/img//hero-product-sml.jpg");
+    background-image: url("../../../../../../../assets/img/hero-product-sml.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,7 +65,7 @@
 }
 @media all and (--from-medium) {
     .hero--product {
-        background-image: url("../assets/img//hero-product.jpg");
+        background-image: url("../../../../../../../assets/img/hero-product.jpg");
         min-height: 15rem;
     }
 }
