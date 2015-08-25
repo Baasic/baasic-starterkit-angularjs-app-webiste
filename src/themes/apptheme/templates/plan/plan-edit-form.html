@@ -1,34 +1,34 @@
 ﻿<div class="plan__border__class">
-    <div>
+    <div class="overflow--hidden">
         <ng-form novalidate name="planForm">
-            <div>
+            <div class="overflow--hidden">
                 <p class="plan__detail plan__detail--price pull">{{plan.name}}</p>
                 <div class="actions push">
                     <a ng-click="collapseToggle()" href=""><img src="../../assets/img/edit.svg" alt="edit plan"></a>
                     <a href="" ng-click="plan.id ? deletePlan($index) : cancelEdit()"><img src="../../assets/img/delete.svg" alt="delete plan"></a>
                 </div>
-            </div> 
+            </div>
             <div class="clear"></div>
 
-            <div ng-class="{'collapsed__false': !plan.isCollapsed, 'collapsed__true': plan.isCollapsed}" class="plan__edit__form"> 
+            <div ng-class="{'collapsed__false': !plan.isCollapsed, 'collapsed__true': plan.isCollapsed}" class="plan__edit__form">
                 <div class="form__transition">
                     <div class="flex">
                         <div class="form-wrapper form">
-                            <input name="planName" ng-model="plan.name" type="text" required>  
+                            <input name="planName" ng-model="plan.name" type="text" required>
                             <span class="highlight"></span>
                             <span class="bar"></span>
-                            <div ng-show="planForm.$submitted || planForm.planName.$dirty">                      
+                            <div ng-show="planForm.$submitted || planForm.planName.$dirty">
                                 <span class="form--alert" ng-show="planForm.planName.$error.required"> Plan name field is required. </span>
                             </div>
-                            <label>Plan Name</label>             
+                            <label>Plan Name</label>
                         </div>
 
                         <div class="form-wrapper form">
                             <input name="price" ng-model="plan.price" type="number" required>
                             <span class="highlight"></span>
                             <span class="bar"></span>
-                            <div ng-show="planForm.$submitted || planForm.price.$dirty">                      
-                                <span class="form--alert" ng-show="planForm.price.$error.number"> Please use the numbers only. </span> 
+                            <div ng-show="planForm.$submitted || planForm.price.$dirty">
+                                <span class="form--alert" ng-show="planForm.price.$error.number"> Please use the numbers only. </span>
                                 <span class="form--alert" ng-show="planForm.price.$error.required"> Price field is required. </span>
                             </div>
                             <label>Price</label>
@@ -45,10 +45,10 @@
                                     <span class="box"></span>
                                     Synchronization
                                 </label>
-                            </div>  
+                            </div>
                             <div ng-show="planForm.$submitted">
                                 <span class="form--alert" ng-show="planForm.sync.$error.required">It is required to select if the plan has synchronization or not. </span>
-                            </div>                             
+                            </div>
                         </div>
                     </div>
 
@@ -58,9 +58,9 @@
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <div ng-show="planForm.$submitted || planForm.tickets.$dirty">
-                                <span class="form--alert" ng-show="planForm.tickets.$error.number"> Please use the numbers only. </span>                                        
+                                <span class="form--alert" ng-show="planForm.tickets.$error.number"> Please use the numbers only. </span>
                                 <span class="form--alert" ng-show="planForm.tickets.$error.required"> It is required to determine number of support tickets. </span>
-                            </div>                                    
+                            </div>
                             <label>Tickets</label>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                             <div ng-show="planForm.$submitted || planForm.navAccessLevel.$dirty">
 
                                 <span class="form--alert" ng-show="planForm.navAccessLevel.$error.required"> Please choose one option. Navigator Level is mandatory field. </span>
-                            </div>                                    
+                            </div>
                         </div>
                         <div class="form-wrapper">
                             <label class="radio__label--title" for="period">Plan Duration</label>
@@ -89,7 +89,7 @@
                             </select>
                             <div ng-show="planForm.$submitted || planForm.period.$dirty">
                                 <span class="form--alert" ng-show="planForm.period.$error.required">Period field is mandatory. </span>
-                            </div>                                    
+                            </div>
                         </div>
                     </div>
                     <div class="form-wrapper form">
@@ -98,7 +98,7 @@
                         <span class="bar"></span>
                         <div ng-show="planForm.$submitted || planForm.description.$dirty">
                             <span class="form--alert" ng-show="planForm.description.$error.required">Please use brief description of plan. This is mandatory. </span>
-                        </div>                                    
+                        </div>
                         <label>Description</label>
                     </div>
                     <div class="form__field form-wrapper">

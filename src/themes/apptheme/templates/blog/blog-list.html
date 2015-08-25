@@ -38,10 +38,12 @@
                         <a ng-if="$root.user.isAuthenticated" class="btn btn--tertiary btn--med" ui-sref="master.blog-edit({ slug: blog.slug })">Edit</a>
                     </div>
                 </a>
-            </div>                 
-        </section>  
-        <pager pager-data="pagerData" ng-show="pager.hasPrevious || pager.hasNext" class="pager">
+            </div>
+        </section>
+        <div class="container--primary flex">
+        <pager pager-data="pagerData" ng-show="pager.hasPrevious || pager.hasNext" class="container--primary pager">
             <a ui-sref="master.main.blog({ page: pager.currentPage - 1 })" class="btn btn--primary btn--sml" ng-show="pager.hasPrevious">Prev</a>
-            <a ui-sref="master.main.blog({ page: pager.currentPage + 1 })" class="btn btn--primary btn-sml" ng-show="pager.hasNext">Next</a>
+            <a ui-sref="master.main.blog({ page: pager.currentPage + 1 })" class="btn btn--primary btn--sml" ng-show="pager.hasNext">Next</a>
         </pager>
+        </div>
     </main>

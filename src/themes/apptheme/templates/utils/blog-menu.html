@@ -1,37 +1,28 @@
 <ul class="nav group">
-    <li class="nav__item"><a ui-sref="master.main.index" class="nav__link nav__link--primary">Home</a></li>
-    <li class="nav__item"><a ui-sref="master.main.blog" rel="blog" class="nav__link nav__link--primary" rel="blog">Blog</a></li>
-    <li class="nav__item"><a ui-sref="master.main.index({ '#': 'contact' })" class="nav__link nav__link--primary">Contact</a></li>
-
-
-    
-    <h2 class="nav__item" >
-        <div class="admin__link" ng-hide="$root.user.isAuthenticated" >
-          <img class="profile__icon" src="../../assets/img/profile.svg" />
-          <div class="panel">
-              <div class="arrow">
-                <div class="drop">
-                    <baasic-logout on-logout="setEmptyUser()">
-                        <a class="drop__text" ui-sref="login">Login</a>
-                    </baasic-logout>
-                </div>
-              </div>
-          </div>
+    <li class="nav__item">
+        <a ui-sref="master.main.index" class="nav__link nav__link--primary">Home</a>
+    </li>
+    <li class="nav__item">
+        <a ui-sref="master.main.blog" rel="blog" class="nav__link nav__link--primary" rel="blog">Blog</a>
+    </li>
+    <li class="nav__item">
+        <a ui-sref="master.main.index({ '#': 'contact' })" class="nav__link nav__link--primary">Contact</a>
+    </li>
+    <li class="nav__link nav__link--primary">
+        <div class="popup__wrapper popup__wrapper--positive">
+            <a href="#">
+                <img class="popup__title" src="assets/img/profile.svg" />
+            </a>
+            <div class="popup__settings popup__settings--positive" ng-if="!$root.user.isAuthenticated">
+                <baasic-logout on-logout="setEmptyUser()">
+                    <a ui-sref="login">Login</a>
+                </baasic-logout>
+            </div>
+            <div class="popup__settings popup__settings--positive" ng-if="$root.user.isAuthenticated">
+                <baasic-logout on-logout="setEmptyUser()">
+                    <a href="#" ng-click="logout()">Logout</a>
+                </baasic-logout>
+            </div>
         </div>
-    </h2>
-
-    <h2 class="nav__item" >
-        <div class="admin__link" ng-show="$root.user.isAuthenticated" >
-          <img class="profile__icon" src="../../assets/img/profile.svg" />
-          <div class="panel">
-              <div class="arrow">
-                <div class="drop">
-                    <baasic-logout on-logout="setEmptyUser()">
-                        <a class="drop__text" href="#" ng-click="logout()">Logout</a>
-                    </baasic-logout>
-                </div>
-              </div>
-          </div>
-        </div>
-    </h2>
-    </ul>
+    </li>
+</ul>

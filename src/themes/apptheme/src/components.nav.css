@@ -24,7 +24,7 @@
     float: right;
     margin-right: 0;
     width: 100%;
-    margin-top: 1.5rem;
+    /*margin-top: 1.5rem;*/
     animation:fadeIn ease-in .2s;
     animation-fill-mode:forwards;
 }
@@ -94,6 +94,10 @@
     padding: 1rem 1rem 1rem 1rem;
     width: 100%;
     display: block;
+}
+
+.popup__wrapper img {
+    width: 2rem;
 }
 
 .nav__link--primary {

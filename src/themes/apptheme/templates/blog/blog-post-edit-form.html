@@ -1,6 +1,6 @@
 ﻿<div class="container--primary">
     <div class="container--secondary">
-        <h1 class="spc--bottom--lrg  section__heading add__edit__title">{{ isNew ? 'Add New' : 'Edit' }} Blog Post</h1>  
+        <h1 class="spc--bottom--lrg  section__heading add__edit__title">{{ isNew ? 'Add New' : 'Edit' }} Blog Post</h1>
         <form name="blogPost" novalidate class="form">
             <div class="flex">
                 <div class="form__field form-wrapper">
@@ -37,7 +37,7 @@
                                 <textarea placeholder="Type your markdown text here.." name="content" id="fieldContent" ng-model="blog.content" class="editor__field"></textarea>
                                 <label class="form__label" for="fieldContent">Content</label>
                             </div>
-                            <div class="col-1-2 editor__preview">
+                            <div class="col-1-2 spc--top--lrg">
                                 <div class="editor__field styledtext" ng-if="state.conentent.viewMode === 'markdown'" btf-markdown="blog.content">
                                 </div>
                                 <div class="editor__field styledtext" ng-if="state.conentent.viewMode === 'html'">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-            </div>        
+            </div>
             <div class="form__field form-wrapper">
                 <tags-input class="form__label" -input ng-model="blog.tags" display-property="tag" add-on-comma="true">
                     <auto-complete source="loadTags($query)"></auto-complete>

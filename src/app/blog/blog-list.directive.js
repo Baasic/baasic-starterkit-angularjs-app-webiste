@@ -12,7 +12,7 @@
                     if (attrs.pageSize) {
                         pageSizeFn = $parse(attrs.pageSize);
                     } else {
-                        pageSizeFn = function () { return 4; };
+                        pageSizeFn = function () { return 7; };
                     } //blogova po stranici
                 },
                 controller: ['$scope', '$stateParams', 'baasicBlogService',
@@ -35,7 +35,7 @@
                                 };
 
                                 $scope.blogList = blogList;
-                               
+
                                 $scope.hasBlogs = blogList.totalRecords > 0;
                             })
                             .error(function (error) {
@@ -50,10 +50,10 @@
 
                         loadBlogs();
 
-                       
+
                     }
 
-                    
+
 
                 ],
                 templateUrl: 'templates/blog/blog-list.html'

@@ -1,13 +1,13 @@
 (function(angular) {
     'use strict';
     angular.module('baasic.mobileApp', [
-        'baasic.dynamicResource' 
+        'baasic.dynamicResource','headroom', 'ng.picturefill'
     ]);
-    
+
     angular.module('baasic.blog', [
-        'baasic.article', 'headroom'
+        'baasic.article', 'headroom', 'ng.picturefill'
     ]);
-    
+
     angular.module('myMobileApp', [
       'ui.router',
       'btford.markdown',
@@ -24,27 +24,28 @@
                 apiRootUrl: 'api.baasic.local',
                 apiVersion: 'beta'
             });
-    
+
             $locationProvider.html5Mode({
                 enabled: true
             });
-    
+
             $urlRouterProvider.when('', '/');
-    
+
+
             $urlRouterProvider.otherwise(function ($injector) {
                 var $state = $injector.get('$state');
                 $state.go('404');
             });
-    
+
             $urlRouterProvider.rule(function ($injector, $location) {
                 var path = $location.path();
-    
+
                 // check to see if the path ends in '/'
                 if (path[path.length - 1] === '/') {
                     $location.replace().path(path.substring(0, path.length - 1));
                 }
             });
-    
+
             $stateProvider
                 .state('master', {
                     abstract: true,
@@ -58,17 +59,17 @@
 
                 })
                 .state('master.main.index', {
-                    url: '?{page}',
+                    url: '',
                     templateUrl: 'templates/content-home.html'
 
                 })
                 .state('master.main.blog', {
-                    url: 'blog',
+                    url: 'blog?{page}',
                     templateUrl: 'templates/blog/blog-home.html',
                     data:{
                         isBlog:true
                     }
-                })         
+                })
                 .state('login', {
                     url: '/login',
                     templateUrl: 'templates/login.html',
@@ -78,7 +79,7 @@
                     url: 'new-blog-post',
                     templateUrl: 'templates/blog/new-blog-post.html',
                     controller: 'NewBlogPostCtrl'
-                    
+
                 })
                 .state('master.main.blog-detail', {
                     url: 'blog/{slug}',
@@ -92,7 +93,7 @@
                     url: 'blog-post/edit/{slug}',
                     templateUrl: 'templates/blog/blog-post-edit.html',
                     controller: 'BlogPostEditCtrl'
-                   
+
                 })
                 .state('master.main.blog-search', {
                     url: 'blog-search?{search,tags}',
@@ -106,7 +107,7 @@
                     url: 'plans?{page}',
                     templateUrl: 'templates/plan/plans.html',
                     //controller: 'PlanListCrtl'
-                   
+
                 })
                 .state('master.main.new-plan', {
                     url: 'new-plan',
@@ -117,7 +118,7 @@
                     url: 'plan/{planId}',
                     templateUrl: 'templates/plan/plan-detail.html',
                     controller: 'PlanCtrl',
-                    
+
                 })
                 .state('master.plan-edit', {
                     url: 'plan/edit/{planId}',
@@ -128,18 +129,18 @@
                     url: 'profile/edit',
                     templateUrl: 'templates/profile/profile-edit-form.html',
                     controller: 'ProfileEditCtrl'
-                })      
-                  
+                })
+
                 .state('master.social', {
                     url: 'edit/social-connections',
                     templateUrl: 'templates/social/social-list.html',
                     controller: 'SocialEditCtrl'
-                })               
+                })
                 .state('404', {
                     templateUrl: 'templates/404.html'
                 });
-    
-    
+
+
         }
     ])
     .constant('recaptchaKey', '6LcmVwMTAAAAAKIBYc1dOrHBR9xZ8nDa-oTzidES')
@@ -151,19 +152,19 @@
             .success(function (tagList) {
                 $scope.tags = tagList.item;
             });
-    
+
     	    $scope.searchBlog = function searchBlog() {
     	        if ($scope.searchFor) {
     	            $state.go('master.main.blog-search', { search: $scope.searchFor });
     	        }
     	    };
-    
+
     	    $scope.setEmptyUser = function setEmptyUser() {
     	        $scope.$root.user = {
     	            isAuthenticated: false
     	        };
     	    };
-    
+
     	    $scope.newBlogPost = function newBlogPost() {
     	        $state.go('master.new-blog-post');
     	    };
@@ -183,22 +184,22 @@
             if (token) {
                 userDetails = baasicAuthService.getUser();
             }
-    
+
             var user;
             if (userDetails !== undefined && userDetails !== null) {
                 user = {
                     isAuthenticated: true,
                     isAdmin: userDetails.roles.indexOf('Administrators') !== -1
                 };
-    
+
                 angular.extend(user, userDetails);
             } else {
                 user = {
                     isAuthenticated: false
                 };
             }
-    
+
             $rootScope.user = user;
         }
     ]);
-}(angular));            
+}(angular));

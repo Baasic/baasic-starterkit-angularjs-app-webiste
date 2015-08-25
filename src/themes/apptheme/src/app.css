@@ -31,7 +31,7 @@
 
 /**
 * Project specific modules
-* All our modules such as buttons, inputs, labels, tables etc. 
+* All our modules such as buttons, inputs, labels, tables etc.
 */
 
 @import "modules.grid.css";
@@ -39,6 +39,7 @@
 @import "modules.toggle.css";
 @import "modules.meta.css";
 @import "modules.video.css";
+@import "modules.tags.css";
 
 /**
 * Project specific components
@@ -57,11 +58,13 @@
 @import "components.blog.css";
 @import "components.avatar.css";
 @import "components.plan.css";
+@import "components.popup.css";
 @import "components.socialedit.css";
+@import "components.loader.css";
 
 /**
 * Project specific external plugins
-* All project Sass or CSS plugins such as Select2, Dropit etc. 
+* All project Sass or CSS plugins such as Select2, Dropit etc.
 */
 
 /*@import "plugins.pluginname.css";*/
@@ -78,4 +81,4 @@
 @import "util.floats.css";
 @import "util.spacers.css";
 @import "util.visibility.css";
-@import "util.tweaks.css";
+@import "util.overflow.css";

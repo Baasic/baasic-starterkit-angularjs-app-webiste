@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    # modules.tags
+\*------------------------------------*/
+
+.tags{
+	box-shadow: none!important;
+	border: none!important;
+}
+.tags .input{
+	border: none;
+}
+.tags-input.tags.focused{
+	box-shadow: none;
+	border: none;
+}
+
+.tags-input.tags{
+	box-shadow: none;
+}
+
+.host{
+	border-bottom: 1px solid rgb(242,242,242);
+}
+
+.tag-item{
+	color: #00000!important;
+	background: #ffffff!important;
+	border-radius: 0!important;
+	border: 2px solid rgb(242,242,242)!important;
+	font-family: var(--ff-sans);
+}
