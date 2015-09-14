@@ -90,7 +90,7 @@
                     }
                 })
                 .state('master.blog-edit', {
-                    url: 'blog-post/edit/{slug}',
+                    url: 'blog/edit/{slug}',
                     templateUrl: 'templates/blog/blog-post-edit.html',
                     controller: 'BlogPostEditCtrl'
 

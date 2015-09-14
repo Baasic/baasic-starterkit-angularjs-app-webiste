@@ -5,11 +5,13 @@
 html {
     font-size: var(--base-font-size);
     line-height: var(--base-line-height);
+    overflow: auto;
 }
 body {
     font-family: var(--ff-serif);
     animation:fadeIn ease-in .2s;
     animation-fill-mode:forwards;
+    overflow: hidden;
 }
 
 @keyframes fadein {
@@ -28,4 +30,13 @@ img {
 
 a:focus {
     outline: none;
+}
+
+main {
+    overflow: hidden;
+}
+
+footer {
+    display: block;
+    margin-top: 4rem;
 }

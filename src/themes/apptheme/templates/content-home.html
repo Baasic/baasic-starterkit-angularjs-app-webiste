@@ -4,8 +4,8 @@
         <div class="box">
             <section class="box__item">
                 <h2 class="box__item--title">Grab your first mate and sail with us!</h2>
-                <a href="#plan" class="btn btn--primary btn--lrg">Sign in</a>
-                <a href="#" class="btn btn--secondary btn--lrg">Get app</a>
+                <a ui-sref="login" class="btn btn--primary btn--lrg">Sign in</a>
+                <a href="#plan" class="btn btn--secondary btn--lrg">Get app</a>
             </section>
             <div class="box__media">
                 <figure class="box__media--image">
@@ -118,7 +118,7 @@
                 </div>
             </div>
             <h2 class="section__heading center">Select a Plan</h2>
-            <plan-boxes class="flex center"></plan-boxes>
+            <plan-boxes class="flex center spc--top--lrg"></plan-boxes>
         </div>
     </section>
     <section class="section__primary">
@@ -178,7 +178,8 @@
                                 <span class="form--alert" ng-show="form.email.$error.required"> Email field is required. </span>
                                 <span class="form--alert" ng-show="form.email.$error.email"> Please type in correct email address. </span>
                             </div>
-                            <label ng-class="form.email.$pristine ? '' : 'label--on-top'">Email</label>
+                            <label ng-class="{'label--on-top': form.$error.email, '':!form.$error.email}">Email</label>
+
                         </div>
                     </div>
                     <div class="flex spc--top--med">

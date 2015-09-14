@@ -1,7 +1,6 @@
 /*------------------------------------*\
     # components.form
 \*------------------------------------*/
-
 .form-wrapper {
     position: relative;
     margin-bottom: calc(var(--base-line-height)*1.5);
@@ -95,7 +94,7 @@
 .highlight {
     position:absolute;
     height: 60%;
-    width: 325px;
+    width: 100%;
     top: 25%;
     /*left:0;*/
     pointer-events: none;
@@ -123,11 +122,31 @@
     height: 50px;
 }
 
+.form__flex {
+    display: flex;
+    width: 100%;
+}
+
+.form__field--full{
+    width: 100%;
+}
+
+@media all and (--from-medium) {
+    .form__field--full {
+        width: 50%;
+    }
+}
+
 .editor__field{
     max-height: 500px;
     height: 500px;
     overflow: auto;
     word-break: break-word;
+    border-bottom: 1px solid rgb(242,242,242);
+}
+
+.font--monospace {
+    font-family: var(--ff-monospace);
 }
 
 .editor__explain{

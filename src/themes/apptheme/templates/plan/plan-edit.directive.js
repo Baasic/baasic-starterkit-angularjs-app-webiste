@@ -25,11 +25,11 @@
                 },
                controller: ['$scope', '$q', 'planService',
                     function ($scope, $q, planService) {
-                        
+
 
                         $scope.savePlan = function savePlan(plan) {
                             if ($scope.plan) {
-                               
+
                                 var promise;
                                 if (!$scope.plan.id) {
                                     promise = planService.create($scope.plan);
@@ -58,32 +58,30 @@
                                         cancel = $scope.plans.pop();
                                     } else {
                                         $scope.plan.isCollapsed = true;
-                                        
+
                                     }
 
-                                    
+
                                     }
-                            
+
                             };
 
                         $scope.collapseToggle = function(){
                             if(!$scope.plan.isCollapsed){
                                 $scope.plan.isCollapsed = true;
-                               
+
                             } else {
                                 $scope.plan.isCollapsed = false;
-                                
-                            }   
+
+                            }
                         };
 
                         $scope.setCollapsed = function(){
                             $scope.plan.isCollapsed = true;
                         };
 
-
-                    
                         }
-                ],                
+                ],
                 templateUrl: 'templates/plan/plan-edit-form.html'
             };
         }

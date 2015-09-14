@@ -1,13 +1,10 @@
-﻿ <div class="section__tertiary--item spc--top--lrg center">
-    <div class="section__tertiary__title-wrapper">
-        <h3 class="section__tertiary__title-emphasized">{{::plan.name}}</h3>
+﻿<section class="group spc--top--lrg spc--bottom--lrg section__form">
+    <div class="pull">
+        <p class="plan__detail">Your order:</p>
+        <p class="plan__detail plan__detail--price">{{ plan.name }}</p>
     </div>
-    <div class="section__tertiary__content-wrapper">
-        <span class="plan__price plan__price--primary">${{::plan.price}}</span>
-        <p>per {{::plan.period}}</p>
-        <p><strong>Synchronization</strong> {{::plan.sync ? 'Yes' : 'No'}}</p>
-        <p><strong>Navigator access level</strong> {{::plan.navAccessLevel}}</p>
-        <p><strong>Support tickets</strong> {{::plan.tickets}}</p>
-        <a ui-sref="master.main.index" class="btn btn--tertiary btn--med">Back</a>
+    <div class="push">
+        <p class="plan__detail">Total:</p>
+        <p class="plan__detail plan__detail--price">{{ plan.price | currency }}</p>
     </div>
-</div>
+</section>

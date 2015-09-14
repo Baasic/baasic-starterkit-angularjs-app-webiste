@@ -4,7 +4,7 @@
 */
 .loader {
     position: fixed;
-    z-index: 5;
+    z-index: 15;
     top: 0px;
     left: 0px;
     right: 0px;

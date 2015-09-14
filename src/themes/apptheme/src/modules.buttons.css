@@ -13,12 +13,20 @@
     background-color: transparent;
     position: relative;
     user-select: none;
-    margin: .5rem; 
-    letter-spacing: 1px;    
+    margin: .5rem;
+    letter-spacing: 1px;
 }
 
 .btn:focus {
     outline: 0;
+}
+
+.btn--margin__top {
+    margin: .5rem 0;
+}
+
+.btn--width {
+    max-width: 3.5rem;
 }
 
 .btn--primary {
@@ -83,13 +91,13 @@
 .btn--sml {
     padding: .25rem .5rem;
     line-height: .75rem;
-    font-size: var(--type-small);    
+    font-size: var(--type-small);
     font-weight: var(--type-regular);
 }
 
 .btn--med {
     padding: .25rem .5rem;
-    font-size: var(--type-base);    
+    font-size: var(--type-base);
     font-weight: var(--type-regular);
 }
 
@@ -103,18 +111,18 @@
     .btn--lrg {
         padding: .5rem 1.15rem;
         font-size: var(--type-medium);
-    }    
+    }
 }
 
 @media all and (--from-medium) {
     .btn--lrg {
         padding: .75rem 1.15rem;
-    }    
+    }
 }
 
 @media all and (--from-large) {
     .btn--lrg {
         padding: .75rem 1.15rem;
         font-size: var(--type-large);
-    }    
+    }
 }

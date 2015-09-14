@@ -8,8 +8,6 @@
                     <a href="" ng-click="plan.id ? deletePlan($index) : cancelEdit()"><img src="../../assets/img/delete.svg" alt="delete plan"></a>
                 </div>
             </div>
-            <div class="clear"></div>
-
             <div ng-class="{'collapsed__false': !plan.isCollapsed, 'collapsed__true': plan.isCollapsed}" class="plan__edit__form">
                 <div class="form__transition">
                     <div class="flex">
@@ -22,7 +20,6 @@
                             </div>
                             <label>Plan Name</label>
                         </div>
-
                         <div class="form-wrapper form">
                             <input name="price" ng-model="plan.price" type="number" required>
                             <span class="highlight"></span>
@@ -34,37 +31,49 @@
                             <label>Price</label>
                         </div>
                     </div>
-
                     <h3 class="plan__edit__section left__padding">Content in the plan</h3>
-                    <div class="spc--top--med pull">
-                        <div class="form-wrapper" >
-                            <div class="checkbox-group">
-                                <input id="sync-{{plan.id}}" name="plan.sync" class="checkbox" ng-model="plan.sync" type="checkbox"  />
-                                <label class="radio__label label--checkbox" for="sync-{{plan.id}}">
-                                    <span class="check"></span>
-                                    <span class="box"></span>
-                                    Synchronization
-                                </label>
+                    <div class="flex spc--top--med">
+                        <div class="pull form__field--full">
+                            <div class="form-wrapper" >
+                                <div class="checkbox-group">
+                                    <input id="sync-{{plan.id}}" name="plan.sync" class="checkbox" ng-model="plan.sync" type="checkbox"  />
+                                    <label class="radio__label label--checkbox" for="sync-{{plan.id}}">
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        Synchronization
+                                    </label>
+                                </div>
+                                <div ng-show="planForm.$submitted">
+                                    <span class="form--alert" ng-show="planForm.sync.$error.required">It is required to select if the plan has synchronization or not. </span>
+                                </div>
                             </div>
-                            <div ng-show="planForm.$submitted">
-                                <span class="form--alert" ng-show="planForm.sync.$error.required">It is required to select if the plan has synchronization or not. </span>
+                            <div class="form-wrapper" >
+                                <div class="checkbox-group">
+                                <input id="featured-{{plan.id}}" name="plan.isFeatured" class="checkbox" ng-model="plan.isFeatured" type="checkbox"  />
+                                    <label class="radio__label label--checkbox" for="featured-{{plan.id}}">
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        Featured Plan
+                                    </label>
+                                </div>
+                                <div ng-show="planForm.$submitted">
+                                    <span class="form--alert" ng-show="planForm.isFeatured.$error.required">It is required to select if the plan is featured or not. </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="push form__field--full">
+                            <div class="form-wrapper form">
+                                <input name="tickets" ng-model="plan.tickets" type="number" min="0" step="1" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <div ng-show="planForm.$submitted || planForm.tickets.$dirty">
+                                    <span class="form--alert" ng-show="planForm.tickets.$error.number"> Please use the numbers only. </span>
+                                    <span class="form--alert" ng-show="planForm.tickets.$error.required"> It is required to determine number of support tickets. </span>
+                                </div>
+                                <label>Tickets</label>
                             </div>
                         </div>
                     </div>
-
-                    <div class="spc--top--med push fifty">
-                        <div class="form-wrapper form">
-                            <input name="tickets" ng-model="plan.tickets" type="number" min="0" step="1" required>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <div ng-show="planForm.$submitted || planForm.tickets.$dirty">
-                                <span class="form--alert" ng-show="planForm.tickets.$error.number"> Please use the numbers only. </span>
-                                <span class="form--alert" ng-show="planForm.tickets.$error.required"> It is required to determine number of support tickets. </span>
-                            </div>
-                            <label>Tickets</label>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
                     <div class="flex spc--top--med">
                         <div class="form-wrapper">
                             <label class="radio__label--title" for="navAccessLevel">Navigator Level</label>
@@ -75,7 +84,6 @@
                                 <option value="Experts">Experts</option>
                             </select>
                             <div ng-show="planForm.$submitted || planForm.navAccessLevel.$dirty">
-
                                 <span class="form--alert" ng-show="planForm.navAccessLevel.$error.required"> Please choose one option. Navigator Level is mandatory field. </span>
                             </div>
                         </div>
@@ -102,8 +110,8 @@
                         <label>Description</label>
                     </div>
                     <div class="form__field form-wrapper">
-                        <button ng-disabled="planForm.$invalid" type="submit" class="btn btn--save btn--med push" ng-click="setCollapsed();savePlan();">Save</button>
-                        <button type="button" class="btn btn--cancel btn--med push" ng-click="cancelEdit();">Cancel</button>
+                        <button ng-disabled="planForm.$invalid" type="submit" class="btn btn--quinary btn--med push" ng-click="setCollapsed();savePlan();">Save</button>
+                        <button type="button" class="btn btn--primary btn--med push" ng-click="cancelEdit();">Cancel</button>
                         <div class="clear"></div>
                     </div>
                 </div>
@@ -111,4 +119,3 @@
         </ng-form>
     </div>
 </div>
-

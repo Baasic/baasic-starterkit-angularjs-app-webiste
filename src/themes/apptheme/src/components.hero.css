@@ -69,3 +69,19 @@
         min-height: 15rem;
     }
 }
+
+.hero--404 {
+    background-image: url(/assets/img/map-sml.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    min-height: 15rem;
+}
+@media all and (--from-medium) {
+    .hero--404 {
+        background-image: url(/assets/img//map.jpg);
+        min-height: 15rem;
+    }
+}

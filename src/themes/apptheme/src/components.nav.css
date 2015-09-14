@@ -92,7 +92,7 @@
     font-weight: var(--type-bold);
     letter-spacing: .05rem;
     padding: 1rem 1rem 1rem 1rem;
-    width: 100%;
+   /* width: 100%;*/
     display: block;
 }
 

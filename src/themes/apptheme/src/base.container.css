@@ -4,7 +4,7 @@
 
 .container--primary {
     margin: 0 auto;
-    padding: 0 1.25rem;    
+    padding: 0 1.25rem;
 }
 
 @media all and (--from-medium) {
@@ -16,7 +16,7 @@
 
 .container--secondary {
     margin: 0 auto;
-    padding: 0 1.25rem;    
+    padding: 0 1.25rem;
 }
 
 @media all and (--from-medium) {
@@ -27,12 +27,12 @@
 }
 
 .container--article {
-    padding: 0 1.25rem;    
+    padding: 0;
 }
 
 @media all and (--from-medium) {
     .container--article {
         max-width: 40rem;
-        padding: 0;    
+        padding: 0;
     }
 }

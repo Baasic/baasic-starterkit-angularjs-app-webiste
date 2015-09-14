@@ -6,7 +6,6 @@
         </div>
     </div>
 </div>
-
 <main role="main" class="group">
     <section class="container--primary">
         <div class="container--article">
@@ -14,28 +13,25 @@
                 <span class="date">{{ blog.publishDate | date : 'MMMM dd, yyyy' }}</span>
                 <p class="date">&mdash;</p>
             </div>
-            <article class="styledtext" btf-markdown="blog.content">            
-            </article>           
+            <article class="styledtext" btf-markdown="blog.content">
+            </article>
         </div>
-
         <div>
-            <ul>
+            <ul class="taglist--style">
                 <li ng-repeat="tag in blog.tags" class="pull">
                     <a class="btn btn--sml btn--quartiary" ui-sref="master.main.blog-search({ tags: tag.slug })">{{ tag.tag }}</a>
                 </li>
             </ul>
         </div>
     </section>
-
     <section class="container--primary">
         <div ng-hide="isEdit" ng-if="$root.user.isAuthenticated" class="container--article">
             <button type="button" class="btn btn--tertiary btn--med" ng-click="editBlog()">Edit</button>
             <button type="button" class="btn btn--primary btn--med" ng-click="deleteBlog()">Delete</button>
         </div>
     </section>
-
     <section class="container--primary">
-        <div class="container--article flex blog__wrapper--tertiaty">
+        <div class="container--article flex spc--top--lrg">
             <baasic-blog-small-list page-size="2"></baasic-blog-small-list>
         </div>
     </section>

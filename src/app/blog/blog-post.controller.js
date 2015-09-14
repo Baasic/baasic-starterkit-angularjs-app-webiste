@@ -24,7 +24,7 @@
                     $scope.$root.loader.suspend();
                     blogService.remove($scope.blog)
                         .success(function () {
-                            $state.go('master.main.index');
+                            $state.go('master.main.blog');
                         })
                         .error(function (error) {
                             conosle.log(error); // jshint ignore: line

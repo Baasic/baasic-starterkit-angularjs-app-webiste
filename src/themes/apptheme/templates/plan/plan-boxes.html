@@ -1,9 +1,9 @@
-﻿ <div class="section__tertiary--item spc--top--lrg" ng-repeat="plan in plans">
+﻿<div ng-class="plan.isFeatured ? 'section__tertiary--item spc--top--sml' : 'section__tertiary--item spc--top--lrg'" ng-repeat="plan in plans">
     <div class="section__tertiary__title-wrapper">
-        <h3 class="section__tertiary__title-emphasized">{{::plan.name}}</h3>
+        <h3 ng-class="plan.isFeatured ? 'section__tertiary__title-emphasized' : 'section__tertiary__title'">{{::plan.name}}</h3>
     </div>
     <div class="section__tertiary__content-wrapper">
-        <span class="plan__price plan__price--primary">${{::plan.price}}</span>
+        <span class="plan__price" ng-class="plan.isFeatured ? 'plan__price--primary' : 'plan__price--secondary'">${{::plan.price}}</span>
         <p>per {{::plan.period}}</p>
         <p><strong>Synchronization</strong> {{::plan.sync ? 'Yes' : 'No'}}</p>
         <p><strong>Navigator access level</strong> {{::plan.navAccessLevel}}</p>

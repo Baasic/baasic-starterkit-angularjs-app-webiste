@@ -27,5 +27,14 @@
 	background: #ffffff!important;
 	border-radius: 0!important;
 	border: 2px solid rgb(242,242,242)!important;
-	font-family: var(--ff-sans);
+	font-family: var(--ff-sans)!important;
+    font-size: 0.8rem;
+}
+
+tags-input .tags .input , tags-input .autocomplete .suggestion-item.selected em, tags-input .autocomplete .suggestion-item em {
+    font-family: var(--ff-sans)!important;
+}
+
+.taglist--style {
+    display: inline-block;
 }

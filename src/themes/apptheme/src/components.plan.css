@@ -4,8 +4,33 @@
 
 .add__new__plan__text{
     float:left;
-    margin:4px;
+    margin:6px;
 }
+
+.add__new__plan__border {
+    border: 1px solid #007E91;
+    margin-top: 1.25rem;
+    box-sizing: border-box;
+    padding-top: 5px;
+    height: 48px;
+    float: right;
+    margin-right: 0;
+    background: url(/assets/img/addnew.svg) no-repeat center right;
+    background-size: 36px;
+    opacity: .5;
+    transition: opacity .2s ease-in-out;
+}
+
+a.add__new__plan__border {
+    color: var(--color-primary);
+    padding: 1rem 2.5rem 1rem 1rem;
+    line-height: 1rem;
+}
+
+.add__new__plan__border:hover {
+    opacity: 1;
+}
+
 .plan__border__class{
     border:1px solid #cccccc;
     padding-top:10px;
@@ -83,7 +108,7 @@
 
 /*add/edit plan*/
 .plan__edit__section{
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 1rem;
 }
 
 .add__edit__title{
@@ -99,6 +124,8 @@
 /*add button*/
 .plus__btn{
     width: 30px;
+    margin-top: 3px;
+    margin-bottom: -3px;
 }
 
 /*plan-list toggle*/
@@ -155,11 +182,12 @@
     transition-delay:.2s;
     border: 2px solid var(--color-primary);
     border-radius: 3px;
+    top: 0;
 }
 /* Style check icon. give it a border on the bottom and right only and then rotate */
 .checkbox-group label .check {
-    top:0;
     left:7px;
+    top: 0;
     width:7px;
     height:15px;
     border:2px solid #fff;

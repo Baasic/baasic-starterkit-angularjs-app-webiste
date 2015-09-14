@@ -26,7 +26,7 @@
         },
 
         controller: ['$scope', '$state', '$q', 'planService', function($scope, $state, $q ,planService) {
-            
+
             if (!$scope.$root.user.isAuthenticated) {
                 $state.go('login');
             }
@@ -34,7 +34,7 @@
 
 
             $scope.plans =[];
-           
+
 
             planService.find({
                 page: 1,
@@ -48,23 +48,23 @@
                     currentPage: data.page,
                     pageSize: data.recordsPerPage,
                     totalRecords: data.totalRecords
-                }; 
+                };
                     var allPlans = $scope.plans;
                     var masterPlans = [];
 
             for (var i = $scope.plans.length - 1; i >= 0; i--) {
                     var injectPlan = allPlans[i];
                     masterPlans.push({
-                    isCollapsed:true,
+                    isCollapsed: true,
                     plan:[injectPlan]
                 });
             };
 
             });
-            
-            $scope.deletePlan = function(plan) {                
+
+            $scope.deletePlan = function(plan) {
                 if (confirm('Are you sure you want to delete this plan?')) {
-                 
+
                     planService.remove($scope.plans[plan])
                     .success(function () {
                         $scope.plans.splice(plan,1);
@@ -79,16 +79,16 @@
 
             $scope.add = function() {
                 $scope.plans.push([
-                ]);  
+                ]);
             };
 
-            
+
 
 
 
         }],
-    
+
 }
 });
 
-}(angular));   
+}(angular));

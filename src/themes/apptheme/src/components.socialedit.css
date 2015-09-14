@@ -1,17 +1,28 @@
 /*------------------------------------*\
-    # components.footer
+    # components.social
 \*------------------------------------*/
 
-.socialedit__container {
-    width: 50%;
+.social__box {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-right: .5rem;
+    float:left;
 }
 
-.socialedit__icon {
-    width: 5%;
-    float: left;
-}
 
 .socialedit__icon {
-    width: 5%;
-    float: left;
+    width: 3rem;
+    position: absolute;
+
 }
+
+.highlight--social, .bar--social, .input--social {
+    width: calc(100% - 3rem)!important;
+    margin-left: 3.5rem;
+}
+
+form .label--social {
+    left: 4.5rem;
+    top: -0.1rem!important;
+}
+

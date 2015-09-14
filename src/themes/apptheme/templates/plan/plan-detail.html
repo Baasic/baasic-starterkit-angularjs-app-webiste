@@ -1,46 +1,31 @@
 ﻿<div class="hero--product">
     <bora-header></bora-header>
 </div>
-
 <main role="main">
     <section class="container--primary spc--bottom--xlrg spc--top--xlrg group">
         <h2 class="section__heading center">Sign up for a plan</h2>
-        
-        <section class="group spc--top--lrg spc--bottom--lrg section__form">
-            <div class="pull">
-                <p class="plan__detail">Your order:</p>
-                <p class="plan__detail plan__detail--price">Maestral</p>
-            </div>
-            
-            <div class="push">
-                <p class="plan__detail">Total:</p>
-                 <p class="plan__detail plan__detail--price">$22</p>
-            </div>
-        </section>
-
+        <plan-preview></plan-preview>
         <form novalidate name="form" class="subscription__form">
-            <div class="section__form group">
+            <div class="section__form section__form--plan group">
                 <div class="flex spc--top--med">
                     <div class="form-wrapper form">
-                        <input name="fname" ng-model="first.name" autocomplete="given-name" type="text" required>                  
+                        <input name="fname" ng-model="first.name" autocomplete="given-name" type="text" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
-                        <div ng-show="form.$submitted || form.fname.$dirty">                      
+                        <div ng-show="form.$submitted || form.fname.$dirty">
                             <span class="form--alert" ng-show="form.fname.$error.required"> First name field is required. </span>
                         </div>
-                        <label>Name</label>               
+                        <label>Name</label>
                     </div>
-        
                     <div class="form-wrapper form">
                         <input name="lname" ng-model="last.name" autocompletetype="family-name" type="text" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
-                        <div ng-show="form.$submitted || form.lname.$dirty">                
+                        <div ng-show="form.$submitted || form.lname.$dirty">
                             <span class="form--alert" ng-show="form.lname.$error.required"> Last name field is required. </span>
                         </div>
                         <label>Last name</label>
                     </div>
-        
                     <div class="form-wrapper form">
                         <input name="email" ng-model="email" type="email" x-autocompletetype="email" required>
                         <span class="highlight"></span>
@@ -48,11 +33,10 @@
                         <div ng-show="form.$submitted || form.email.$dirty">
                             <span class="form--alert" ng-show="form.email.$error.required"> Email field is required. </span>
                             <span class="form--alert" ng-show="form.email.$error.email"> Please type in correct email address. </span>
-                        </div>                                    
-                        <label>Email</label>
+                        </div>
+                        <label ng-class="{'label--on-top': form.$error.email, '':!form.$error.email}">Email</label>
                     </div>
                 </div>
-        
                 <div class="flex spc--top--med">
                     <div class="form-wrapper form">
                         <input name="password" type="password" ng-model="password" required>
@@ -63,7 +47,6 @@
                         </div>
                         <label>Password</label>
                     </div>
-        
                     <div class="form-wrapper form">
                         <input name="confirmpass" ng-model="confirmpass" type="password" required>
                         <span class="highlight"></span>
@@ -74,18 +57,15 @@
                         <label>Repeat Password</label>
                     </div>
                 </div>
-        
                 <div class="spc--bottom--lrg">
                     <button type="submit" class="btn btn--primary btn--med push">Sign Up</button>
                 </div>
             </div>
         </form>
-
         <div class="section__form group">
             <figure class="pull">
                 <img src="../../assets/img/payments.jpg" alt="Payment">
             </figure>
-
             <div class="push">
                 <p class="plan__terms"><a href="#" class="plan__terms--item">Terms and Conditions</a></p>
                 <p class="plan__terms"><a href="#" class="plan__terms--item">Privacy Policy</a></p>
