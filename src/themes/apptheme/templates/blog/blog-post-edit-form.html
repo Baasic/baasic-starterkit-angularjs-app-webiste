@@ -9,12 +9,12 @@
                     <p class="form--alert form--alert--warning" ng-show="(blogPost.$submitted || blogPost.title.$touched) && blogPost.title.$error.required">Title is required.</p>
                 </div>
                 <div class="form__field form-wrapper">
-                    <input type="text" name="featured" id="fieldBody" ng-model="blog.featured" class="input input--text" />
+                    <input type="text" name="featured" id="fieldBody" ng-model="blog.featured" class="input input--text" required />
                     <label for="fieldBody">Featured image</label>
                 </div>
             </div>
             <div class="form__field form-wrapper">
-                <textarea name="excerpt" id="fieldExcerpt" ng-model="blog.excerpt" class="input input--textarea"></textarea>
+                <textarea name="excerpt" id="fieldExcerpt" ng-model="blog.excerpt" class="input input--textarea" required ></textarea>
                 <label class="form__label" for="fieldExcerpt">Excerpt</label>
             </div>
             <div class="form__field spc--bottom--med form-wrapper">
@@ -32,8 +32,8 @@
                         </div>
                         <div class="group row">
                             <div class="col-1-2 add__edit__title">
-                                <textarea placeholder="Type your markdown text here.." name="content" id="fieldContent" ng-model="blog.content" class="editor__field" required></textarea>
-                                <label class="form__label" for="fieldContent">Content</label>
+                                <textarea name="content" id="fieldContent" ng-model="blog.content" class="editor__field" required></textarea>
+                                <label class="form__label textarea__label" for="fieldContent">Type your content here</label>
                             </div>
                             <div class="col-1-2 spc--top--lrg">
                                 <div class="editor__field styledtext" ng-if="state.conentent.viewMode === 'markdown'" btf-markdown="blog.content">

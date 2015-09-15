@@ -60,6 +60,14 @@
     color: color(var(--ultra-dark) whiteness(50%))!important;
 }
 
+textarea + .textarea__label {
+    top: 8rem;
+}
+
+textarea:focus + .textarea__label, textarea:valid + .textarea__label {
+    top: 6rem!important;
+}
+
 .bar {
     position: relative;
     display: block;

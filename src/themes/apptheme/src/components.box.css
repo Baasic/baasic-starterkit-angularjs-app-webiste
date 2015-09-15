@@ -80,24 +80,25 @@
     .box__media {
         flex: 1;
         position: relative;
-    }    
+    }
 }
 
 @media all and (--from-large) {
     .box__media {
         flex: 1 0 0;
-    }    
+    }
 }
 
 @media all and (--from-xlarge) {
     .box__media {
         flex: 1;
-    }    
+    }
 }
 
 .box__media--image {
     margin-bottom: -.5rem;
     /*padding: 0 1.25rem;*/
+    max-width: 100%;
 }
 
 @media all and (--from-medium) {
