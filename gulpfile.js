@@ -196,6 +196,13 @@ gulp.task('watch', ['default'], function () {
             g.livereload.changed(evt);
         }
     });
+    gulp.watch('./src/themes/' + theme + '/templates/**/*.js', ['jshint']).on('change', function (evt) {
+        if (evt.type !== 'changed') {
+            gulp.start('index');
+        } else {
+            g.livereload.changed(evt);
+        }
+    });
     gulp.watch('./src/app/index.html', ['index']);
     gulp.watch(['./src/themes/' + theme + '/templates/**/*.html'], ['templates']);
     gulp.watch(['./src/themes/' + theme + '/src/**/*.css'], ['csslint']).on('change', function (evt) {
@@ -273,7 +280,6 @@ function appFiles() {
       './.tmp/src/app/**/*.js',
       '!./.tmp/src/app/**/*_test.js',
       './src/app/**/*.js',
-      '!./src/themes/' + theme + '/templates/js/*',
       './src/themes/' + theme + '/templates/**/*.js',
       '!./src/app/**/*_test.js'
     ];
