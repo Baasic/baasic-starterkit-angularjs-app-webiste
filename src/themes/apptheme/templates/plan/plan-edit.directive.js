@@ -9,10 +9,7 @@
                 replace: true,
                 compile: function () {
                     return {
-                        pre: function (scope, elem, attrs) {
-                            if (attrs.plan) {
-                                scope.plan = attrs.plan;
-                            }
+                        pre: function (scope, elem, attrs) {                            
                             if (attrs.onSave) {
                                 scope.onSaveFn = $parse(attrs.onSave);
                             }

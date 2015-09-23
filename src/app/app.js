@@ -39,11 +39,9 @@
 
             $urlRouterProvider.rule(function ($injector, $location) {
                 var path = $location.path();
-                if (path) {
-                    // check to see if the path ends in '/'
-                    if (path[path.length - 1] === '/') {
-                        $location.replace().path(path.substring(0, path.length - 1));
-                    }
+                // check to see if the path ends in '/'
+                if (path[path.length - 1] === '/') {
+                    $location.replace().path(path.substring(0, path.length - 1));
                 }
             });
 

@@ -11,7 +11,7 @@
     float: right;
     margin-right: 0;
     color: var(--color-primary);
-    background: url(/assets/img/addnew.svg) no-repeat center right;
+    background: url(assets/img/addnew.svg) no-repeat center right;
     background-size: 36px;
     opacity: .5;
     transition: opacity .2s ease-in-out;
