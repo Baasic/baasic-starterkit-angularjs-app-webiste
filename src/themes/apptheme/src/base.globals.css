@@ -13,7 +13,6 @@ body {
     animation-fill-mode:forwards;
     overflow: hidden;
 }
-
 @keyframes fadein {
     from {
         opacity:0;
@@ -22,20 +21,15 @@ body {
         opacity:1;
     }
 }
-
 img {
     max-width: 100%;
-    /*transition:all .2s linear;  */
 }
-
 a:focus {
     outline: none;
 }
-
 main {
     overflow: hidden;
 }
-
 footer {
     display: block;
     margin-top: 4rem;
