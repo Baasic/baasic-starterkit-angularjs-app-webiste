@@ -18,11 +18,12 @@
       'baasic.blog',
       'baasic.mobileApp'
     ])
-    .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', 'baasicAppProvider',
-        function config($locationProvider, $urlRouterProvider, $stateProvider, baasicAppProvider) {
-            baasicAppProvider.create('baasic-app-starterkit-demo', {
-                apiRootUrl: 'api.baasic.local',
-                apiVersion: 'beta'
+    .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', 'baasicAppProvider', 'baasicAppConfigProvider',
+        function config($locationProvider, $urlRouterProvider, $stateProvider, baasicAppProvider, baasicAppConfigProvider) {
+            
+            baasicAppProvider.create(baasicAppConfigProvider.config.apiKey, {
+                apiRootUrl: baasicAppConfigProvider.config.apiRootUrl,
+                apiVersion: baasicAppConfigProvider.config.apiVersion
             });
 
             $locationProvider.html5Mode({
