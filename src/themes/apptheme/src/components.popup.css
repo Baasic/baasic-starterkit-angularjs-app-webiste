@@ -35,21 +35,17 @@
     white-space: nowrap;
     min-width: 6rem;
 }
-.popup__settings--positive {
-    background-color: var(--color-secondary);
-
-}
 .popup__settings--negative {
-    background-color: #ffffff;
+    background-color: white;
     white-space: normal;
     bottom: -140px;
     left: 85px;
 
 }
-.popup__settings--positive a {
-    color: #ffffff;
+.popup__settings--positive .link {
+    color: white;
 }
-.popup__settings--negative a {
+.popup__settings--negative .link {
     color: var(--color-secondary);
 }
 .popup__settings--positive:before {
@@ -72,18 +68,17 @@
     top: -8px;
     border-style: solid;
     border-width: 0 10px 10px 10px;
-    border-color: transparent transparent #ffffff transparent;
+    border-color: transparent transparent white transparent;
     transition-duration: 0.3s;
     transition-property: transform;
 }
-.popup__settings a {
+.popup__settings .link {
     font-family: var(--ff-sans);
     text-decoration: none;
 }
-.popup__settings a:hover {
+.popup__settings .link:hover {
     text-decoration: underline;
 }
-
 .popup__wrapper:hover .popup__settings {
     z-index: 10;
     opacity: 1;

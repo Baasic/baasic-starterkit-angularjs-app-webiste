@@ -1,7 +1,6 @@
 /*------------------------------------*\
     # components.plan
 \*------------------------------------*/
-
 .plan__border {
     border: 1px solid #007E91;
     margin-top: 1.25rem;
@@ -59,30 +58,24 @@
 .plan--collapsed__false .plan--form__transition {
     opacity: 1;
 }
-
-/* sync checkbox*/
 .plan--checkbox__group {
     position:relative;
     margin-left:10px;
 }
-/* Hide Checkbox Input */
 .plan--checkbox__group .checkbox  {
     display:none
 }
-/* Style Label */
 .plan--checkbox__group .checkbox__label {
     padding-left:30px;
     cursor:pointer;
 }
-/* Style span tag */
-.plan--checkbox__group label span {
+.plan--checkbox__group .span {
     display:block;
     position:absolute;
     left:0;
     transition-duration:.3s
 }
-/* Style box */
-.plan--checkbox__group label .box {
+.plan--checkbox__group .box {
     background:var(--ultra-light);
     height:20px;
     width:20px;
@@ -92,8 +85,7 @@
     border-radius: 3px;
     top: 0;
 }
-/* Style check icon. give it a border on the bottom and right only and then rotate */
-.plan--checkbox__group label .check {
+.plan--checkbox__group .check {
     left:7px;
     top: 0;
     width:7px;
@@ -106,13 +98,9 @@
     transform:rotate(45deg);
     transition-delay:.3s;
 }
-
-/* Change color of box when checkbox is checked */
-input[type=checkbox]:checked ~ label .box {
+.checkbox:checked ~ .checkbox__label .box {
     background:var(--color-primary);
 }
-
-/* Rotate and show check icon when checkbox is checked */
-input[type=checkbox]:checked ~ label .check {
+.checkbox:checked ~ .checkbox__label .check {
     opacity:1;
 }

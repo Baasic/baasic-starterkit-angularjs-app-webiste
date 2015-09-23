@@ -2,12 +2,12 @@
         <div class="container--secondary">
 
             <div class="push nav__link"  ng-if="$root.user.isAuthenticated">
-                <div class="push popup__wrapper popup__wrapper--negative">
+                <div class="push popup__wrapper">
                     <a href="#">
-                        <img class="popup__title" src="assets/img/cog.svg" />
+                        <img class="popup__title" src="assets/img/cog-invert.svg" />
                     </a>
                     <div class="popup__pull popup__settings popup__settings--negative" >
-                        <a ui-sref="master.social">Edit Social Networks</a>
+                        <a ui-sref="master.social" class="link">Edit Social Networks</a>
                     </div>
                 </div>
             </div>
