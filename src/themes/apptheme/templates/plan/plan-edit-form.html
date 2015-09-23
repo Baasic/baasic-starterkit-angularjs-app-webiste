@@ -1,15 +1,15 @@
-﻿<div class="plan__border__class">
+﻿<div class="plan__border--alt">
     <div class="overflow--hidden">
         <ng-form novalidate name="planForm">
             <div class="overflow--hidden">
                 <p class="plan__detail plan__detail--price pull">{{plan.name}}</p>
-                <div class="actions push">
-                    <a ng-click="collapseToggle()" href=""><img src="../../assets/img/edit.svg" alt="edit plan"></a>
-                    <a href="" ng-click="plan.id ? deletePlan($index) : cancelEdit()"><img src="../../assets/img/delete.svg" alt="delete plan"></a>
+                <div class="plan--actions push">
+                    <a ng-click="collapseToggle()" href=""><img src="../../assets/img/edit.svg" alt="edit plan" class="icon"></a>
+                    <a href="" ng-click="plan.id ? deletePlan($index) : cancelEdit()"><img src="../../assets/img/delete.svg" alt="delete plan" class="icon"></a>
                 </div>
             </div>
-            <div ng-class="{'collapsed__false': !plan.isCollapsed, 'collapsed__true': plan.isCollapsed}" class="plan__edit__form">
-                <div class="form__transition">
+            <div ng-class="{'plan--collapsed__false': !plan.isCollapsed, 'plan--collapsed__true': plan.isCollapsed}">
+                <div class="plan--form__transition">
                     <div class="flex">
                         <div class="form-wrapper form">
                             <input name="planName" ng-model="plan.name" type="text" required>
@@ -33,11 +33,11 @@
                     </div>
                     <h3 class="plan__edit__section left__padding">Content in the plan</h3>
                     <div class="flex spc--top--med">
-                        <div class="pull form__field--full">
+                        <div class="pull form__field">
                             <div class="form-wrapper" >
-                                <div class="checkbox-group">
+                                <div class="plan--checkbox__group">
                                     <input id="sync-{{plan.id}}" name="plan.sync" class="checkbox" ng-model="plan.sync" type="checkbox"  />
-                                    <label class="radio__label label--checkbox" for="sync-{{plan.id}}">
+                                    <label class="radio__label checkbox__label" for="sync-{{plan.id}}">
                                         <span class="check"></span>
                                         <span class="box"></span>
                                         Synchronization
@@ -48,9 +48,9 @@
                                 </div>
                             </div>
                             <div class="form-wrapper" >
-                                <div class="checkbox-group">
+                                <div class="plan--checkbox__group">
                                 <input id="featured-{{plan.id}}" name="plan.isFeatured" class="checkbox" ng-model="plan.isFeatured" type="checkbox"  />
-                                    <label class="radio__label label--checkbox" for="featured-{{plan.id}}">
+                                    <label class="radio__label checkbox__label" for="featured-{{plan.id}}">
                                         <span class="check"></span>
                                         <span class="box"></span>
                                         Featured Plan
@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="push form__field--full">
+                        <div class="push form__field">
                             <div class="form-wrapper form">
                                 <input name="tickets" ng-model="plan.tickets" type="number" min="0" step="1" required>
                                 <span class="highlight"></span>
@@ -109,7 +109,7 @@
                         </div>
                         <label>Description</label>
                     </div>
-                    <div class="form__field form-wrapper">
+                    <div class="form-wrapper">
                         <button ng-disabled="planForm.$invalid" type="submit" class="btn btn--quinary btn--med push" ng-click="setCollapsed();savePlan();">Save</button>
                         <button type="button" class="btn btn--primary btn--med push" ng-click="cancelEdit();">Cancel</button>
                         <div class="clear"></div>

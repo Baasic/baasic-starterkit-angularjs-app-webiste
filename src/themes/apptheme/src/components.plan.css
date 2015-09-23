@@ -2,179 +2,87 @@
     # components.plan
 \*------------------------------------*/
 
-.add__new__plan__text{
-    float:left;
-    margin:6px;
-}
-
-.add__new__plan__border {
+.plan__border {
     border: 1px solid #007E91;
     margin-top: 1.25rem;
     box-sizing: border-box;
-    padding-top: 5px;
+    padding: .65rem 2.5rem .65rem .65rem;
     height: 48px;
     float: right;
     margin-right: 0;
+    color: var(--color-primary);
     background: url(/assets/img/addnew.svg) no-repeat center right;
     background-size: 36px;
     opacity: .5;
     transition: opacity .2s ease-in-out;
 }
-
-a.add__new__plan__border {
-    color: var(--color-primary);
-    padding: 1rem 2.5rem 1rem 1rem;
-    line-height: 1rem;
-}
-
-.add__new__plan__border:hover {
+.plan__border:hover {
     opacity: 1;
 }
-
-.plan__border__class{
-    border:1px solid #cccccc;
-    padding-top:10px;
-    margin-bottom:10px;
+.plan__border--alt {
+    border: 1px solid #cccccc;
+    padding-top: 10px;
+    margin-bottom: 10px;
 }
-.plan__edit__form{
-    transition:max-height .5s ease-in-out;
+.plan__filter--container {
+    max-width: 80em;
 }
-/*Plan table*/
-
-.plan__table{
-    box-sizing:border-box;
-    font-family:'Signika Negative', Helvetica, Arial, sans-serif;
-    font-size:16px;
-    color:#007D90;
-    border:none;
-    margin:15px;
-}
-
-.plan__table tr{
-    border:1px solid #007D90;
-}
-
-.plan__table th{
-    text-transform: uppercase;
-}
-
-.plan__table th, .plan__table td{
-    padding:10px;
-    text-align: center;
-}
-
-.plan__table ul{
-    list-style-type:none;
-}
-
-.plan__table ul li{
-    display: block;
-}
-
-.plan__filter{
-    outline:none!important;
-    max-width:80em;
-}
-
-/* plan table pagination */
-.pagination{
-    font-family: 'Signika Negative', Helvetica,Arial,sans-serif;
-    margin:15px auto;
-    text-align: center;
-}
-
-.pagination__item{
-    border:1px solid var(--color-primary);
-    color:#007d90;
-    transition:all .3s ease-in-out;
-}
-.pagination__item:hover, .pagination__item:active{
-    border:1px solid var(--color-primary);
-    background-color: var(--color-primary);
-    color:#ffffff;
-}
-
-/* plans filter */
-.plan__filter input{
-    border: 1px solid #007D90;
+.plan__filter--input {
+    border: 1px solid var(--color-primary);
     line-height: 2em;
     padding: 7px;
     color: var(--color-primary);
     margin: 20px 0;
     display: block;
     float: left;
+    outline: none!important;
     width: calc(100% - 200px);
 }
-
-/*add/edit plan*/
-.plan__edit__section{
-    margin: 0 0 2rem 1rem;
-}
-
-.add__edit__title{
-    margin-top: 2rem;
-}
-
-/* add/edit plan icons*/
-.actions a img{
+.plan--actions .icon {
     width: 35px !important;
     height: auto;
 }
-
-/*add button*/
-.plus__btn{
-    width: 30px;
-    margin-top: 3px;
-    margin-bottom: -3px;
-}
-
-/*plan-list toggle*/
-.collapsed__true{
+.plan--collapsed__true {
     max-height: 0;
     overflow: hidden;
 }
-
-.collapsed__false{
-    max-height: 1200px;
+.plan--collapsed__false {
+   margin: 0 0 2rem 1rem;
 }
-
-/*open-close add/edit form*/
-.form__transition{
+.plan--form__transition {
     margin-top: 30px;
     transition: opacity 1s ease-in-out;
 }
-
-.collapsed__true .form__transition{
+.plan--collapsed__true .plan--form__transition {
     opacity: 0;
 }
-
-.collapsed__false .form__transition{
+.plan--collapsed__false .plan--form__transition {
     opacity: 1;
 }
 
 /* sync checkbox*/
-.checkbox-group {
+.plan--checkbox__group {
     position:relative;
     margin-left:10px;
 }
 /* Hide Checkbox Input */
-.checkbox-group input[type=checkbox] {
+.plan--checkbox__group .checkbox  {
     display:none
 }
 /* Style Label */
-.checkbox-group label {
+.plan--checkbox__group .checkbox__label {
     padding-left:30px;
     cursor:pointer;
 }
 /* Style span tag */
-.checkbox-group label span {
+.plan--checkbox__group label span {
     display:block;
     position:absolute;
     left:0;
     transition-duration:.3s
 }
 /* Style box */
-.checkbox-group label .box {
+.plan--checkbox__group label .box {
     background:var(--ultra-light);
     height:20px;
     width:20px;
@@ -185,7 +93,7 @@ a.add__new__plan__border {
     top: 0;
 }
 /* Style check icon. give it a border on the bottom and right only and then rotate */
-.checkbox-group label .check {
+.plan--checkbox__group label .check {
     left:7px;
     top: 0;
     width:7px;

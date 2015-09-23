@@ -8,7 +8,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     text-rendering: optimizeLegibility;
 }
-
 h1 {
     font-size: var(--type-xlarge);
     line-height: calc(var(--base-line-height)*1.5);
@@ -30,19 +29,16 @@ h5 {
 h6 {
     font-size: var(--type-base);
 }
-
 /* Default paragraphs */
 p {
     margin: 0;
 }
-
 /* Ordered lists */
 ol {
     padding: 0;
     margin: 0;
     list-style-position: inside;
 }
-
 ol > li {
     font-size: var(--type-base);
 }
@@ -52,7 +48,6 @@ ol > li {
         line-height: calc(var(--base-line-height)*1.25);
     }
 }
-
 /* Unordered lists */
 ul {
     padding: 0;
@@ -62,14 +57,12 @@ ul {
 ul > li {
     font-size: var(--type-base);
 }
-
 @media all and (--from-medium) {
     ul > li {
         font-size: var(--type-medium);
         line-height: calc(var(--base-line-height)*1.25);
     }
 }
-
 /* Definition lists */
 dl {
     margin: 0;
@@ -81,38 +74,30 @@ dl > dd {
     font-size: var(--type-base);
     margin: 0;
 }
-
 /* Quotes */
 blockquote {
     margin: 0;
 }
 cite {}
-
 /* Preformatted text */
 pre {}
 code {}
-
 /* Subscript and superscript */
 sub {}
 sup {}
-
 /* Abbreviations */
 abbr {}
-
 /* Small copy */
 small {}
-
 /* Strong copy */
 strong {
     font-weight: var(--type-bold);
 }
-
 /* Figure */
 figure {
     margin: 0;
 }
 figure > figcaption {}
-
 /* HR */
 hr {
     border: 0;

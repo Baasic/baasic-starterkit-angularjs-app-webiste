@@ -12,6 +12,7 @@
     position: relative;
     display: inline-block;
     border-radius: 8px;
+    width: 2.5rem;
 }
 
 .popup__wrapper--positive {

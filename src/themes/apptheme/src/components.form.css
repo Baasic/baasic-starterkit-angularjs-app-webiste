@@ -7,7 +7,6 @@
     flex: 1;
     padding: 0 1rem;
 }
-
 .form input, .form textarea {
     font-family: var(--ff-sans);
     font-size: var(--type-base);
@@ -18,7 +17,6 @@
     border-bottom: 1px solid color(var(--ultra-light));
     border-radius: 0px;
 }
-
 .form textarea {
     font-family: var(--ff-sans);
     font-size: var(--type-base);
@@ -29,11 +27,9 @@
     border-bottom: 1px solid color(var(--ultra-light));
     border-radius: 0px;
 }
-
 .form input:focus, .form textarea:focus {
     outline: none;
 }
-
 .form label {
     font-family: var(--ff-sans);
     color: var(--ultra-dark);
@@ -44,83 +40,69 @@
     left: 1rem;
     top: .75rem;
     transition: 0.2s ease all;
-    -moz-transition:0.2s ease all;
-    -webkit-transition:0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
 }
-
-.form input:focus ~ label, .form input:valid ~ label, .form textarea:focus ~ label, .form textarea:valid ~ label{
+.form input:focus ~ label, .form input:valid ~ label, .form textarea:focus ~ label, .form textarea:valid ~ label {
     top: -20px;
     font-size: 14px;
     color: color(var(--ultra-dark) whiteness(50%));
 }
-
-.label--on-top{
+.label--on-top {
     top: -20px!important;
     font-size: 14px!important;
     color: color(var(--ultra-dark) whiteness(50%))!important;
 }
-
 textarea + .textarea__label {
     top: 8rem;
 }
-
 textarea:focus + .textarea__label, textarea:valid + .textarea__label {
     top: 6rem!important;
 }
-
 .bar {
     position: relative;
     display: block;
     width: 100%;
 }
-
 .bar:before, .bar:after {
     content: '';
     height: 2px;
     width: 0;
     bottom: 1px;
     position: absolute;
-    background: var(--dark-cyan);
+    background: var(--color-primary);
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
 }
-
 .bar:before {
     left: 50%;
 }
-
 .bar:after {
     right: 50%;
 }
-
 .form input:focus ~ .bar:before, .form input:focus ~ .bar:after,
 .form textarea:focus ~ .bar:before, .form textarea:focus ~ .bar:after  {
     width: 50%;
 }
-
 .highlight {
     position:absolute;
     height: 60%;
     width: 100%;
     top: 25%;
-    /*left:0;*/
     pointer-events: none;
     opacity: 0.5;
 }
-
 .form input:focus ~ .highlight, .form textarea:focus ~ .highlight {
     -webkit-animation: inputlighter 0.3s ease;
     -moz-animation: inputlighter 0.3s ease;
     animation: inputlighter 0.3s ease;
 }
-
 .form--alert {
     font-family: var(--ff-sans);
     color: var(--color-secondary);
     font-size: var(--type-small);
 }
-
 .form__select{
     font-family: 'Signika Negative', Helvetica, Arial, sans-serif;
     min-width: 100%;
@@ -129,22 +111,18 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
     outline: none;
     height: 50px;
 }
-
 .form__flex {
     display: flex;
     width: 100%;
 }
-
-.form__field--full{
+.form__field {
     width: 100%;
 }
-
 @media all and (--from-medium) {
-    .form__field--full {
+    .form__field {
         width: 50%;
     }
 }
-
 .editor__field{
     max-height: 500px;
     height: 500px;
@@ -152,26 +130,21 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
     word-break: break-word;
     border-bottom: 1px solid rgb(242,242,242);
 }
-
 .font--monospace {
     font-family: var(--ff-monospace);
 }
-
 .editor__explain{
     color: #ABA9A9;
-    font-family: 'Signika Negative', Helvetica,Arial,sans-serif;
+    font-family: var(--ff-sans);
     font-size: 14px;
 }
-
 .radio__label, .radio__label--title{
-    font-family: 'Signika Negative', Helvetica, Arial, sans-serif;
+    font-family: var(--ff-sans);
     top: 0;
 }
-
 .radio__label{
     margin: 10px 10px 20px 10px;;
 }
-
 .radio__label--title{
     margin-bottom: 10px;
 }
@@ -179,24 +152,22 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
 .radio__button__group{
     margin: 10px;
 }
-
 @-webkit-keyframes inputlighter
 {
     from
     {
-        background: var(--dark-cyan);
+        background: var(--color-primary);
     }
     to
     {
         width: 0; background: transparent;
     }
 }
-
 @-moz-keyframes inputlighter
 {
     from
     {
-        background: var(--dark-cyan);
+        background: var(--color-primary);
     }
     to
     {
@@ -207,7 +178,7 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
 {
     from
     {
-        background: var(--dark-cyan);
+        background: var(--color-primary);
     }
     to
     {

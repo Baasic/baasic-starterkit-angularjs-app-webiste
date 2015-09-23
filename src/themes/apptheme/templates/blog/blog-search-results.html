@@ -1,11 +1,12 @@
 ﻿<section class="container--primary flex">
     <h1 class="spc--bottom--lrg spc--top--lrg">Search results</h1>
     <div class="search--results" ng-if="hasBlogs" ng-repeat="blog in blogList.item">
-        <div>
-            <a ui-sref="master.main.blog-detail({ slug: blog.slug })">
+        <div class="search--results__container"
+            <a ui-sref="master.main.blog-detail({ slug: blog.slug })" class="link">
                 <span class="date">{{ blog.publishDate | date : 'medium' }}</span>
                 <h3 class="article--secondary__title">{{ blog.title }}</h3>
-                <p class="article--secondary__body">{{ blog.excerpt }}</p> <a class="push btn btn--quinary btn--med" ui-sref="master.main.blog-detail({ slug: blog.slug })">Read more</a>
+                <p class="article--secondary__body">{{ blog.excerpt }}</p> 
+                <a class="push btn btn--quinary btn--med" ui-sref="master.main.blog-detail({ slug: blog.slug })">Read more</a>
             </a>
         </div>
     </div>

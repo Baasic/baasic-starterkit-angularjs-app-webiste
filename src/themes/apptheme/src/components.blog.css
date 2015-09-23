@@ -11,17 +11,6 @@
     display: block;
     letter-spacing: 0.3rem;
 }
-
-.blog__header__title:nth-child(2) {
-    margin-top: .5rem;
-}
-
-@media all and (--from-medium) {
-    .blog__header__title:nth-child(2) {
-        margin-top: var(--base-line-height);
-    }
-}
-
 @media all and (--from-medium) {
     .blog__header__title {
         font-size: var(--type-xxxlarge);
@@ -29,11 +18,17 @@
         margin-bottom: calc(var(--base-line-height)*2);
     }
 }
-
-.blog__article--primary__container {
-    min-width:100%;
+.blog__header__title:nth-child(2) {
+    margin-top: .5rem;
 }
-
+@media all and (--from-medium) {
+    .blog__header__title:nth-child(2) {
+        margin-top: var(--base-line-height);
+    }
+}
+.blog__article--primary__container {
+    width: 100%;
+}
 .blog__article--primary {
     flex: 1;
     background-position: center;
@@ -45,10 +40,6 @@
     text-decoration: none;
     min-height: 20rem;
 }
-.blog__article--primary a {
-    text-decoration: none;
-}
-
 @media all and (--from-medium) {
     .blog__article--primary {
         min-height: 31.25rem;
@@ -60,7 +51,9 @@
         padding-bottom: calc(var(--base-line-height)*3);
     }
 }
-
+.blog__article--primary .link {
+    text-decoration: none;
+}
 .article--primary__title {
     font-family: var(--ff-sans);
     font-size: var(--type-xlarge);
@@ -68,14 +61,12 @@
     color: white;
     letter-spacing: .2rem;
 }
-
 @media all and (--from-medium) {
     .article--primary__title {
         font-size: var(--type-xxxlarge);
         line-height: calc(var(--base-line-height)*2);
     }
 }
-
 .article--primary__body {
     font-size: var(--type-medium);
     line-height: var(--base-line-height);
@@ -83,7 +74,6 @@
     letter-spacing: .1rem;
     margin-bottom: calc(var(--base-line-height)*.5);
 }
-
 @media all and (--from-medium) {
     .article--primary__body {
         font-size: var(--type-large);
@@ -91,13 +81,11 @@
         line-height: calc(var(--base-line-height)*1.5);
     }
 }
-
 .blog__article--secondary {
     margin-bottom: calc(var(--base-line-height)*1);
     padding-bottom: calc(var(--base-line-height)*1);
     border-bottom: .0625rem solid color(var(--ultra-light) blackness(20%));
 }
-
 @media all and (--from-medium) {
     .blog__article--secondary {
         display: flex;
@@ -106,15 +94,15 @@
         border-bottom: none;
     }
 }
-
-.blog__article--secondary:last-child {
-    border-bottom: none;
-}
-
 .secondary__article__image {
     height: 15rem;
     background-size: cover;
     background-position: center center;
+}
+@media all and (--from-medium) {
+    .secondary__article__image {
+        max-width: 100%;
+    }
 }
 .tertiary__article__image {
     width: 100%;
@@ -122,18 +110,9 @@
     background-size: cover;
     background-position: center center;
 }
-
-@media all and (--from-medium) {
-    .secondary__article__image {
-        max-width: 100%;
-    }
-}
-
-.blog__article--secondary a, .search--results a {
+.blog__article--secondary .link {
     text-decoration: none;
 }
-
-
 .article--secondary__title {
     font-family: var(--ff-sans);
     font-size: var(--type-large);
@@ -142,21 +121,17 @@
     margin-top: .75rem;
     margin-bottom: .75rem;
 }
-
 .article--secondary__body {
     color: var(--ultra-dark);
     margin-bottom: .75rem;
 }
-
 .blog__wrapper--tertiaty {
     margin-top: calc(var(--base-line-height)*2);
 }
-
 .blog__article--tertiary {
     margin-bottom: calc(var(--base-line-height)*1);
     border-bottom: .0625rem solid color(var(--ultra-light) blackness(20%));
 }
-
 @media all and (--from-medium) {
     .blog__article--tertiary {
         display: flex;
@@ -166,25 +141,9 @@
         border-bottom: none;
     }
 }
-
-.blog__article--tertiary a {
+.blog__article--tertiary .link {
     text-decoration: none;
     transition: all .5s ease-in-out;
     width: 100%;
     height: auto;
-}
-
-.search--results {
-    margin-bottom: calc(var(--base-line-height)*1);
-    padding-bottom: calc(var(--base-line-height)*1);
-    border-bottom: .0625rem solid color(var(--ultra-light) blackness(20%));
-}
-
-@media all and (--from-medium) {
-    .search--results {
-        display: flex;
-        width: 100%;
-        margin-bottom: calc(var(--base-line-height)*2);
-        border-bottom: none;
-    }
 }

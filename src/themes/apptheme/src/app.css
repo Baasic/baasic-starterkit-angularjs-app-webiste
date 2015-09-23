@@ -52,11 +52,12 @@
 @import "components.logo.css";
 @import "components.section.css";
 @import "components.footer.css";
-@import "components.404.css";
+@import "components.lost.css";
 @import "components.form.css";
 @import "components.box.css";
 @import "components.price.css";
 @import "components.blog.css";
+@import "components.search.css";
 @import "components.avatar.css";
 @import "components.plan.css";
 @import "components.popup.css";
