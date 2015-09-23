@@ -5,15 +5,15 @@ angular.module('baasic.mobileApp')
 
             if (!$scope.$root.user.isAuthenticated) {
                 $state.go('login');
-            }            
-   
+            }
+
             socialService.find()
-            
+
                 .success(function (social) {
                     $scope.social = social.item;
                 })
                 .error(function (error) {
-                
+
                 })
                 .finally(function () {
                 });

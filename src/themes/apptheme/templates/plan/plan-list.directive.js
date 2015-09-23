@@ -10,16 +10,13 @@
 
         compile: function () {
             return {
-                pre: function (scope, elem, attrs) {
-                    if (attrs.plan) {
-                        scope.plan = attrs.plan;
-                    }
+                pre: function (scope, elem, attrs) {                    
                     if (attrs.onSave) {
-                        scope.onSaveFn = $parse(attrs.onSave);
+                        scope.onSaveFn = eval(attrs.onSave);
                     }
 
                     if (attrs.onCancel) {
-                        scope.onCancelFn = $parse(attrs.onCancel);
+                        scope.onCancelFn = eval(attrs.onCancel);
                     }
                 }
             };
@@ -31,10 +28,7 @@
                 $state.go('login');
             }
 
-
-
-            $scope.plans =[];
-
+            $scope.plans = [];
 
             planService.find({
                 page: 1,
@@ -49,17 +43,6 @@
                     pageSize: data.recordsPerPage,
                     totalRecords: data.totalRecords
                 };
-                    var allPlans = $scope.plans;
-                    var masterPlans = [];
-
-            for (var i = $scope.plans.length - 1; i >= 0; i--) {
-                    var injectPlan = allPlans[i];
-                    masterPlans.push({
-                    isCollapsed: true,
-                    plan:[injectPlan]
-                });
-            };
-
             });
 
             $scope.deletePlan = function(plan) {
@@ -78,8 +61,7 @@
             };
 
             $scope.add = function() {
-                $scope.plans.push([
-                ]);
+                $scope.plans.push({});
             };
 
 

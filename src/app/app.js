@@ -32,7 +32,6 @@
 
             $urlRouterProvider.when('', '/');
 
-
             $urlRouterProvider.otherwise(function ($injector) {
                 var $state = $injector.get('$state');
                 $state.go('404');
@@ -40,10 +39,11 @@
 
             $urlRouterProvider.rule(function ($injector, $location) {
                 var path = $location.path();
-
-                // check to see if the path ends in '/'
-                if (path[path.length - 1] === '/') {
-                    $location.replace().path(path.substring(0, path.length - 1));
+                if (path) {
+                    // check to see if the path ends in '/'
+                    if (path[path.length - 1] === '/') {
+                        $location.replace().path(path.substring(0, path.length - 1));
+                    }
                 }
             });
 
@@ -107,7 +107,6 @@
                 .state('master.main.plans', {
                     url: 'plans?{page}',
                     templateUrl: 'templates/plan/plans.html',
-                    //controller: 'PlanListCrtl'
 
                 })
                 .state('master.main.new-plan', {

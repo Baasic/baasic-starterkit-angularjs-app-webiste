@@ -4,7 +4,7 @@
             <div class="overflow--hidden">
                 <p class="plan__detail plan__detail--price pull">{{plan.name}}</p>
                 <div class="plan--actions push">
-                    <a ng-click="collapseToggle()" href=""><img src="../../assets/img/edit.svg" alt="edit plan" class="icon"></a>
+                    <a ng-click="collapseToggle(plan)" href=""><img src="../../assets/img/edit.svg" alt="edit plan" class="icon"></a>
                     <a href="" ng-click="plan.id ? deletePlan($index) : cancelEdit()"><img src="../../assets/img/delete.svg" alt="delete plan" class="icon"></a>
                 </div>
             </div>
@@ -110,8 +110,8 @@
                         <label>Description</label>
                     </div>
                     <div class="form-wrapper">
-                        <button ng-disabled="planForm.$invalid" type="submit" class="btn btn--quinary btn--med push" ng-click="setCollapsed();savePlan();">Save</button>
-                        <button type="button" class="btn btn--primary btn--med push" ng-click="cancelEdit();">Cancel</button>
+                        <button ng-disabled="planForm.$invalid" type="submit" class="btn btn--quinary btn--med push" ng-click="setCollapsed(plan);savePlan(plan);">Save</button>
+                        <button type="button" class="btn btn--primary btn--med push" ng-click="cancelEdit(plan);">Cancel</button>
                         <div class="clear"></div>
                     </div>
                 </div>

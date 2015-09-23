@@ -82,7 +82,7 @@ gulp.task('styles-dist', function () {
 /**
  * Scripts
  */
-gulp.task('scripts-dist', ['templates-dist'], function () {
+gulp.task('scripts-dist', ['templates'], function () {
     return es.merge(appConfigSource(), appFiles())
         .pipe(g.angularFilesort())
         .pipe(dist('js', bower.name, { ngAnnotate: true }));
