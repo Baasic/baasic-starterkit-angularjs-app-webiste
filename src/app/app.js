@@ -18,11 +18,12 @@
       'baasic.blog',
       'baasic.mobileApp'
     ])
-    .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', 'baasicAppProvider',
-        function config($locationProvider, $urlRouterProvider, $stateProvider, baasicAppProvider) {
-            baasicAppProvider.create('baasic-app-starterkit-demo', {
-                apiRootUrl: 'api.baasic.local',
-                apiVersion: 'beta'
+    .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', 'baasicAppProvider', 'baasicAppConfigProvider',
+        function config($locationProvider, $urlRouterProvider, $stateProvider, baasicAppProvider, baasicAppConfigProvider) {
+            
+            baasicAppProvider.create(baasicAppConfigProvider.config.apiKey, {
+                apiRootUrl: baasicAppConfigProvider.config.apiRootUrl,
+                apiVersion: baasicAppConfigProvider.config.apiVersion
             });
 
             $locationProvider.html5Mode({
@@ -31,7 +32,6 @@
 
             $urlRouterProvider.when('', '/');
 
-
             $urlRouterProvider.otherwise(function ($injector) {
                 var $state = $injector.get('$state');
                 $state.go('404');
@@ -39,7 +39,6 @@
 
             $urlRouterProvider.rule(function ($injector, $location) {
                 var path = $location.path();
-
                 // check to see if the path ends in '/'
                 if (path[path.length - 1] === '/') {
                     $location.replace().path(path.substring(0, path.length - 1));
@@ -106,7 +105,6 @@
                 .state('master.main.plans', {
                     url: 'plans?{page}',
                     templateUrl: 'templates/plan/plans.html',
-                    //controller: 'PlanListCrtl'
 
                 })
                 .state('master.main.new-plan', {

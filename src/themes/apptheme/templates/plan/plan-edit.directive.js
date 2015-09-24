@@ -6,13 +6,10 @@
             return {
                 restrict: 'AE',
                 scope: true,
-                replace:true,
+                replace: true,
                 compile: function () {
                     return {
-                        pre: function (scope, elem, attrs) {
-                            if (attrs.plan) {
-                                scope.plan = attrs.plan;
-                            }
+                        pre: function (scope, elem, attrs) {                            
                             if (attrs.onSave) {
                                 scope.onSaveFn = $parse(attrs.onSave);
                             }
@@ -23,18 +20,18 @@
                         }
                     };
                 },
-               controller: ['$scope', '$q', 'planService',
+                controller: ['$scope', '$q', 'planService',
                     function ($scope, $q, planService) {
 
 
                         $scope.savePlan = function savePlan(plan) {
-                            if ($scope.plan) {
+                            if (plan) {
 
                                 var promise;
-                                if (!$scope.plan.id) {
-                                    promise = planService.create($scope.plan);
+                                if (!plan.id) {
+                                    promise = planService.create(plan);
                                 } else {
-                                    promise = planService.update($scope.plan);
+                                    promise = planService.update(plan);
                                 }
 
                                 promise
@@ -51,39 +48,35 @@
                             }
                         };
 
-                        $scope.cancelEdit = function(){
-                            if ($scope.plan){
+                        $scope.cancelEdit = function (plan) {
+                            if (plan) {
                                 var cancel;
-                                    if(!$scope.plan.id){
-                                        cancel = $scope.plans.pop();
-                                    } else {
-                                        $scope.plan.isCollapsed = true;
+                                if (!plan.id) {
+                                    cancel = $scope.plans.pop();
+                                } else {
+                                    plan.isCollapsed = true;
+                                }
+                            }
+                        };
 
-                                    }
-
-
-                                    }
-
-                            };
-
-                        $scope.collapseToggle = function(){
-                            if(!$scope.plan.isCollapsed){
-                                $scope.plan.isCollapsed = true;
+                        $scope.collapseToggle = function (plan) {
+                            if (!plan.isCollapsed) {
+                                plan.isCollapsed = true;
 
                             } else {
-                                $scope.plan.isCollapsed = false;
+                                plan.isCollapsed = false;
 
                             }
                         };
 
-                        $scope.setCollapsed = function(){
-                            $scope.plan.isCollapsed = true;
+                        $scope.setCollapsed = function (plan) {
+                            plan.isCollapsed = true;
                         };
 
-                        }
+                    }
                 ],
                 templateUrl: 'templates/plan/plan-edit-form.html'
             };
         }
     ]
-);
+        );
