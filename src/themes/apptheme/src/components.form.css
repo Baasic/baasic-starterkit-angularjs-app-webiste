@@ -81,6 +81,11 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
 .bar:after {
     right: 50%;
 }
+.bar--social {
+    width: calc(100% - 3rem);
+    margin-left: 3.5rem;
+}
+
 .form input:focus ~ .bar:before, .form input:focus ~ .bar:after,
 .form textarea:focus ~ .bar:before, .form textarea:focus ~ .bar:after  {
     width: 50%;
@@ -92,6 +97,10 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
     top: 25%;
     pointer-events: none;
     opacity: 0.5;
+}
+.highlight--social {
+    width: calc(100% - 3rem);
+    margin-left: 3.5rem;
 }
 .form input:focus ~ .highlight, .form textarea:focus ~ .highlight {
     -webkit-animation: inputlighter 0.3s ease;

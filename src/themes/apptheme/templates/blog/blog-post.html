@@ -17,9 +17,9 @@
             </article>
         </div>
         <div>
-            <ul class="taglist--style">
+            <ul class="clearfix spc--bottom--med">
                 <li ng-repeat="tag in blog.tags" class="pull">
-                    <a class="btn btn--sml btn--quartiary" ui-sref="master.main.blog-search({ tags: tag.slug })">{{ tag.tag }}</a>
+                    <a class="tags__link" ui-sref="master.main.blog-search({ tags: tag.slug })">{{ tag.tag }}</a>
                 </li>
             </ul>
         </div>
@@ -29,9 +29,10 @@
             <button type="button" class="btn btn--tertiary btn--med" ng-click="editBlog()">Edit</button>
             <button type="button" class="btn btn--primary btn--med" ng-click="deleteBlog()">Delete</button>
         </div>
+        <button type="button" class="btn btn--quinary btn--med spc--top--med" href="javascript:void(0);" ui-sref="master.main.blog" rel="home">Back</button>
     </section>
     <section class="container--primary">
-        <div class="container--article flex spc--top--lrg">
+        <div class="container--article flex">
             <baasic-blog-small-list page-size="2"></baasic-blog-small-list>
         </div>
     </section>

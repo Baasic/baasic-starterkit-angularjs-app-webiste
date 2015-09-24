@@ -107,15 +107,10 @@
     </section>
     <section  id="plan" class="section__tertiary">
         <div class="container--primary">
-            <div class="nav__link push"  ng-if="$root.user.isAuthenticated">
-                <div class="push popup__wrapper">
-                    <a href="#">
-                        <img class="popup__title" src="assets/img/cog.svg" />
-                    </a>
-                    <div class="popup__pull popup__settings popup__settings--positive" >
-                        <a ui-sref="master.main.plans">Edit Plans</a>
-                    </div>
-                </div>
+            <div class="push" ng-if="$root.user.isAuthenticated">
+                <a ui-sref="master.main.plans">
+                    <img class="icon" src="assets/img/cog.svg" />
+                </a>
             </div>
             <h2 class="section__heading center">Select a Plan</h2>
             <plan-boxes class="flex center spc--top--lrg"></plan-boxes>

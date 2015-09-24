@@ -1,28 +1,24 @@
 /*------------------------------------*\
     # components.social
 \*------------------------------------*/
-
-.social__box {
+.social__item {
     position: relative;
     margin-bottom: 2rem;
     padding-right: .5rem;
     float:left;
 }
-
-
-.socialedit__icon {
+.social__icon {
     width: 3rem;
     position: absolute;
 
 }
-
-.highlight--social, .bar--social, .input--social {
+.social__input {
     width: calc(100% - 3rem)!important;
     margin-left: 3.5rem;
 }
 
-form .label--social {
-    left: 4.5rem;
+.social__label {
+    left: 4.5rem!important;
     top: -0.1rem!important;
 }
 

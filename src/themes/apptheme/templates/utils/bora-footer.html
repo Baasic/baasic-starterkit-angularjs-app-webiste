@@ -1,17 +1,10 @@
     <footer class="footer center" role="content-info">
         <div class="container--secondary">
-
-            <div class="push nav__link"  ng-if="$root.user.isAuthenticated">
-                <div class="push popup__wrapper">
-                    <a href="#">
-                        <img class="popup__title" src="assets/img/cog-invert.svg" />
-                    </a>
-                    <div class="popup__pull popup__settings popup__settings--negative" >
-                        <a ui-sref="master.social" class="link">Edit Social Networks</a>
-                    </div>
-                </div>
+            <div class="push"  ng-if="$root.user.isAuthenticated">
+                <a ui-sref="master.social">
+                    <img class="icon" src="assets/img/cog-invert.svg" />
+                </a>
             </div>
-
             <social-list-footer> </social-list-footer>
 
             <nav role="footer__nav center">

@@ -1,7 +1,7 @@
-﻿<div class="plan__border--alt">
+﻿<div class="plan">
     <div class="overflow--hidden">
         <ng-form novalidate name="planForm">
-            <div class="overflow--hidden">
+            <div class="group">
                 <p class="plan__detail plan__detail--price pull">{{plan.name}}</p>
                 <div class="plan--actions push">
                     <a ng-click="collapseToggle()" href=""><img src="../../assets/img/edit.svg" alt="edit plan" class="icon"></a>
@@ -35,7 +35,7 @@
                     <div class="flex spc--top--med">
                         <div class="pull form__field">
                             <div class="form-wrapper" >
-                                <div class="plan--checkbox__group">
+                                <div class="plan--checkbox__group relative">
                                     <input id="sync-{{plan.id}}" name="plan.sync" class="checkbox" ng-model="plan.sync" type="checkbox"  />
                                     <label class="radio__label checkbox__label" for="sync-{{plan.id}}">
                                         <span class="span check"></span>
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="form-wrapper" >
-                                <div class="plan--checkbox__group">
+                                <div class="plan--checkbox__group relative">
                                 <input id="featured-{{plan.id}}" name="plan.isFeatured" class="checkbox" ng-model="plan.isFeatured" type="checkbox"  />
                                     <label class="radio__label checkbox__label" for="featured-{{plan.id}}">
                                         <span class="span check"></span>

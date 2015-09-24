@@ -9,17 +9,8 @@ html {
 }
 body {
     font-family: var(--ff-serif);
-    animation: fadeIn ease-in .2s;
-    animation-fill-mode: forwards;
     overflow: hidden;
-}
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    min-width: 20rem;
 }
 img {
     max-width: 100%;

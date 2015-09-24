@@ -13,11 +13,11 @@
     border-radius: 8px;
     width: 2.5rem;
 }
-.popup__wrapper--positive {
+.popup__wrapper--primary {
     background: var(--color-secondary);
     border: 5px solid var(--color-secondary);
 }
-.popup__wrapper--negative {
+.popup__wrapper--secondary {
     background: #ffffff;
     border: 5px solid #ffffff;
 }
@@ -25,7 +25,6 @@
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    left: -60px;
     bottom: -100px;
     transform: translate(0,10px);
     padding: 1rem;
@@ -35,20 +34,25 @@
     white-space: nowrap;
     min-width: 6rem;
 }
-.popup__settings--negative {
-    background-color: white;
-    white-space: normal;
-    bottom: -140px;
-    left: 85px;
-
+.nav__link--primary .popup__settings--primary {
+    background-color: var(--color-secondary);
+    left: -60px;
 }
-.popup__settings--positive .link {
+.popup__settings--primary {
+    background-color: var(--color-secondary);
+    left: -80px;
+}
+.popup__settings--secondary {
+    background-color: white;
+    left: -180px;
+}
+.popup__settings--primary .link {
     color: white;
 }
-.popup__settings--negative .link {
+.popup__settings--secondary .link {
     color: var(--color-secondary);
 }
-.popup__settings--positive:before {
+.popup__settings--primary:before {
     position: absolute;
     z-index: -1;
     content: '';
@@ -60,11 +64,11 @@
     transition-duration: 0.3s;
     transition-property: transform;
 }
-.popup__settings--negative:before {
+.popup__settings--secondary:before {
     position: absolute;
     z-index: -1;
     content: '';
-    right: calc(25% - 10px);
+    right: calc(10% - 10px);
     top: -8px;
     border-style: solid;
     border-width: 0 10px 10px 10px;
@@ -77,19 +81,16 @@
     text-decoration: none;
 }
 .popup__settings .link:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: var(--light);
 }
 .popup__wrapper:hover .popup__settings {
     z-index: 10;
     opacity: 1;
     visibility: visible;
-    transform: translate(0,-20px);
+    transform: translate(0px,-20px);
     transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
 }
 .popup__message {
   text-align: center;
-}
-
-.popup__pull {
-    left: -80px;
 }
