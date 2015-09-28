@@ -47,25 +47,25 @@
 }
 
 .btn--tertiary {
-    border: 2px solid var(--bittersweet);
+    border: 0.125rem solid var(--bittersweet);
     font-family: var(--ff-sans);
     color: var(--bittersweet);
 }
 
 .btn--tertiary:hover, .btn--tertiary:active, .btn--tertiary:focus  {
-    border: 2px solid color(var(--bittersweet) shade(15%));
+    border: 0.125rem solid color(var(--bittersweet) shade(15%));
     color: color(var(--bittersweet) shade(15%));
 }
 
 .btn--tertiary--negative {
     color: var(--ultra-light);
-    border: 2px solid var(--ultra-light);
+    border: 0.125rem solid var(--ultra-light);
     font-family: var(--ff-sans);
     color: var(--ultra-light);
 }
 
 .btn--tertiary--negative:hover, .btn--tertiary--negative:active, .btn--tertiary--negative:focus  {
-    border: 2px solid color(var(--ultra-light) shade(15%));
+    border: 0.125rem solid color(var(--ultra-light) shade(15%));
     color: color(var(--ultra-light) shade(15%));
 }
 
@@ -99,6 +99,13 @@
     opacity: .5;
     transition: opacity .2s ease-in-out;
 }
+@media all and (--to-medium) {
+    .btn--senary {
+        width: 100%;
+        margin-top: -0.7rem;
+    }
+}
+
 .btn--senary:hover {
     opacity: 1;
 }

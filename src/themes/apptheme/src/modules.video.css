@@ -15,7 +15,7 @@
 .player {
     position: relative;
     max-width: 100%;
-    min-width: 290px;
+    min-width: 18.13rem;
     overflow: hidden;
 }
 
@@ -39,10 +39,10 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 1.25rem;
     min-height: 2.5em;
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     text-shadow: -1px -1px 0 #565d64, 1px -1px 0 #565d64, -1px 1px 0 #565d64, 1px 1px 0 #565d64;
     text-align: center;
@@ -50,9 +50,9 @@
     -webkit-font-smoothing: antialiased;
 }
 
-@media (min-width:768px) {
+@media (--from-medium) {
     .player-captions {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 }
 
@@ -65,7 +65,7 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     position: relative;
-    padding: 20px 10px 10px;
+    padding: 1.25rem 0.625rem 0.625rem;
     background: #343f4a;
     line-height: 1;
     text-align: center;
@@ -82,7 +82,7 @@
 
 .player-controls-sound {
     display: block;
-    margin: 10px auto 0;
+    margin: 0.625rem auto 0;
 }
 
 @media (min-width:560px) {
@@ -99,16 +99,16 @@
 .player-controls button, .player-controls input+label {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 2px;
-    padding: 5px 10px;
+    margin: 0 0.125rem;
+    padding: 0.3125rem 0.625rem;
     transition: background .3s ease;
-    border-radius: 3px;
+    border-radius: 0.1875rem;
     cursor: pointer;
 }
 
 .player-controls button svg, .player-controls input+label svg {
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
     display: block;
     fill: currentColor;
     transition: fill .3s ease;
@@ -146,10 +146,10 @@
 .player-controls .player-time {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 10px;
+    margin-left: 0.625rem;
     color: #cbd0d3;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
@@ -160,7 +160,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: 10px;
+    height: 0.625rem;
     background: #6e777f;
 }
 
@@ -225,71 +225,71 @@
     vertical-align: middle;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 100px;
-    margin: 0 10px 0 0;
+    width: 6.25rem;
+    margin: 0 0.625rem 0 0;
     padding: 0;
     cursor: pointer;
     background: 0 0;
 }
 
 .player-volume[type=range]::-webkit-slider-runnable-track {
-    height: 6px;
+    height: 0.375rem;
     background: #565d64;
     border: 0;
-    border-radius: 3px;
+    border-radius: 0.1875rem;
 }
 
 .player-volume[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    margin-top: -3px;
-    height: 12px;
-    width: 12px;
+    margin-top: -0.1875rem;
+    height: 0.75rem;
+    width: 0.75rem;
     background: #cbd0d3;
     border: 0;
-    border-radius: 6px;
+    border-radius: 0.375rem;
     transition: background .3s ease;
     cursor: ew-resize;
 }
 
 .player-volume[type=range]::-moz-range-track {
-    height: 6px;
+    height: 0.375rem;
     background: #565d64;
     border: 0;
-    border-radius: 3px;
+    border-radius: 0.1875rem;
 }
 
 .player-volume[type=range]::-moz-range-thumb {
-    height: 12px;
-    width: 12px;
+    height: 0.75rem;
+    width: 0.75rem;
     background: #cbd0d3;
     border: 0;
-    border-radius: 6px;
+    border-radius: 0.375rem;
     transition: background .3s ease;
     cursor: ew-resize;
 }
 
 
 .player-volume[type=range]::-ms-track {
-    height: 6px;
+    height: 0.375rem;
     background: 0 0;
     border-color: transparent;
-    border-width: 3px 0;
+    border-width: 0.1875rem 0;
     color: transparent;
 }
 
 .player-volume[type=range]::-ms-fill-lower, .player-volume[type=range]::-ms-fill-upper {
-    height: 6px;
+    height: 0.375rem;
     background: #565d64;
     border: 0;
-    border-radius: 3px;
+    border-radius: 0.1875rem;
 }
 
 .player-volume[type=range]::-ms-thumb {
-    height: 12px;
-    width: 12px;
+    height: 0.75rem;
+    width: 0.75rem;
     background: #cbd0d3;
     border: 0;
-    border-radius: 6px;
+    border-radius: 0.375rem;
     transition: background .3s ease;
     cursor: ew-resize;
 }
@@ -333,17 +333,17 @@
 
 .player-fullscreen .player-video-wrapper .player-captions, .player.fullscreen-active .player-video-wrapper .player-captions {
     top: auto;
-    bottom: 90px;
+    bottom: 5.625rem;
 }
 
 @media (min-width:560px) and (max-width:767px) {
     .player-fullscreen .player-video-wrapper .player-captions, .player.fullscreen-active .player-video-wrapper .player-captions {
-        bottom: 60px;
+        bottom: 3.75rem;
     }
 }
 @media (min-width:768px) {
     .player-fullscreen .player-video-wrapper .player-captions, .player.fullscreen-active .player-video-wrapper .player-captions {
-        bottom: 80px;
+        bottom: 5rem;
     }
 }
 

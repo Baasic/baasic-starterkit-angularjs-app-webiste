@@ -54,13 +54,13 @@
 @import "components.lost.css";
 @import "components.form.css";
 @import "components.box.css";
-@import "components.price.css";
 @import "components.blog.css";
 @import "components.tags.css";
 @import "components.search.css";
 @import "components.avatar.css";
 @import "components.plan.css";
-@import "components.profile.css";
+@import "components.planeditor.css";
+/*@import "components.profile.css";*/
 @import "components.popup.css";
 @import "components.socialedit.css";
 @import "components.loader.css";

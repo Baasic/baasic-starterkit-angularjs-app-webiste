@@ -3,21 +3,21 @@
         <h1 class="spc--bottom--xlrg  section__heading spc--top--lrg">{{ isNew ? 'Add New' : 'Edit' }} Blog Post</h1>
         <form name="blogPost" novalidate class="form">
             <div class="flex">
-                <div class="form__field form-wrapper">
+                <div class="form__field form--wrapper">
                     <input type="text" name="title" id="fieldTitle" ng-model="blog.title" class="input input--text" required />
                     <label class="form__label" for="fieldTitle">Title</label>
                     <p class="form--alert form--alert--warning" ng-show="(blogPost.$submitted || blogPost.title.$touched) && blogPost.title.$error.required">Title is required.</p>
                 </div>
-                <div class="form-wrapper">
+                <div class="form--wrapper">
                     <input type="text" name="featured" id="fieldBody" ng-model="blog.featured" class="input input--text" required />
                     <label for="fieldBody">Featured image</label>
                 </div>
             </div>
-            <div class="form-wrapper">
+            <div class="form--wrapper">
                 <textarea name="excerpt" id="fieldExcerpt" ng-model="blog.excerpt" class="input input--textarea" required ></textarea>
                 <label class="form__label" for="fieldExcerpt">Excerpt</label>
             </div>
-            <div class="spc--bottom--med form-wrapper">
+            <div class="spc--bottom--med form--wrapper">
                 <div class="group">
                     <div class="editor__type">
                         <div class="editor__header">
@@ -48,12 +48,12 @@
                     </div>
                 </div>
             </div>
-            <div class="form-wrapper">
+            <div class="form--wrapper">
                 <tags-input class="form__label" -input ng-model="blog.tags" display-property="tag" add-on-comma="true">
                     <auto-complete source="loadTags($query)"></auto-complete>
                 </tags-input>
             </div>
-            <div class="form-wrapper">
+            <div class="form--wrapper">
                 <button type="submit" class="btn btn--quinary btn--med push" ng-click="saveBlog()">Save</button>
                 <button type="button" class="btn btn--primary btn--med push" ng-click="cancelEdit()">Cancel</button>
             </div>

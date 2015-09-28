@@ -1,6 +1,6 @@
-.relative {
+.position--rel {
     position: relative;
 }
-.absolute {
+.position--abs {
     position: absolute;
 }

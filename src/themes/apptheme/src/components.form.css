@@ -1,7 +1,7 @@
 /*------------------------------------*\
     # components.form
 \*------------------------------------*/
-.form-wrapper {
+.form--wrapper {
     position: relative;
     margin-bottom: calc(var(--base-line-height)*1.5);
     flex: 1;
@@ -10,7 +10,7 @@
 .form input, .form textarea {
     font-family: var(--ff-sans);
     font-size: var(--type-base);
-    padding: 10px 10px 10px 5px;
+    padding: 0.625rem 0.625rem 0.625rem  0.3125rem;
     display: block;
     width: 100%;
     border: none;
@@ -20,7 +20,7 @@
 .form textarea {
     font-family: var(--ff-sans);
     font-size: var(--type-base);
-    padding: 10px 10px 10px 5px;
+    padding: 0.625rem 0.625rem 0.625rem  0.3125rem;
     display: block;
     width: 100%;
     border:none;
@@ -44,13 +44,13 @@
     -webkit-transition: 0.2s ease all;
 }
 .form input:focus ~ label, .form input:valid ~ label, .form textarea:focus ~ label, .form textarea:valid ~ label {
-    top: -20px;
-    font-size: 14px;
+    top: -1.25rem;
+    font-size:  0.875rem;
     color: color(var(--ultra-dark) whiteness(50%));
 }
 .label--on-top {
-    top: -20px!important;
-    font-size: 14px!important;
+    top: -1.25rem!important;
+    font-size:  0.875rem!important;
     color: color(var(--ultra-dark) whiteness(50%))!important;
 }
 textarea + .textarea__label {
@@ -66,7 +66,7 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
 }
 .bar:before, .bar:after {
     content: '';
-    height: 2px;
+    height: 0.125rem;
     width: 0;
     bottom: 1px;
     position: absolute;
@@ -118,7 +118,7 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
     border: none;
     border-bottom: 1px solid rgb(242, 242, 242);
     outline: none;
-    height: 50px;
+    height:  3.125rem;
 }
 .form__flex {
     display: flex;
@@ -133,8 +133,8 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
     }
 }
 .editor__field{
-    max-height: 500px;
-    height: 500px;
+    max-height:  31.25rem;
+    height:  31.25rem;
     overflow: auto;
     word-break: break-word;
     border-bottom: 1px solid rgb(242,242,242);
@@ -145,21 +145,21 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
 .editor__explain{
     color: #ABA9A9;
     font-family: var(--ff-sans);
-    font-size: 14px;
+    font-size:  0.875rem;
 }
 .radio__label, .radio__label--title{
     font-family: var(--ff-sans);
     top: 0;
 }
 .radio__label{
-    margin: 10px 10px 20px 10px;;
+    margin: 0.625rem 0.625rem 1.25rem 0.625rem;
 }
 .radio__label--title{
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .radio__button__group{
-    margin: 10px;
+    margin: 0.625rem;
 }
 @-webkit-keyframes inputlighter
 {

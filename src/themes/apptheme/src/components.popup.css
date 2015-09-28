@@ -4,47 +4,47 @@
 
 .popup__title {
   text-align: center;
-  padding: 0 0 15px 0;
+  padding: 0 0 0.9375rem 0;
   margin-bottom: -1.5rem;
 }
 .popup__wrapper {
     position: relative;
     display: inline-block;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     width: 2.5rem;
 }
 .popup__wrapper--primary {
     background: var(--color-secondary);
-    border: 5px solid var(--color-secondary);
+    border: 0.3125rem solid var(--color-secondary);
 }
 .popup__wrapper--secondary {
     background: #ffffff;
-    border: 5px solid #ffffff;
+    border: 0.3125rem solid #ffffff;
 }
 .popup__settings {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    bottom: -100px;
-    transform: translate(0,10px);
+    bottom: -6.25rem;
+    transform: translate(0,0.625rem);
     padding: 1rem;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.26);
+    border-radius: 0.5rem;
     width: auto;
     white-space: nowrap;
     min-width: 6rem;
 }
 .nav__link--primary .popup__settings--primary {
     background-color: var(--color-secondary);
-    left: -60px;
+    left: -3.75rem;
 }
 .popup__settings--primary {
     background-color: var(--color-secondary);
-    left: -80px;
+    left: -5rem;
 }
 .popup__settings--secondary {
     background-color: white;
-    left: -180px;
+    left: -15rem;
 }
 .popup__settings--primary .link {
     color: white;
@@ -56,10 +56,10 @@
     position: absolute;
     z-index: -1;
     content: '';
-    right: calc(25% - 10px);
-    top: -8px;
+    right: calc(25% - 0.625rem);
+    top: -0.5rem;
     border-style: solid;
-    border-width: 0 10px 10px 10px;
+    border-width: 0 0.625rem 0.625rem 0.625rem;
     border-color: transparent transparent var(--color-secondary) transparent;
     transition-duration: 0.3s;
     transition-property: transform;
@@ -68,10 +68,10 @@
     position: absolute;
     z-index: -1;
     content: '';
-    right: calc(10% - 10px);
-    top: -8px;
+    right: calc(10% - 0.625rem);
+    top: -0.5rem;
     border-style: solid;
-    border-width: 0 10px 10px 10px;
+    border-width: 0 0.625rem 0.625rem 0.625rem;
     border-color: transparent transparent white transparent;
     transition-duration: 0.3s;
     transition-property: transform;
@@ -88,7 +88,7 @@
     z-index: 10;
     opacity: 1;
     visibility: visible;
-    transform: translate(0px,-20px);
+    transform: translate(0rem,-1.25rem);
     transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
 }
 .popup__message {
