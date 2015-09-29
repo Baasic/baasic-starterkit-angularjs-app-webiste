@@ -61,7 +61,6 @@
 @import "components.plan.css";
 @import "components.planeditor.css";
 @import "components.profilelogin.css";
-@import "components.popup.css";
 @import "components.socialedit.css";
 @import "components.loader.css";
 
@@ -82,4 +81,4 @@
 @import "util.floats.css";
 @import "util.spacers.css";
 @import "util.visibility.css";
-@import "util.overflow.css";
+@import "util.position.css";

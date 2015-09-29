@@ -7,14 +7,12 @@
     display: block;
     color: var(--color-secondary);
 }
-
 .plan__price--primary {
     font-size: 6rem;
     margin-top: calc(var(--base-line-height)*1);
     margin-bottom: calc(var(--base-line-height)*1);
     line-height: calc(var(--base-line-height)*3);
 }
-
 .plan__price--secondary {
     font-size: 3rem;
     margin-top: calc(var(--base-line-height)*1);
@@ -33,20 +31,17 @@
     color: var(--color-primary);
     font-weight: var(--type-bold);
 }
-
 .plan__terms {
     font-family: var(--ff-sans);
     font-size: var(--type-base);
     padding: 0; /*1rem;*/
 }
-
 .plan__terms--item {
     font-weight: var(--type-bold);
     color: color(var(--ultra-light) blackness(80%));
     text-decoration: none;
     transition: color .5s ease-out;
 }
-
 .plan__terms--item:hover {
     color: var(--color-primary);
     text-decoration: none;

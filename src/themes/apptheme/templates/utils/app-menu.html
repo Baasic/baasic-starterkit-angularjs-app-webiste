@@ -15,18 +15,18 @@
         <a ui-sref="master.main.index({ '#': 'contact' })" class="nav__link nav__link--primary">Contact</a>
     </li>
     <li class="nav__link nav__link--primary">
-        <div class="popup__wrapper">
+        <div class="profile__login">
             <a href="#">
-                <img class="popup__title" src="assets/img/profile.svg" />
+                <img class="profile__login__icon" src="assets/img/profile.svg" />
             </a>
-            <div class="popup__settings popup__settings--primary" ng-if="!$root.user.isAuthenticated">
+            <div class="profile__login__popup" ng-if="!$root.user.isAuthenticated">
                 <baasic-logout on-logout="setEmptyUser()">
-                    <a ui-sref="login" class="link">Login</a>
+                    <a ui-sref="login" class="profile__login__link">LOGIN</a>
                 </baasic-logout>
             </div>
-            <div class="popup__settings popup__settings--primary" ng-if="$root.user.isAuthenticated">
+            <div class="profile__login__popup" ng-if="$root.user.isAuthenticated">
                 <baasic-logout on-logout="setEmptyUser()">
-                    <a href="#" ng-click="logout()" class="link">Logout</a>
+                    <a href="#" ng-click="logout()" class="profile__login__link">LOGOUT</a>
                 </baasic-logout>
             </div>
         </div>
