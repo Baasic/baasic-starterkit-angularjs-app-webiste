@@ -12,6 +12,7 @@
     margin-top: -1.5rem;
     margin-left: -1.5rem;
     cursor: pointer;
+    z-index: -1;
 }
 
 .headroom--not-top .menu-icon-container {

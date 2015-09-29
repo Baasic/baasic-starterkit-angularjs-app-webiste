@@ -20,7 +20,7 @@
     ])
     .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', 'baasicAppProvider', 'baasicAppConfigProvider',
         function config($locationProvider, $urlRouterProvider, $stateProvider, baasicAppProvider, baasicAppConfigProvider) {
-            
+
             baasicAppProvider.create(baasicAppConfigProvider.config.apiKey, {
                 apiRootUrl: baasicAppConfigProvider.config.apiRootUrl,
                 apiVersion: baasicAppConfigProvider.config.apiVersion
@@ -200,4 +200,6 @@
             $rootScope.user = user;
         }
     ]);
+
 }(angular));
+
