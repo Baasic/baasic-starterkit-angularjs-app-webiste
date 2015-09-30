@@ -13,7 +13,7 @@
     background-color: transparent;
     position: relative;
     user-select: none;
-    margin: .5rem;
+    margin: .5rem .5rem .5rem 0;
     letter-spacing: 1px;
 }
 .btn:focus {
