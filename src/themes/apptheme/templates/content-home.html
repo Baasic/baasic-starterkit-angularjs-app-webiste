@@ -140,7 +140,6 @@
             </div>
         </div>
     </section>
-
     <section id="contact" class="section__secondary">
         <div class="container--primary">
             <h2 class="section__heading center">Hook with us</h2>
@@ -152,7 +151,7 @@
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <div ng-show="form.$submitted || form.fname.$dirty">
-                                <span class="form--alert" ng-show="form.fname.$error.required"> First name field is required. </span>
+                                <span class="form__alert" ng-show="form.fname.$error.required"> First name field is required. </span>
                             </div>
                             <label>Name</label>
                         </div>
@@ -161,7 +160,7 @@
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <div ng-show="form.$submitted || form.lname.$dirty">
-                                <span class="form--alert" ng-show="form.lname.$error.required"> Last name field is required. </span>
+                                <span class="form__alert" ng-show="form.lname.$error.required"> Last name field is required. </span>
                             </div>
                             <label>Last name</label>
                         </div>
@@ -170,11 +169,10 @@
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <div ng-show="form.$submitted || form.email.$dirty">
-                                <span class="form--alert" ng-show="form.email.$error.required"> Email field is required. </span>
-                                <span class="form--alert" ng-show="form.email.$error.email"> Please type in correct email address. </span>
+                                <span class="form__alert" ng-show="form.email.$error.required"> Email field is required. </span>
+                                <span class="form__alert" ng-show="form.email.$error.email"> Please type in correct email address. </span>
                             </div>
                             <label ng-class="{'label--on-top': form.$error.email, '':!form.$error.email}">Email</label>
-
                         </div>
                     </div>
                     <div class="flex spc--top--med">
@@ -182,7 +180,7 @@
                             <textarea ng-model="message" name="message" rows="5" required></textarea>
                             <span class="bar"></span>
                             <div ng-show="form.$submitted || form.message.$dirty">
-                                <span class="form--alert" ng-show="form.message.$error.required"> Message field is required. </span>
+                                <span class="form__alert" ng-show="form.message.$error.required"> Message field is required. </span>
                             </div>
                             <label>Your message</label>
                         </div>

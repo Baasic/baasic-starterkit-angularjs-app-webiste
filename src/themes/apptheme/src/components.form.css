@@ -56,9 +56,6 @@
 textarea + .textarea__label {
     top: 8rem;
 }
-textarea:focus + .textarea__label, textarea:valid + .textarea__label {
-    top: 6rem!important;
-}
 .bar {
     position: relative;
     display: block;
@@ -107,7 +104,7 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
     -moz-animation: inputlighter 0.3s ease;
     animation: inputlighter 0.3s ease;
 }
-.form--alert {
+.form__alert {
     font-family: var(--ff-sans);
     color: var(--color-secondary);
     font-size: var(--type-small);
@@ -116,7 +113,7 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
     font-family: var(--ff-sans);
     min-width: 100%;
     border: none;
-    border-bottom: 1px solid rgb(242, 242, 242);
+    border-bottom: 1px solid var(--ultra-light);
     outline: none;
     height:  3.125rem;
 }
@@ -131,35 +128,6 @@ textarea:focus + .textarea__label, textarea:valid + .textarea__label {
     .form__field {
         width: 50%;
     }
-}
-.editor__field{
-    max-height:  31.25rem;
-    height:  31.25rem;
-    overflow: auto;
-    word-break: break-word;
-    border-bottom: 1px solid rgb(242,242,242);
-}
-.font--monospace {
-    font-family: var(--ff-monospace);
-}
-.editor__explain{
-    color: var(--dark);
-    font-family: var(--ff-sans);
-    font-size:  0.875rem;
-}
-.radio__label, .radio__label--title{
-    font-family: var(--ff-sans);
-    top: 0;
-}
-.radio__label{
-    margin: 0.625rem 0.625rem 1.25rem 0.625rem;
-}
-.radio__label--title{
-    margin-bottom: 0.625rem;
-}
-
-.radio__button__group{
-    margin: 0.625rem;
 }
 @-webkit-keyframes inputlighter
 {

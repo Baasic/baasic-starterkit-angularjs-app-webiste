@@ -16,7 +16,7 @@
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <div ng-show="planForm.$submitted || planForm.planName.$dirty">
-                                <span class="form--alert" ng-show="planForm.planName.$error.required"> Plan name field is required. </span>
+                                <span class="form__alert" ng-show="planForm.planName.$error.required"> Plan name field is required. </span>
                             </div>
                             <label>Plan Name</label>
                         </div>
@@ -25,8 +25,8 @@
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <div ng-show="planForm.$submitted || planForm.price.$dirty">
-                                <span class="form--alert" ng-show="planForm.price.$error.number"> Please use the numbers only. </span>
-                                <span class="form--alert" ng-show="planForm.price.$error.required"> Price field is required. </span>
+                                <span class="form__alert" ng-show="planForm.price.$error.number"> Please use the numbers only. </span>
+                                <span class="form__alert" ng-show="planForm.price.$error.required"> Price field is required. </span>
                             </div>
                             <label>Price</label>
                         </div>
@@ -44,7 +44,7 @@
                                     </label>
                                 </div>
                                 <div ng-show="planForm.$submitted">
-                                    <span class="form--alert" ng-show="planForm.sync.$error.required">It is required to select if the plan has synchronization or not. </span>
+                                    <span class="form__alert" ng-show="planForm.sync.$error.required">It is required to select if the plan has synchronization or not. </span>
                                 </div>
                             </div>
                             <div class="form--wrapper" >
@@ -57,7 +57,7 @@
                                     </label>
                                 </div>
                                 <div ng-show="planForm.$submitted">
-                                    <span class="form--alert" ng-show="planForm.isFeatured.$error.required">It is required to select if the plan is featured or not. </span>
+                                    <span class="form__alert" ng-show="planForm.isFeatured.$error.required">It is required to select if the plan is featured or not. </span>
                                 </div>
                             </div>
                         </div>
@@ -67,8 +67,8 @@
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <div ng-show="planForm.$submitted || planForm.tickets.$dirty">
-                                    <span class="form--alert" ng-show="planForm.tickets.$error.number"> Please use the numbers only. </span>
-                                    <span class="form--alert" ng-show="planForm.tickets.$error.required"> It is required to determine number of support tickets. </span>
+                                    <span class="form__alert" ng-show="planForm.tickets.$error.number"> Please use the numbers only. </span>
+                                    <span class="form__alert" ng-show="planForm.tickets.$error.required"> It is required to determine number of support tickets. </span>
                                 </div>
                                 <label>Tickets</label>
                             </div>
@@ -84,7 +84,7 @@
                                 <option value="Experts">Experts</option>
                             </select>
                             <div ng-show="planForm.$submitted || planForm.navAccessLevel.$dirty">
-                                <span class="form--alert" ng-show="planForm.navAccessLevel.$error.required"> Please choose one option. Navigator Level is mandatory field. </span>
+                                <span class="form__alert" ng-show="planForm.navAccessLevel.$error.required"> Please choose one option. Navigator Level is mandatory field. </span>
                             </div>
                         </div>
                         <div class="form--wrapper">
@@ -96,7 +96,7 @@
                                 <option value="Year">Year</option>
                             </select>
                             <div ng-show="planForm.$submitted || planForm.period.$dirty">
-                                <span class="form--alert" ng-show="planForm.period.$error.required">Period field is mandatory. </span>
+                                <span class="form__alert" ng-show="planForm.period.$error.required">Period field is mandatory. </span>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <div ng-show="planForm.$submitted || planForm.description.$dirty">
-                            <span class="form--alert" ng-show="planForm.description.$error.required">Please use brief description of plan. This is mandatory. </span>
+                            <span class="form__alert" ng-show="planForm.description.$error.required">Please use brief description of plan. This is mandatory. </span>
                         </div>
                         <label>Description</label>
                     </div>

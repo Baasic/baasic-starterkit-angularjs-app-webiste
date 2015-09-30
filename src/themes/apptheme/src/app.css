@@ -55,9 +55,9 @@
 @import "components.form.css";
 @import "components.box.css";
 @import "components.blog.css";
+@import "components.blogeditor.css";
 @import "components.tags.css";
 @import "components.search.css";
-/*@import "components.avatar.css";*/
 @import "components.plan.css";
 @import "components.planeditor.css";
 @import "components.profilelogin.css";

@@ -1,6 +1,6 @@
-﻿<div class="flex blog__wrapper--tertiaty">
+﻿<div class="flex blog__wrapper--tertiary">
     <article class="blog__article--tertiary" ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo:2">
-        <div class="blog__article--tertiary--container">
+        <div>
             <a ui-sref="master.main.blog-detail({slug:blog.slug})" class="link">
                 <img ng-src="{{blog.featured}}" class="tertiary__article__image" alt="#">
                 <h2 class="article--secondary__title">{{blog.title}}</h2>

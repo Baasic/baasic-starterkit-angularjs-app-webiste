@@ -125,7 +125,7 @@
     color: var(--ultra-dark);
     margin-bottom: .75rem;
 }
-.blog__wrapper--tertiaty {
+.blog__wrapper--tertiary {
     margin-top: calc(var(--base-line-height)*2);
 }
 .blog__article--tertiary {
