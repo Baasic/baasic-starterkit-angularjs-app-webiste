@@ -80,8 +80,8 @@
     color: var(--color-primary);
     background: url(/assets/img/addnew.svg) no-repeat center right;
     background-size: 2.2rem;
-    opacity: .5;
-    transition: opacity .2s ease-in-out;
+    opacity: 1;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
 }
 @media all and (--to-medium) {
     .btn--senary {
@@ -90,7 +90,9 @@
     }
 }
 .btn--senary:hover {
-    opacity: 1;
+    color: var(--ultra-light);
+    background: url(/assets/img/addnew_white.svg) no-repeat center right var(--color-primary);
+    background-size: 2.2rem;
 }
 /* Buttons specifics*/
 .btn--sml {
