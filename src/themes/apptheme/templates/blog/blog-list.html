@@ -10,7 +10,7 @@
 <main role="main" class="article">
     <section class="container--primary flex">
         <div ng-if="hasBlogs" ng-repeat="blog in blogList.item" ng-class="{'blog__article--secondary':!$first, 'blog__article--primary__container':$first}">
-            <a ui-sref="master.main.blog-detail({slug:blog.slug})" class="link">
+            <a ui-sref="master.main.blog-detail({slug:blog.slug})" class="blog__article--primary__link">
                 <div ng-if="$first" ng-style="{ 'background-image': blog.featured ? 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(' + blog.featured + ')' : 'none' }" class="blog__article--primary">
                     <h2 class="article--primary__title">{{ blog.title }}</h2>
                     <span class="article--primary__title">&mdash;</span>
@@ -22,7 +22,7 @@
                     <a ng-if="$root.user.isAuthenticated" class="btn btn--tertiary btn--med spc--sml--top" ui-sref="master.blog-edit({ slug: blog.slug })">Edit</a>
                 </div>
             </a>
-            <a ui-sref="master.main.blog-detail({slug:blog.slug})" class="link">
+            <a ui-sref="master.main.blog-detail({slug:blog.slug})" class="blog__article--secondary__link">
                 <div ng-if="!$first">
                     <div class="secondary__article__image"  ng-style="{ 'background-image': blog.featured ? 'url(' + blog.featured + ')' : 'none' }"></div>
                     <h2 class="article--secondary__title">{{ blog.title }}</h2>
