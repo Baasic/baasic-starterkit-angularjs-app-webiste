@@ -2,11 +2,19 @@
     # util.visibility
 \*------------------------------------*/
 
-.hide--onsmall {
+.hide--onmedium {
+    display: block;
+}
+@media (--from-medium) {
+    .hide--onmedium {
+        display: none;
+    }
+}
+.show--onmedium {
     display: none;
 }
-@media (--from-small) {
-    .hide--onsmall {
-        display: block;
+@media (--from-medium) {
+    .show--onmedium {
+        display: inline-block;
     }
 }

@@ -14,7 +14,19 @@
     <li class="nav__item">
         <a ui-sref="master.main.index({ '#': 'contact' })" class="nav__link nav__link--primary">Contact</a>
     </li>
-    <li class="nav__link nav__link--primary">
+    <div class="nav__item hide--onmedium">
+        <li class="nav__item" ng-if="!$root.user.isAuthenticated">
+            <baasic-logout on-logout="setEmptyUser()">
+                <a ui-sref="login" class="nav__link nav__link--primary">LOGIN</a>
+            </baasic-logout>
+        </li>
+        <li class="nav__item" ng-if="$root.user.isAuthenticated">
+            <baasic-logout on-logout="setEmptyUser()">
+                <a href="#" ng-click="logout()" class="nav__link nav__link--primary">LOGOUT</a>
+            </baasic-logout>
+        </li>
+    </div>
+    <li class="nav__link nav__link--primary show--onmedium">
         <div class="profile__login">
             <a href="#">
                 <img class="profile__login__icon" src="assets/img/profile.svg" />
