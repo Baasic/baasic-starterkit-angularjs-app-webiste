@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    # components.planeditor
+\*------------------------------------*/
+
+.plan__editor {
+    border: 1px solid #cccccc;
+    padding-top: 0.625rem;
+    margin-bottom: 0.625rem;
+}
+.plan__editor__icon {
+    width: 2.188rem;
+    height: auto;
+}
+.plan__editor__collapsed--true {
+    max-height: 0;
+    overflow: hidden;
+}
+.plan__editor__collapsed--false {
+    margin: 0 0 2rem 1rem;
+}
+.plan__editor__form--transition {
+    margin-top: 1.875rem;
+    transition: opacity 1s ease-in-out;
+}
+.plan__editor__collapsed--true .plan__editor__form--transition {
+    opacity: 0;
+}
+.plan__editor__collapsed--false .plan__editor__form--transition {
+    opacity: 1;
+}
+.plan__editor--checkbox__group {
+    margin-left: 0.625rem;
+}
+.plan__editor--checkbox__group .checkbox  {
+    display: none
+}
+.plan__editor--checkbox__group .checkbox__label {
+    padding-left: 1.875rem;
+    cursor: pointer;
+}
+.plan__editor--checkbox__group .span {
+    display: block;
+    position: absolute;
+    left: 0;
+    transition-duration: .3s
+}
+.plan__editor--checkbox__group .box {
+    background: var(--ultra-light);
+    height: 1.25rem;
+    width: 1.25rem;
+    z-index: 9;
+    transition-delay: .2s;
+    border: 0.125rem solid var(--color-primary);
+    border-radius: 0.1875rem;
+    top: 0;
+}
+.plan__editor--checkbox__group .check {
+    left: 0.4375rem;
+    top: 0;
+    width: 0.4375rem;
+    height: 0.9375rem;
+    border: 0.125rem solid white;
+    border-top: none;
+    border-left: none;
+    opacity: 0;
+    z-index: 10;
+    transform: rotate(45deg);
+    transition-delay: .3s;
+}
+.plan__editor--checkbox__group .checkbox:checked ~ .checkbox__label .box {
+    background: var(--color-primary);
+}
+.plan__editor--checkbox__group .checkbox:checked ~ .checkbox__label .check {
+    opacity: 1;
+}
+.plan__editor__filter--container {
+    max-width: 80em;
+}
+.plan__editor__filter--input {
+    border: 1px solid var(--color-primary);
+    line-height: 2em;
+    padding: 0.4375rem;
+    color: var(--color-primary);
+    margin: 1.25rem 0;
+    display: block;
+    float: left;
+    outline: none!important;
+    width: calc(100% - 12.5rem);
+}
+@media all and (--to-medium) {
+    .plan__editor__filter--input {
+        width: 100%;
+    }
+}

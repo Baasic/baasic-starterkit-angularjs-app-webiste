@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    # components.search
+\*------------------------------------*/
+
+.search__results__container {
+    width: 100%;
+}
+.search__results {
+    margin-bottom: calc(var(--base-line-height)*1);
+    padding-bottom: calc(var(--base-line-height)*1);
+    border-bottom: .0625rem solid color(var(--ultra-light) blackness(20%));
+}
+@media all and (--from-medium) {
+    .search__results {
+        display: flex;
+        min-width: 100%;
+        margin-bottom: calc(var(--base-line-height)*2);
+        border-bottom: none;
+    }
+}
+.search__results__link {
+    text-decoration: none;
+}

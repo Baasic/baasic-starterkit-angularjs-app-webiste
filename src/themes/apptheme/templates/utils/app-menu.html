@@ -1,0 +1,48 @@
+<ul class="nav">
+    <li class="nav__item">
+        <a ui-sref="master.main.index({ '#': 'features' })" class="nav__link nav__link--primary">Features</a>
+    </li>
+    <li class="nav__item">
+        <a ui-sref="master.main.index({ '#': 'video' })" class="nav__link nav__link--primary">Watch the video</a>
+    </li>
+    <li class="nav__item">
+        <a ui-sref="master.main.index({ '#': 'plan' })" class="nav__link nav__link--primary">Plan</a>
+    </li>
+    <li class="nav__item">
+        <a ui-sref="master.main.blog" rel="blog" class="nav__link nav__link--primary" rel="blog">Blog</a>
+    </li>
+    <li class="nav__item">
+        <a ui-sref="master.main.index({ '#': 'contact' })" class="nav__link nav__link--primary">Contact</a>
+    </li>
+    <div class="nav__item hide--onmedium">
+        <li class="nav__item" ng-if="!$root.user.isAuthenticated">
+            <baasic-logout on-logout="setEmptyUser()">
+                <a ui-sref="login" class="nav__link nav__link--primary">LOGIN</a>
+            </baasic-logout>
+        </li>
+        <li class="nav__item" ng-if="$root.user.isAuthenticated">
+            <baasic-logout on-logout="setEmptyUser()">
+                <a href="#" ng-click="logout()" class="nav__link nav__link--primary">LOGOUT</a>
+            </baasic-logout>
+        </li>
+    </div>
+    <li class="nav__link nav__link--primary show--onmedium">
+        <div class="profile__login">
+            <a href="#">
+                <img class="profile__login__icon" src="assets/img/profile.svg" />
+            </a>
+            <div class="profile__login__popup" ng-if="!$root.user.isAuthenticated">
+                <baasic-logout on-logout="setEmptyUser()">
+                    <a ui-sref="login" class="profile__login__link">LOGIN</a>
+                </baasic-logout>
+            </div>
+            <div class="profile__login__popup" ng-if="$root.user.isAuthenticated">
+                <baasic-logout on-logout="setEmptyUser()">
+                    <a href="#" ng-click="logout()" class="profile__login__link">LOGOUT</a>
+                </baasic-logout>
+            </div>
+        </div>
+    </li>
+</ul>
+
+

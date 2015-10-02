@@ -1,0 +1,17 @@
+<div class="hero--product">
+	<bora-header></bora-header>
+</div>
+<section class="container--primary">
+	<div class="plan__editor__filter--container container--primary group">
+		<input type="text" class="plan__editor__filter--input" name="planFilter" ng-model="planFilter" placeholder="Type for filtering plans">
+		<a href="#" ng-click="add()" class="btn btn--senary link">
+            Add new plan
+        </a>
+	</div>
+	<div class="clear"></div>
+	<div class="plan__editor__container container--primary">
+		<div ng-repeat="plan in plans | filter: planFilter">
+		  <baasic-plan-edit></baasic-plan-edit>
+        </div>
+	</div>
+</section>

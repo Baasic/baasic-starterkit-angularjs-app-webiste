@@ -1,0 +1,132 @@
+/*------------------------------------*\
+    # modules.buttons
+\*------------------------------------*/
+
+.btn {
+    transition: background-color .7s ease-out;
+    font-family: var(--ff-sans);
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    border: 0;
+    background-color: transparent;
+    position: relative;
+    user-select: none;
+    margin: .5rem .5rem .5rem 0;
+    letter-spacing: 1px;
+}
+.btn:focus {
+    outline: 0;
+}
+.btn--width {
+    max-width: 3.5rem;
+}
+.btn--primary {
+    color: var(--ultra-light);
+    background-color: var(--bittersweet);
+}
+.btn--primary:hover, .btn--primary:active, .btn--primary:focus  {
+    background-color: color(var(--bittersweet) shade(15%));
+}
+.btn--secondary {
+    color: var(--ultra-light);
+    background-color: var(--mindaro);
+}
+.btn--secondary:hover, .btn--secondary:active, .btn--secondary:focus  {
+    background-color: color(var(--mindaro) shade(15%));
+}
+.btn--tertiary {
+    border: 0.125rem solid var(--bittersweet);
+    font-family: var(--ff-sans);
+    color: var(--bittersweet);
+}
+.btn--tertiary:hover, .btn--tertiary:active, .btn--tertiary:focus  {
+    border: 0.125rem solid color(var(--bittersweet) shade(15%));
+    color: color(var(--bittersweet) shade(15%));
+}
+.btn--tertiary--negative {
+    color: var(--ultra-light);
+    border: 0.125rem solid var(--ultra-light);
+    font-family: var(--ff-sans);
+    color: var(--ultra-light);
+}
+.btn--tertiary--negative:hover, .btn--tertiary--negative:active, .btn--tertiary--negative:focus  {
+    border: 0.125rem solid color(var(--ultra-light) shade(15%));
+    color: color(var(--ultra-light) shade(15%));
+}
+.btn--quartiary {
+    color: var(--ultra-dark);
+    background-color: var(--ultra-light);
+}
+.btn--quartiary:hover, .btn--quartiary:active, .btn--quartiary:focus  {
+    background-color: color(var(--ultra-light) shade(15%));
+}
+.btn--quinary {
+    color: var(--ultra-light);
+    background-color: var(--color-primary);
+}
+.btn--quinary:hover, .btn--quinary:active, .btn--quinary:focus  {
+    background-color: color(var(--color-primary) shade(15%));
+}
+.btn--senary {
+    border: 1px solid var(--color-primary);
+    margin-top: 1.25rem;
+    box-sizing: border-box;
+    padding: .75rem 2.5rem .65rem .65rem;
+    height: 3rem;
+    float: right;
+    margin-right: 0;
+    color: var(--color-primary);
+    background: url(/assets/img/addnew.svg) no-repeat center right;
+    background-size: 2.2rem;
+    opacity: 1;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+@media all and (--to-medium) {
+    .btn--senary {
+        width: 100%;
+        margin-top: -0.7rem;
+    }
+}
+.btn--senary:hover {
+    color: var(--ultra-light);
+    background: url(/assets/img/addnew_white.svg) no-repeat center right var(--color-primary);
+    background-size: 2.2rem;
+}
+/* Buttons specifics*/
+.btn--sml {
+    padding: .25rem .5rem;
+    line-height: .75rem;
+    font-size: var(--type-small);
+    font-weight: var(--type-regular);
+}
+.btn--med {
+    padding: .25rem .5rem;
+    font-size: var(--type-base);
+    font-weight: var(--type-regular);
+}
+.btn--lrg {
+    padding: .25rem .5rem;
+    font-size: var(--type-medium);
+    font-weight: var(--type-regular);
+}
+@media all and (min-width: 21em) {
+    .btn--lrg {
+        padding: .5rem 1.15rem;
+        font-size: var(--type-medium);
+    }
+}
+
+@media all and (--from-medium) {
+    .btn--lrg {
+        padding: .75rem 1.15rem;
+    }
+}
+
+@media all and (--from-large) {
+    .btn--lrg {
+        padding: .75rem 1.15rem;
+        font-size: var(--type-large);
+    }
+}

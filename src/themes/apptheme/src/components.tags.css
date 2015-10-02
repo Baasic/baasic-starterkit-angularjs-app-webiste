@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    # components.tags
+\*------------------------------------*/
+
+.tags__item {
+    display: block;
+    margin-right: .35rem;
+    margin-bottom: .35rem;
+    float: left;
+}
+.tags__link {
+    display: block;
+    position: relative;
+    color: var(--dark);
+    font-family: var(--ff-sans);
+    font-size: var(--type-tiny);
+    line-height: calc(var(--base-line-height)*0.5);
+    height: calc(var(--base-line-height)*1);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    padding: 0.3rem 0.5rem 0.5rem 0.5rem;
+    margin-right: 0.3rem;
+    max-width: 8rem;
+    text-decoration: none;
+    background: var(--ultra-light);
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+.tags__link:hover,
+.tags__link:focus,
+.tags__link:active {
+    color: var(--color-primary);
+    background: var(--light);
+}
+@media all and (--from-large) {
+    .tags__link--active {
+        color: var(--color-primary);
+        font-weight: var(--type-bold);
+    }
+}

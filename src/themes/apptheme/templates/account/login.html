@@ -1,0 +1,26 @@
+﻿<div class="section__form--login">
+    <form name="login" ng-submit="submitLogin()" novalidate>
+        <div class="flex">
+            <div class="form--wrapper form">
+                <input type="text" name="username" ng-model="username" required  />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Username</label>
+                <p class="form__alert" ng-show="(login.$submitted || login.username.$touched) && login.username.$error.required">Username is required.</p>
+            </div>
+            <div class="form--wrapper form">
+                <input type="password" name="password" ng-model="password" required  autocomplete="off" />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Password</label>
+                <p class="form__alert" ng-show="(login.$submitted || login.password.$touched) && login.password.$error.required">Password is required.</p>
+            </div>
+        </div>
+        <div class="form--wrapper form">
+            <button type="submit" class="btn btn--quinary btn--med push">Login</button>
+            <span ng-show="loginError" class="form__alert">
+                {{loginError}}
+            </span>
+        </div>
+    </form>
+</div>

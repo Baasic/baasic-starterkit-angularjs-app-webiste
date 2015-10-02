@@ -1,0 +1,112 @@
+/*------------------------------------*\
+    # components.box
+\*------------------------------------*/
+
+.box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+@media all and (--from-medium) {
+    .box {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+}
+.box__item {
+    margin-top: calc(var(--base-line-height)*6);
+    margin-bottom: calc(var(--base-line-height)*2);
+}
+@media all and (--from-medium) {
+    .box__item {
+        flex: 1 0 0;
+        margin-bottom: 0;
+    }
+}
+.box__item--title {
+    margin-bottom: calc(var(--base-line-height)*1);
+    font-family: var(--ff-sans);
+    font-size: var(--type-xxlarge);
+    line-height: calc(var(--base-line-height)*1.75);
+    font-weight: var(--type-light);
+    color: var(--color-primary);
+    letter-spacing: .05rem;
+}
+@media all and (--from-medium) {
+    .box__item--title {
+        font-family: var(--ff-sans);
+        font-size: 3rem;
+        line-height: calc(var(--base-line-height)*2.5);
+        font-weight: var(--type-light);
+        color: var(--color-primary);
+        letter-spacing: .05rem;
+    }
+}
+@media all and (--from-mediumlarge) {
+    .box__item--title {
+        font-family: var(--ff-sans);
+        font-size: 4rem;
+        line-height: calc(var(--base-line-height)*3.25);
+        font-weight: var(--type-light);
+        color: var(--color-primary);
+        letter-spacing: .05rem;
+    }
+}
+@media all and (--from-large) {
+    .box__item--title {
+        font-family: var(--ff-sans);
+        font-size: 5rem;
+        line-height: calc(var(--base-line-height)*4);
+        font-weight: var(--type-light);
+        color: var(--color-primary);
+        letter-spacing: .05rem;
+    }
+}
+.box__media {
+    flex: 1;
+}
+@media all and (--from-medium) {
+    .box__media {
+        flex: 1;
+        position: relative;
+    }
+}
+@media all and (--from-large) {
+    .box__media {
+        flex: 1 0 0;
+    }
+}
+@media all and (--from-xlarge) {
+    .box__media {
+        flex: 1;
+    }
+}
+.box__media--image {
+    margin-bottom: -0.5rem;
+    max-width: 100%;
+}
+@media all and (--from-medium) {
+    .box__media--image {
+        position: absolute;
+        right: 0;
+        top: 4rem;
+        padding: 0;
+    }
+}
+@media all and (--from-large) {
+    .box__media--image {
+        position: absolute;
+        right: 0;
+        top: 9rem;
+        padding: 0;
+    }
+}
+@media all and (--from-xlarge) {
+    .box__media--image {
+        position: absolute;
+        right: 0;
+        top: 4rem;
+        padding: 0;
+    }
+}

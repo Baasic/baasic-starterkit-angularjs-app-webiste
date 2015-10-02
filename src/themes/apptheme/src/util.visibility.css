@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    # util.visibility
+\*------------------------------------*/
+
+.hide--onmedium {
+    display: block;
+}
+@media (--from-medium) {
+    .hide--onmedium {
+        display: none;
+    }
+}
+.show--onmedium {
+    display: none;
+}
+@media (--from-medium) {
+    .show--onmedium {
+        display: inline-block;
+    }
+}

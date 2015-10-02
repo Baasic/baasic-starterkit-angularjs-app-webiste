@@ -1,0 +1,151 @@
+/*------------------------------------*\
+    # components.blog
+\*------------------------------------*/
+
+.blog__header__title {
+    color: var(--ultra-dark);
+    font-size: var(--type-xxlarge);
+    line-height: calc(var(--base-line-height)*1.5);
+    margin-top: calc(var(--base-line-height)*5);
+    margin-bottom: var(--base-line-height);
+    display: block;
+    letter-spacing: 0.3rem;
+}
+@media all and (--from-medium) {
+    .blog__header__title {
+        font-size: var(--type-xxxlarge);
+        line-height: calc(var(--base-line-height)*2.5);
+        margin-bottom: calc(var(--base-line-height)*2);
+    }
+}
+.blog__header__title:nth-child(2) {
+    margin-top: .5rem;
+}
+@media all and (--from-medium) {
+    .blog__header__title:nth-child(2) {
+        margin-top: var(--base-line-height);
+    }
+}
+.blog__article--primary__container {
+    width: 100%;
+}
+.blog__article--primary {
+    flex: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: calc(var(--base-line-height)*1);
+    margin-bottom: calc(var(--base-line-height)*2);
+    padding: var(--base-line-height);
+    text-decoration: none;
+    min-height: 20rem;
+}
+@media all and (--from-medium) {
+    .blog__article--primary {
+        min-height: 31.25rem;
+        margin-top: calc(var(--base-line-height)*1);
+        margin-bottom: calc(var(--base-line-height)*2);
+        padding-top: calc(var(--base-line-height)*3);
+        padding-right: calc(var(--base-line-height)*3);
+        padding-left: calc(var(--base-line-height)*3);
+        padding-bottom: calc(var(--base-line-height)*3);
+    }
+}
+.article--primary__title {
+    font-family: var(--ff-sans);
+    font-size: var(--type-xlarge);
+    line-height: calc(var(--base-line-height)*1.5);
+    color: white;
+    letter-spacing: .2rem;
+}
+@media all and (--from-medium) {
+    .article--primary__title {
+        font-size: var(--type-xxxlarge);
+        line-height: calc(var(--base-line-height)*2);
+    }
+}
+.article--primary__body {
+    font-size: var(--type-medium);
+    line-height: var(--base-line-height);
+    color: white;
+    letter-spacing: .1rem;
+    margin-bottom: calc(var(--base-line-height)*.5);
+}
+@media all and (--from-medium) {
+    .article--primary__body {
+        font-size: var(--type-large);
+        margin-bottom: calc(var(--base-line-height)*1);
+        line-height: calc(var(--base-line-height)*1.5);
+    }
+}
+.blog__article--secondary {
+    margin-bottom: calc(var(--base-line-height)*1);
+    padding-bottom: calc(var(--base-line-height)*1);
+    border-bottom: .0625rem solid color(var(--ultra-light) blackness(20%));
+}
+@media all and (--from-medium) {
+    .blog__article--secondary {
+        display: flex;
+        width: 30%;
+        margin-bottom: calc(var(--base-line-height)*2);
+        border-bottom: none;
+    }
+}
+.secondary__article__image {
+    height: 15rem;
+    background-size: cover;
+    background-position: center center;
+}
+@media all and (--from-medium) {
+    .secondary__article__image {
+        max-width: 100%;
+    }
+}
+.tertiary__article__image {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+}
+.article--secondary__title {
+    font-family: var(--ff-sans);
+    font-size: var(--type-large);
+    color: var(--ultra-dark);
+    text-transform: uppercase;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+.article--secondary__body {
+    color: var(--ultra-dark);
+    margin-bottom: .75rem;
+}
+.blog__wrapper--tertiary {
+    margin-top: calc(var(--base-line-height)*2);
+}
+.blog__article--tertiary {
+    margin-bottom: calc(var(--base-line-height)*1);
+    border-bottom: .0625rem solid color(var(--ultra-light) blackness(20%));
+}
+@media all and (--from-medium) {
+    .blog__article--tertiary {
+        display: flex;
+        max-width: 50%;
+        padding: 0 1rem 0 0;
+        margin-bottom: calc(var(--base-line-height)*2);
+        border-bottom: none;
+    }
+    .blog__article--tertiary:nth-of-type(2) {
+        padding: 0 0 0 1rem;
+    }
+
+}
+.blog__article--primary__link,
+.blog__article--secondary__link {
+    text-decoration: none;
+}
+.blog__article--tertiary__link {
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: auto;
+}

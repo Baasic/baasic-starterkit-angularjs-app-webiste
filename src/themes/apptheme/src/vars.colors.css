@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    # vars.colors
+\*------------------------------------*/
+
+:root {
+    --light:            #d2d2d2;
+    --ultra-light:      #f2f2f2;
+    --dark:             #a2a2a2;
+    --ultra-dark:       #202020;
+
+    --dark-cyan:	    #007D90;
+    --bittersweet:		#FD6D6D;
+    --mindaro:          #BFEB66;
+
+
+    --color-primary:     var(--dark-cyan);
+    --color-secondary:   var(--bittersweet);
+    --color-tertiary:    var(--mindaro);
+
+    --color-warning:     red;
+    --color-success:     green;
+    --color-note:        orange;
+}

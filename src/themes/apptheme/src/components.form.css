@@ -1,0 +1,164 @@
+/*------------------------------------*\
+    # components.form
+\*------------------------------------*/
+.form--wrapper {
+    position: relative;
+    margin-bottom: calc(var(--base-line-height)*1.5);
+    flex: 1;
+    padding: 0 1rem;
+}
+.form input, .form textarea {
+    font-family: var(--ff-sans);
+    font-size: var(--type-base);
+    padding: 0.625rem 0.625rem 0.625rem  0.3125rem;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid color(var(--ultra-light));
+    border-radius: 0px;
+}
+.form textarea {
+    font-family: var(--ff-sans);
+    font-size: var(--type-base);
+    padding: 0.625rem 0.625rem 0.625rem  0.3125rem;
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid color(var(--ultra-light));
+    border-radius: 0px;
+}
+.form input:focus, .form textarea:focus {
+    outline: none;
+}
+.form label {
+    font-family: var(--ff-sans);
+    color: var(--ultra-dark);
+    font-size: var(--type-base);
+    font-weight: var(--type-regular);
+    position: absolute;
+    pointer-events: none;
+    left: 1rem;
+    top: .75rem;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+.form input:focus ~ label, .form input:valid ~ label, .form textarea:focus ~ label, .form textarea:valid ~ label {
+    top: -1.25rem;
+    font-size:  0.875rem;
+    color: color(var(--ultra-dark) whiteness(50%));
+}
+.label--on-top {
+    top: -1.25rem!important;
+    font-size:  0.875rem!important;
+    color: color(var(--ultra-dark) whiteness(50%))!important;
+}
+textarea + .textarea__label {
+    top: 8rem;
+}
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.bar:before, .bar:after {
+    content: '';
+    height: 0.125rem;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: var(--color-primary);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+    left: 50%;
+}
+.bar:after {
+    right: 50%;
+}
+.bar--social {
+    width: calc(100% - 3rem);
+    margin-left: 3.5rem;
+}
+
+.form input:focus ~ .bar:before, .form input:focus ~ .bar:after,
+.form textarea:focus ~ .bar:before, .form textarea:focus ~ .bar:after  {
+    width: 50%;
+}
+.highlight {
+    position:absolute;
+    height: 60%;
+    width: 100%;
+    top: 25%;
+    pointer-events: none;
+    opacity: 0.5;
+}
+.highlight--social {
+    width: calc(100% - 3rem);
+    margin-left: 3.5rem;
+}
+.form input:focus ~ .highlight, .form textarea:focus ~ .highlight {
+    -webkit-animation: inputlighter 0.3s ease;
+    -moz-animation: inputlighter 0.3s ease;
+    animation: inputlighter 0.3s ease;
+}
+.form__alert {
+    font-family: var(--ff-sans);
+    color: var(--color-secondary);
+    font-size: var(--type-small);
+}
+.form__select{
+    font-family: var(--ff-sans);
+    min-width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--ultra-light);
+    outline: none;
+    height:  3.125rem;
+}
+.form__flex {
+    display: flex;
+    width: 100%;
+}
+.form__field {
+    width: 100%;
+}
+@media all and (--from-medium) {
+    .form__field {
+        width: 50%;
+    }
+}
+@-webkit-keyframes inputlighter
+{
+    from
+    {
+        background: var(--color-primary);
+    }
+    to
+    {
+        width: 0; background: transparent;
+    }
+}
+@-moz-keyframes inputlighter
+{
+    from
+    {
+        background: var(--color-primary);
+    }
+    to
+    {
+        width: 0; background: transparent;
+    }
+}
+@keyframes inputlighter
+{
+    from
+    {
+        background: var(--color-primary);
+    }
+    to
+    {
+        width: 0; background: transparent;
+    }
+}

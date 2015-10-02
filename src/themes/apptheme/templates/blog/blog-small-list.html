@@ -1,0 +1,17 @@
+﻿<div class="flex blog__wrapper--tertiary">
+    <article class="blog__article--tertiary" ng-if="hasBlogs" ng-repeat="blog in blogList.item | limitTo:2">
+        <div>
+            <a ui-sref="master.main.blog-detail({slug:blog.slug})" class="blog__article--tertiary__link">
+                <img ng-src="{{blog.featured}}" class="tertiary__article__image" alt="#">
+                <h2 class="article--secondary__title">{{blog.title}}</h2>
+                <p class="article--secondary__body">{{blog.excerpt}}</p>
+                <div>
+                    <span class="date">{{blog.publishDate | date : 'MMMM dd, yyyy' }} | </span>
+                    <span class="reading-time">{{ blog.readingTime.text }} </span>
+                </div>
+            </a>
+            <a ng-if="$root.user.isAuthenticated" class="btn btn--tertiary btn--med btn--margin__top btn--width" ui-sref="master.blog-edit({ slug: blog.slug })">Edit</a>
+        </div>
+    </article>
+</div>
+
