@@ -31,7 +31,7 @@ npm (Node Package Manager) will go through its configuration file (package.json)
     
 this will serve you the default theme, to serve a different theme please use the _--theme_ switch
 
-    gulp serve --theme bora
+    gulp serve --theme apptheme
 
 and you are *almost* ready to go. 
 
