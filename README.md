@@ -15,15 +15,25 @@ Dynamic Resource Schema is JSON that can be created on Dashboard. We use one dyn
 
 More information about the App Starter Kit can be found in the upcoming blog post.
 
-## Working with the starter kit
+## Starter Kit live demo
 
 As a client-side prerequisite, you should install the basic tools for your operating system: Node.js, Bower and Gulp. Start by cloning the [AngularJS app starter kit repository](https://github.com/Baasic/baasic-starterkit-angularjs-app-website/). After that, go into the root folder of the started kit you just cloned and type
+[Bora](http://demo.baasic.com/angularjs/starterkit-app-website/bora/)  
+ 
+
+## Working with the Starter kit
+ 
+As a client-side prerequisite, you should install the basic tools for your operating system: Node.js (4.x and above), Bower and Gulp. Start by cloning the [AngularJS App Website Starter Kit repository](https://github.com/Baasic/baasic-starterkit-angularjs-app-webiste/). After that, go into the root folder of the started Kit you just cloned and type
 
     npm install
 
 npm (Node Package Manager) will go through its configuration file (package.json) and install all dependencies. It may take a couple of minutes to download and install everything; when it is finished, just type
 
     gulp serve
+
+this will serve you the default theme, to serve a different theme please use the _--theme_ switch
+
+    gulp serve --theme apptheme
 
 and you are *almost* ready to go.
 
@@ -108,6 +118,17 @@ To make the app ready for deploy to production run:
 ```bash
 gulp dist
 ```
+or
+```bash
+gulp dist --theme gastro-thumbnail
+```
+
+## Base url option
+
+You can also add a `--baseUrl` command if your blog destination is not in root of your website 
+
+For example:
+`--baseUrl "/angularjs/starterkit-app-webiste/bora/"`
 
 Now there's a `./dist` folder with all scripts and stylesheets concatenated and minified, also third party libraries installed with bower will be concatenated and minified into `vendors.min.js` and `vendors.min.css` respectively.
 

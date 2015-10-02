@@ -3,23 +3,27 @@
 \*------------------------------------*/
 
 .group {
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
-
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
 .flex {
     display: flex;
     flex-direction: column;
 }
-
 @media all and (--from-medium) {
     .flex {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        
     }
 }
-
 .flex--alt {
     display: flex;
     flex-direction: row;

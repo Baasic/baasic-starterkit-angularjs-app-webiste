@@ -2,117 +2,47 @@
     # components.plan
 \*------------------------------------*/
 
-.plan__border {
-    border: 1px solid #007E91;
-    margin-top: 1.25rem;
-    box-sizing: border-box;
-    padding: .65rem 2.5rem .65rem .65rem;
-    height: 48px;
-    float: right;
-    margin-right: 0;
-    color: var(--color-primary);
-    background: url(assets/img/addnew.svg) no-repeat center right;
-    background-size: 36px;
-    opacity: .5;
-    transition: opacity .2s ease-in-out;
-}
-.plan__border:hover {
-    opacity: 1;
-}
-.plan__border--alt {
-    border: 1px solid #cccccc;
-    padding-top: 10px;
-    margin-bottom: 10px;
-}
-.plan__filter--container {
-    max-width: 80em;
-}
-.plan__filter--input {
-    border: 1px solid var(--color-primary);
-    line-height: 2em;
-    padding: 7px;
-    color: var(--color-primary);
-    margin: 20px 0;
+.plan__price {
+    font-family: var(--ff-serif);
     display: block;
-    float: left;
-    outline: none!important;
-    width: calc(100% - 200px);
+    color: var(--color-secondary);
 }
-.plan--actions .icon {
-    width: 35px !important;
-    height: auto;
+.plan__price--primary {
+    font-size: 6rem;
+    margin-top: calc(var(--base-line-height)*1);
+    margin-bottom: calc(var(--base-line-height)*1);
+    line-height: calc(var(--base-line-height)*3);
 }
-.plan--collapsed__true {
-    max-height: 0;
-    overflow: hidden;
+.plan__price--secondary {
+    font-size: 3rem;
+    margin-top: calc(var(--base-line-height)*1);
+    margin-bottom: calc(var(--base-line-height)*1.5);
+    line-height: calc(var(--base-line-height)*1);
 }
-.plan--collapsed__false {
-   margin: 0 0 2rem 1rem;
+.plan__detail {
+    padding-top: calc(var(--base-line-height)*.75);
+    letter-spacing: .1rem;
+    font-family: var(--ff-sans);
+    font-size: var(--type-medium);
+    line-height: calc(var(--base-line-height)*1.25);
+    padding: 0 1rem;
 }
-.plan--form__transition {
-    margin-top: 30px;
-    transition: opacity 1s ease-in-out;
+.plan__detail--price {
+    color: var(--color-primary);
+    font-weight: var(--type-bold);
 }
-.plan--collapsed__true .plan--form__transition {
-    opacity: 0;
+.plan__terms {
+    font-family: var(--ff-sans);
+    font-size: var(--type-base);
+    padding: 0; /*1rem;*/
 }
-.plan--collapsed__false .plan--form__transition {
-    opacity: 1;
+.plan__terms--item {
+    font-weight: var(--type-bold);
+    color: color(var(--ultra-light) blackness(80%));
+    text-decoration: none;
+    transition: color .5s ease-out;
 }
-
-/* sync checkbox*/
-.plan--checkbox__group {
-    position:relative;
-    margin-left:10px;
-}
-/* Hide Checkbox Input */
-.plan--checkbox__group .checkbox  {
-    display:none
-}
-/* Style Label */
-.plan--checkbox__group .checkbox__label {
-    padding-left:30px;
-    cursor:pointer;
-}
-/* Style span tag */
-.plan--checkbox__group label span {
-    display:block;
-    position:absolute;
-    left:0;
-    transition-duration:.3s
-}
-/* Style box */
-.plan--checkbox__group label .box {
-    background:var(--ultra-light);
-    height:20px;
-    width:20px;
-    z-index:9;
-    transition-delay:.2s;
-    border: 2px solid var(--color-primary);
-    border-radius: 3px;
-    top: 0;
-}
-/* Style check icon. give it a border on the bottom and right only and then rotate */
-.plan--checkbox__group label .check {
-    left:7px;
-    top: 0;
-    width:7px;
-    height:15px;
-    border:2px solid #fff;
-    border-top:none;
-    border-left:none;
-    opacity:0;
-    z-index:10;
-    transform:rotate(45deg);
-    transition-delay:.3s;
-}
-
-/* Change color of box when checkbox is checked */
-input[type=checkbox]:checked ~ label .box {
-    background:var(--color-primary);
-}
-
-/* Rotate and show check icon when checkbox is checked */
-input[type=checkbox]:checked ~ label .check {
-    opacity:1;
+.plan__terms--item:hover {
+    color: var(--color-primary);
+    text-decoration: none;
 }

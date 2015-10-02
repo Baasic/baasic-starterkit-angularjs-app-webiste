@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    # components.header
+\*------------------------------------*/
+.header--fixed {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+.header__nav.close {
+    display: none;
+}
+@media all and (--from-medium) {
+    .header__nav.close {
+        display: block;
+    }
+}
+.header__nav {
+    float: right;
+    margin-right: 0;
+    width: 100%;
+    animation: fadeIn ease-in-out .2s;
+    animation-fill-mode: forwards;
+}
+@media all and (--from-medium) {
+    .header__nav {
+        width: auto;
+    }
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}

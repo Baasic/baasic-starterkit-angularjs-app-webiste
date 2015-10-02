@@ -1,7 +1,9 @@
 /*------------------------------------*\
-    # util.overflow
+    # components.pager
 \*------------------------------------*/
 
-.overflow--hidden {
+.pager {
     overflow: hidden;
+    display: block;
+    margin-left: -1.5rem;
 }

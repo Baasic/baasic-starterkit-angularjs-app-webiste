@@ -43,7 +43,7 @@
         letter-spacing: .05rem;
     }
 }
-@media all and (min-width: 870px) {
+@media all and (--from-mediumlarge) {
     .box__item--title {
         font-family: var(--ff-sans);
         font-size: 4rem;
@@ -83,7 +83,7 @@
     }
 }
 .box__media--image {
-    margin-bottom: -.5rem;
+    margin-bottom: -0.5rem;
     max-width: 100%;
 }
 @media all and (--from-medium) {

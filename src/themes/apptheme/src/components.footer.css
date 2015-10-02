@@ -3,8 +3,9 @@
 \*------------------------------------*/
 
 .footer {
-    background-color: var(--bittersweet);
+    background-color: var(--color-secondary);
     padding: calc(var(--base-line-height)*1.5) 0;
+    margin-top: 4rem;
 }
 .footer__nav {
     display: block;
@@ -19,8 +20,8 @@
     z-index: 1;
     margin-right: .75rem;
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
 }
 @media all and (--from-medium) {
     .footer__icon--social {
@@ -36,7 +37,7 @@
 .footer__icon--social:hover:after, .footer__icon--social:focus:after {
     content: "";
     position: absolute;
-    border: 3px solid white;
+    border: 0.1875rem solid white;
     width: 115%;
     height: 115%;
     border-radius: 50%;
@@ -47,7 +48,7 @@
     .footer__icon--social:hover:after, .footer__icon--social:focus:after {
         content: "";
         position: absolute;
-        border: 3px solid white;
+        border: 0.1875rem solid white;
         width: 115%;
         height: 115%;
         border-radius: 50%;

@@ -5,54 +5,54 @@
     <section class="container--primary spc--bottom--xlrg spc--top--xlrg group">
         <h2 class="section__heading center">Sign up for a plan</h2>
         <plan-preview></plan-preview>
-        <form novalidate name="form" class="subscription__form">
+        <form novalidate name="form">
             <div class="section__form section__form--plan group">
                 <div class="flex spc--top--med">
-                    <div class="form-wrapper form">
+                    <div class="form--wrapper form">
                         <input name="fname" ng-model="first.name" autocomplete="given-name" type="text" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <div ng-show="form.$submitted || form.fname.$dirty">
-                            <span class="form--alert" ng-show="form.fname.$error.required"> First name field is required. </span>
+                            <span class="form__alert" ng-show="form.fname.$error.required"> First name field is required. </span>
                         </div>
                         <label>Name</label>
                     </div>
-                    <div class="form-wrapper form">
+                    <div class="form--wrapper form">
                         <input name="lname" ng-model="last.name" autocompletetype="family-name" type="text" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <div ng-show="form.$submitted || form.lname.$dirty">
-                            <span class="form--alert" ng-show="form.lname.$error.required"> Last name field is required. </span>
+                            <span class="form__alert" ng-show="form.lname.$error.required"> Last name field is required. </span>
                         </div>
                         <label>Last name</label>
                     </div>
-                    <div class="form-wrapper form">
+                    <div class="form--wrapper form">
                         <input name="email" ng-model="email" type="email" x-autocompletetype="email" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <div ng-show="form.$submitted || form.email.$dirty">
-                            <span class="form--alert" ng-show="form.email.$error.required"> Email field is required. </span>
-                            <span class="form--alert" ng-show="form.email.$error.email"> Please type in correct email address. </span>
+                            <span class="form__alert" ng-show="form.email.$error.required"> Email field is required. </span>
+                            <span class="form__alert" ng-show="form.email.$error.email"> Please type in correct email address. </span>
                         </div>
                         <label ng-class="{'label--on-top': form.$error.email, '':!form.$error.email}">Email</label>
                     </div>
                 </div>
                 <div class="flex spc--top--med">
-                    <div class="form-wrapper form">
+                    <div class="form--wrapper form">
                         <input name="password" type="password" ng-model="password" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <div ng-show="form.$submitted || form.password.$dirty">
-                            <span class="form--alert" ng-show="form.password.$error.required"> Password field is required. </span>
+                            <span class="form__alert" ng-show="form.password.$error.required"> Password field is required. </span>
                         </div>
                         <label>Password</label>
                     </div>
-                    <div class="form-wrapper form">
+                    <div class="form--wrapper form">
                         <input name="confirmpass" ng-model="confirmpass" type="password" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <div ng-show="form.$submitted || form.passConf.$dirty">
-                            <span class="form--alert" ng-show="form.passConf.$error.required"> Repeat password field is required. </span>
+                            <span class="form__alert" ng-show="form.passConf.$error.required"> Repeat password field is required. </span>
                         </div>
                         <label>Repeat Password</label>
                     </div>
