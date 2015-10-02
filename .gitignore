@@ -16,6 +16,7 @@ bower_components/
 *.sublime-project
 *.sublime-workspace
 *.exe
+*.mov
 
 **/nuspec.list
 **/packages/
@@ -27,4 +28,4 @@ bower_components/
 
 
 
-docs/design/BaasicStarterkitAppSite/video/33138000_480p.mov
+
