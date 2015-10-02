@@ -13,7 +13,6 @@
     font-weight: var(--type-bold);
     font-family: var(--ff-sans);
 }
-
 @media all and (--from-medium) {
     .styledtext h1, 
     .styledtext h2, 
@@ -27,7 +26,6 @@
         font-family: var(--ff-sans);
     }
 }
-
 .styledtext p, 
 .styledtext ul, 
 .styledtext dl, 
@@ -42,7 +40,6 @@
     font-size: var(--type-base);
     line-height: var(--base-line-height);
 }
-
 @media all and (--from-medium) {
     .styledtext p, 
     .styledtext ul, 
@@ -58,7 +55,6 @@
         line-height: calc(var(--base-line-height)*1.25);
     }
 }
-
 .styledtext ul {
     padding-left: 1.5rem;
     list-style-type: disc;
@@ -66,24 +62,19 @@
 .styledtext ol {
     padding-left: 1.5rem;
 }
-
 .styledtext pre {
 }
-
 .styledtext pre code {
 }
-
 .styledtext em {
     margin-bottom: 1rem;
     font-size: var(--type-base);
     line-height: var(--base-line-height);
 }
-
 .styledtext em {
     font-size: var(--type-base);
     line-height: var(--base-line-height);
 }
-
 @media all and (--from-medium) {
     .styledtext em {
         font-size: var(--type-medium);
@@ -102,7 +93,6 @@
     padding-left: calc(var(--base-line-height)*1.5);
     border-left: .3rem solid var(--color-primary);
 }
-
 @media all and (--from-medium) {
     .styledtext blockquote {
         color: var(--color-primary);
@@ -115,13 +105,10 @@
         margin-right: -calc(var(--base-line-height)*7);
     }
 }
-
 .styledtext blockquote:before {
 }
-
 .styledtext blockquote > p {
 }     
-
 .styledtext table {
     width: 100%;
     font-family: var(--ff-sans);
@@ -129,12 +116,10 @@
     font-size: var(--type-base);
     margin-top: calc(var(--base-line-height)*.5);
 }
-
 .styledtext table tr td {
     padding: .5rem;
     border: .0625rem solid color(var(--ultra-dark) alpha(20%));
 }
-
 .styledtext table th {
     padding: .5rem;
     background-color: color(var(--color-primary) alpha(60%));
@@ -143,4 +128,4 @@
 }
 .styledtext table th:last-child {
     border-right: .0625rem solid color(var(--color-primary) alpha(60%));
-}    
+}

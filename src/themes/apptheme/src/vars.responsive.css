@@ -4,7 +4,6 @@
 
 @custom-media --to-small (max-width: 20em); /*320px*/
 @custom-media --to-medium (max-width: 48em); /*768px*/
-
 @custom-media --from-small (min-width: 20em); /*320px*/
 @custom-media --from-medium (min-width: 48em); /*768px*/
 @custom-media --from-mediumlarge (min-width: 54,375em); /*870px*/
