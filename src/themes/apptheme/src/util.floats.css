@@ -5,19 +5,15 @@
 .push {
     float: right;
 }
-
 .pull {
     float: left;
 }
-
 .center {
     text-align: center;
 }
-
 .text-right {
     text-align: right;
 }
-
 .flex--right {
     justify-content: flex-end;
 }

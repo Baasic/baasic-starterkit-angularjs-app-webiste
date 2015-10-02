@@ -10,7 +10,7 @@
 
         compile: function () {
             return {
-                pre: function (scope, elem, attrs) {                    
+                pre: function (scope, elem, attrs) {
                     if (attrs.onSave) {
                         scope.onSaveFn = eval(attrs.onSave);
                     }
@@ -32,7 +32,7 @@
 
             planService.find({
                 page: 1,
-                rpp: 20,
+                rpp: 10,
                 sort: 'sync|desc'
             })
             .success(function(data) {

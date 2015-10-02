@@ -1,4 +1,4 @@
-<ul class="nav group">
+<ul class="nav">
     <li class="nav__item">
         <a ui-sref="master.main.index" class="nav__link nav__link--primary">Home</a>
     </li>
@@ -8,19 +8,31 @@
     <li class="nav__item">
         <a ui-sref="master.main.index({ '#': 'contact' })" class="nav__link nav__link--primary">Contact</a>
     </li>
-    <li class="nav__link nav__link--primary">
-        <div class="popup__wrapper popup__wrapper--positive">
+    <div class="nav__item hide--onmedium">
+        <li class="nav__item" ng-if="!$root.user.isAuthenticated">
+            <baasic-logout on-logout="setEmptyUser()">
+                <a ui-sref="login" class="nav__link nav__link--primary">LOGIN</a>
+            </baasic-logout>
+        </li>
+        <li class="nav__item" ng-if="$root.user.isAuthenticated">
+            <baasic-logout on-logout="setEmptyUser()">
+                <a href="#" ng-click="logout()" class="nav__link nav__link--primary">LOGOUT</a>
+            </baasic-logout>
+        </li>
+    </div>
+    <li class="nav__link nav__link--primary show--onmedium">
+        <div class="profile__login">
             <a href="#">
-                <img class="popup__title" src="assets/img/profile.svg" />
+                <img class="profile__login__icon" src="assets/img/profile.svg" />
             </a>
-            <div class="popup__settings popup__settings--positive" ng-if="!$root.user.isAuthenticated">
+            <div class="profile__login__popup" ng-if="!$root.user.isAuthenticated">
                 <baasic-logout on-logout="setEmptyUser()">
-                    <a ui-sref="login">Login</a>
+                    <a ui-sref="login" class="profile__login__link">LOGIN</a>
                 </baasic-logout>
             </div>
-            <div class="popup__settings popup__settings--positive" ng-if="$root.user.isAuthenticated">
+            <div class="profile__login__popup" ng-if="$root.user.isAuthenticated">
                 <baasic-logout on-logout="setEmptyUser()">
-                    <a href="#" ng-click="logout()">Logout</a>
+                    <a href="#" ng-click="logout()" class="profile__login__link">LOGOUT</a>
                 </baasic-logout>
             </div>
         </div>

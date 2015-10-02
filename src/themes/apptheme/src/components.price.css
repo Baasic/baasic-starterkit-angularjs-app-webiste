@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    # components.price
+    # components.plan
 \*------------------------------------*/
 
 .plan__price {
@@ -21,8 +21,6 @@
     margin-bottom: calc(var(--base-line-height)*1.5);
     line-height: calc(var(--base-line-height)*1);
 }
-
-/* Plan details */
 .plan__detail {
     padding-top: calc(var(--base-line-height)*.75);
     letter-spacing: .1rem;
@@ -39,7 +37,7 @@
 .plan__terms {
     font-family: var(--ff-sans);
     font-size: var(--type-base);
-    padding: 0; /*1rem;*/
+    padding: 0;
 }
 
 .plan__terms--item {

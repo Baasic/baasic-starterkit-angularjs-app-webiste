@@ -102,3 +102,6 @@ figure > figcaption {}
 hr {
     border: 0;
 }
+a:focus {
+    outline: none;
+}

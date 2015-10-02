@@ -15,50 +15,40 @@
 .headroom--unpinned {
     transform: translateY(-100%);
 }
-
 .headroom--top {
     padding-top: 1.5rem;
 }
-
 .headroom--not-top {
     background-color: color(var(--color-primary) alpha(80%));
 }
-
 .headroom--not-top .logo-svg svg {
     margin-top: 1rem;
     height: 2.5rem;
 }
-
 .headroom--not-top .logo-svg svg .bora-1,
 .headroom--not-top .logo-svg svg .bora-2,
 .headroom--not-top .logo-svg svg .bora-3 {
     stroke: white !important;
 }
-
 .headroom--not-top .logo-svg svg .b,
 .headroom--not-top .logo-svg svg .o,
 .headroom--not-top .logo-svg svg .r,
 .headroom--not-top .logo-svg svg .a {
     fill: white !important;
 }
-
 .headroom--not-top .header__nav {
     margin-top: 0;
 }
-
 .headroom--not-top .nav__link--primary {
     color: white;
 }
-
 .headroom--not-top .container--secondary {
     padding: 0;
 }
-
 /* Menu icon tweaking */
 .headroom--not-top .menu-icon, .headroom--not-top .menu-icon::after, .headroom--not-top .menu-icon::before {
     background-color: var(--ultra-light);
 }
-
 .headroom--not-top .menu-icon.transformed {
     background-color: transparent;
 }
