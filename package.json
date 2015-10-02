@@ -2,7 +2,7 @@
   "name": "baasic-angularjs-app-starter-kit",
   "version": "0.1.0",
   "private": true,
-   "scripts": {
+  "scripts": {
     "postinstall": "bower install"
   },
   "dependencies": {},
@@ -10,6 +10,7 @@
     "autoprefixer": "^6.0.2",
     "chai": "^3.2.0",
     "css-mqpacker": "^4.0.0",
+    "cssnano": "^3.2.0",
     "event-stream": "^3.2.1",
     "gulp": "^3.9.0",
     "gulp-angular-filesort": "^1.1.1",
@@ -44,7 +45,7 @@
     "karma-script-launcher": "^0.1.0",
     "lazypipe": "~0.2.1",
     "main-bower-files": "^2.9.0",
-    "mocha": "^2.3.2",    
+    "mocha": "^2.3.2",
     "postcss-calc": "^5.0.0",
     "postcss-color-function": "^2.0.0",
     "postcss-custom-media": "^5.0.0",

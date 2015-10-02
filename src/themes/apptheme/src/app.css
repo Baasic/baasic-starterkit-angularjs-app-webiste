@@ -46,6 +46,7 @@
 * All project components such as headers, footer, bars, dropdowns etc.
 */
 @import "components.styledtext.css";
+@import "components.message.css";
 @import "components.hero.css";
 @import "components.nav.css";
 @import "components.logo.css";

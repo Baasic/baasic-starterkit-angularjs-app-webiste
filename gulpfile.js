@@ -34,6 +34,7 @@ var customMedia = require('postcss-custom-media');
 var calc = require('postcss-calc');
 var colorFunction = require('postcss-color-function');
 var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
 
 //Processor
 gulp.task('styles', ['clean-tmp'], function () {
@@ -70,12 +71,12 @@ gulp.task('styles-dist', function () {
         autoprefixer({
             browsers: ['last 2 versions']
         }),
+        cssnano()
     ];
     return gulp.src([
         './src/themes/' + theme + '/src/app.css'
     ])
         .pipe(postcss(processors))
-        .pipe(minifyCss({processImport: false}))
         .pipe(gulp.dest('./dist/'));
 });
 
