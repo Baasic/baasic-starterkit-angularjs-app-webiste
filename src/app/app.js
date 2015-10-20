@@ -1,7 +1,7 @@
 (function(angular) {
     'use strict';
     angular.module('baasic.mobileApp', [
-        'baasic.dynamicResource','headroom', 'ng.picturefill'
+        'baasic.dynamicResource','headroom', 'ng.picturefill','smoothScroll'
     ]);
 
     angular.module('baasic.blog', [
@@ -135,7 +135,10 @@
                     controller: 'SocialEditCtrl'
                 })
                 .state('404', {
-                    templateUrl: 'templates/404.html'
+                    templateUrl: 'templates/404.html',
+                    data:{
+                        isBlog:true
+                    }
                 });
 
 

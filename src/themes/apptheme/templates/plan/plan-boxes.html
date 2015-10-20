@@ -1,4 +1,4 @@
-﻿<div ng-class="plan.isFeatured ? 'section__tertiary--item spc--top--sml' : 'section__tertiary--item spc--top--lrg'" ng-repeat="plan in plans">
+﻿<div ng-class="plan.isFeatured ? 'section__tertiary--item spc--top--sml' : 'section__tertiary--item spc--top--lrg'" ng-repeat="plan in plans" style="order:{{plan.order}}">
     <div class="section__tertiary__title--wrapper">
         <h3 ng-class="plan.isFeatured ? 'section__tertiary__title--emphasized' : 'section__tertiary__title'">{{::plan.name}}</h3>
     </div>
