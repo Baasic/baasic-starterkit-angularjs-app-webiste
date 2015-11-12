@@ -105,7 +105,9 @@
                 .state('master.main.plans', {
                     url: 'plans?{page}',
                     templateUrl: 'templates/plan/plans.html',
-
+                    data:{
+                        isPlan:true
+                    }
                 })
                 .state('master.main.new-plan', {
                     url: 'new-plan',
