@@ -4,7 +4,7 @@
         <h2 class="spc--bottom--lrg section__heading">Edit Social Connections</h2>
         <div class="" ng-repeat="soc in socials | orderBy: 'order'">
             <div class="col-1-2 social__item">
-                <img src="/assets/img/social/{{soc.name}}.svg" class="social__icon" />
+                <img src="assets/img/social/{{soc.name}}.svg" class="social__icon" />
                 <input type="text" name="{{soc.name}}" id="{{soc.name}}" ng-model="soc.url" class="input input--text social__input" />
                 <span class="highlight highlight--social"></span>
                 <span class="bar bar--social"></span>

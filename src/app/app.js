@@ -1,7 +1,7 @@
 (function(angular) {
     'use strict';
     angular.module('baasic.mobileApp', [
-        'baasic.dynamicResource','headroom', 'ng.picturefill'
+        'baasic.dynamicResource','headroom', 'ng.picturefill','smoothScroll'
     ]);
 
     angular.module('baasic.blog', [
@@ -105,7 +105,9 @@
                 .state('master.main.plans', {
                     url: 'plans?{page}',
                     templateUrl: 'templates/plan/plans.html',
-
+                    data:{
+                        isPlan:true
+                    }
                 })
                 .state('master.main.new-plan', {
                     url: 'new-plan',
@@ -135,7 +137,10 @@
                     controller: 'SocialEditCtrl'
                 })
                 .state('404', {
-                    templateUrl: 'templates/404.html'
+                    templateUrl: 'templates/404.html',
+                    data:{
+                        isBlog:true
+                    }
                 });
 
 

@@ -33,7 +33,7 @@
             planService.find({
                 page: 1,
                 rpp: 10,
-                sort: 'sync|desc'
+                sort: 'order|asc'
             })
             .success(function(data) {
                 $scope.plans = data.item;

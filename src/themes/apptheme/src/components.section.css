@@ -121,12 +121,6 @@
         margin-right: 1.5rem;
     }
 }
-.section__tertiary--item:last-child {
-    margin-right: 0;
-}
-.section__tertiary--item:nth-of-type(3n+3) {
-    margin-right: 0;
-}
 .section__tertiary__title--wrapper {
     background-color: var(--bittersweet);
     padding: .5rem;
@@ -176,4 +170,7 @@
 }
 .section__article {
     width: 60%;
+}
+.section__plan__boxes {
+    margin-right: -1rem;
 }
