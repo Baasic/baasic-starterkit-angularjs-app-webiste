@@ -3,7 +3,7 @@ Baasic AngularJS App Website Starter Kit
 
 ## Starter Kit Functionality
 
-This starter kit provides a blog engine, ladning page and simple plan editor. Initially, it shows landing page with a list of availaible plans. In blog section it shows blog posts with tags and login modules contained within a panel on the right side. To keep things simple, it allows you to add/edit/delete blog posts using the markdown syntax and add tags to posts. It is very simple to add/edit/delete plans as well. We deliberately removed more advanced features so the basic functionality is not obscured by them: however, future samples will include a complete content management functionality.
+This starter kit provides a blog engine, landing page and simple plan editor. Initially, it shows landing page with a list of available plans. In blog section it shows blog posts with tags and login modules contained within a panel on the right side. To keep things simple, it allows you to add/edit/delete blog posts using the markdown syntax and add tags to posts. It is very simple to add/edit/delete plans as well. We deliberately removed more advanced features so the basic functionality is not obscured by them: however, future samples will include a complete content management functionality.
 
 This kit is based on the Baasic article data type and Dynamic Resources. Articles provide a standard way to gather written work for the purpose of publishing various documents, news, posts and other similar items. Each article has a set of properties that can be edited interactively to change their appearance and behavior. We can distinguish following article types:
 - Published article - a publicly available article,
